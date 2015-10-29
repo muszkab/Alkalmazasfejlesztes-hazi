@@ -11,6 +11,5 @@ include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    bsp.h \
-    state.h
+    bsp.h
 
