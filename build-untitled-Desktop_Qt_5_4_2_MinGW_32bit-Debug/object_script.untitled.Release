@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\Communication.o
+./release\CommunicationSerialPort.o
+./release\CommunicationTcpSocket.o
+./release\CommunicationTcpSocketClient.o
+./release\CommunicationTcpSocketServer.o
+./release\qrc_qml.o
+./release\moc_Communication.o
+./release\moc_CommunicationTcpSocket.o
+./release\moc_CommunicationTcpSocketServer.o
+);
