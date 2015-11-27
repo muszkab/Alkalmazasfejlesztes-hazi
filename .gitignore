@@ -37,3 +37,5 @@ Makefile*
 [Rr]elease*/
 [Bb]in
 [Dd]ebug*/
+*.Debug
+*.Release
