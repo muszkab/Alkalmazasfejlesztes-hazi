@@ -39,3 +39,4 @@ Makefile*
 [Dd]ebug*/
 *.Debug
 *.Release
+build-*/*
