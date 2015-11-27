@@ -12,7 +12,7 @@ Window {
     }
 
     Text {
-        text: qsTr("Hello World")
+        text: qsTr("Hello World!!!")
         anchors.centerIn: parent
     }
 }
