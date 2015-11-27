@@ -1,5 +1,8 @@
 #include "szimulator.h"
 
+#define alfa 15
+#define maxorientacio 360/alfa-1
+
 Szimulator::Szimulator(int port)
     : communication(port), state()
 {
@@ -18,11 +21,11 @@ RobotState::koord Szimulator::SetKoordinata(float x, float y, qint8 o)
    return k;
 }
 
-RobotState::koord PositionCalculate (RobotState::koord prevPos, float v, float t)
+RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
-    newPos.x=prevPos.x+cos(prevPos.orient*15)*v*t;
-    newPos.y=prevPos.y+sin(prevPos.orient*15)*v*t;
+    newPos.x=prevPos.x+cos(prevPos.orient*alfa)*v*t;
+    newPos.y=prevPos.y+sin(prevPos.orient*alfa)*v*t;
     newPos.orient=prevPos.orient;
     return newPos;
     /*FÖLÖSLEGES
@@ -146,7 +149,7 @@ void Szimulator::tick()
         qDebug() << "Szimulator: Right parancs, 15 fok jobbra";
         if(state.pos().orient==0)
         {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, 23));
+            state.setPos(SetKoordinata(state.pos().x, state.pos().y, maxorientacio));
         }
         else
         {
@@ -156,7 +159,7 @@ void Szimulator::tick()
         break;
     case RobotState::Status::Left:
         qDebug() << "Szimulator: Left parancs, 15 fok balra";
-        if(state.pos().orient==23)
+        if(state.pos().orient==maxorientacio)
         {
             state.setPos(SetKoordinata(state.pos().x, state.pos().y, 0));
         }

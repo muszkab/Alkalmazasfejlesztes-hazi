@@ -32,6 +32,7 @@ public:
 
     /** A pozíció számoláshoz szükséges függvények */
     RobotState::koord SetKoordinata(float x, float y, qint8 o);
+    RobotState::koord PositionCalculate (RobotState::koord prevPos, float v, float t);
 
 private:
     /** Belső szerver a kommunikációhoz. */

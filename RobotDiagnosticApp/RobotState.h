@@ -3,7 +3,6 @@
 #define ROBOTSTATE_H
 #include <QDataStream>
 #include <QString>
-#include "RobotState.h"
 
 /**
  * @brief A robot teljes állapotleírása le egy adott időpillanatban.
