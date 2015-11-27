@@ -3,6 +3,7 @@
 #define ROBOTSTATE_H
 #include <QDataStream>
 #include <QString>
+#include "RobotState.h"
 
 /**
  * @brief A robot teljes állapotleírása le egy adott időpillanatban.
@@ -37,10 +38,15 @@ public:
         /** Balra kanyarodási parancs */
         Left = 5
     };
-
+    /** Koordiáták és orientáció a pozició tárolásához */
     typedef struct koord{
+        /** X koordináta */
         float x;
+        /** Y koordináta */
         float y;
+        /** Orientáció, 0-tól 23-ig lehet értéke, 15 fok forgást jelent egy egység. 24*15=360
+         * Sebesség irányát is ez írja le.*/
+        qint8 orient;
     }koord;
 
     /**

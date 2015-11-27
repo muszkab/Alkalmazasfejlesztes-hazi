@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QTimer>
-//#include "Communication/CommunicationTcpSocketServer.h"
+#include "Communication/CommunicationTcpSocketServer.h"
 #include "RobotState.h"
 
 /**
@@ -29,6 +29,9 @@ public:
      * @param intervalSec   A szimulátor periódusideje.
      */
     void start(float intervalSec);
+
+    /** A pozíció számoláshoz szükséges függvények */
+    RobotState::koord SetKoordinata(float x, float y, qint8 o);
 
 private:
     /** Belső szerver a kommunikációhoz. */

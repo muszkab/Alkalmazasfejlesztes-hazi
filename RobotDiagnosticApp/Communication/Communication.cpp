@@ -19,7 +19,7 @@ void Communication::connectToDevice(QIODevice *device)
 {
     // A fogadási adatfolyam csatlakozatotása az eszközhöz (pl. sockethez)
     // (Ha volt korábbi, az most megszűnik a unique_ptr miatt.)
-    receiveStream = std::make_unique<QDataStream>(device);
+    receiveStream = std::make_uniqe<QDataStream>(device);
 }
 
 std::unique_ptr<QDataStream> Communication::getSendStream()
