@@ -3,10 +3,15 @@ TEMPLATE = app
 QT += qml quick
 CONFIG += c++11
 
+
 SOURCES += main.cpp \
     szimulator.cpp \
     RobotState.cpp \
-    communication.cpp
+    Communication/Communication.cpp \
+    Communication/CommunicationSerialPort.cpp \
+    Communication/CommunicationTcpSocket.cpp \
+    Communication/CommunicationTcpSocketClient.cpp \
+    Communication/CommunicationTcpSocketServer.cpp
 
 RESOURCES += qml.qrc
 
@@ -19,7 +24,11 @@ include(deployment.pri)
 HEADERS += \
     szimulator.h \
     RobotState.h \
-    communication.h
+    Communication/Communication.h \
+    Communication/CommunicationSerialPort.h \
+    Communication/CommunicationTcpSocket.h \
+    Communication/CommunicationTcpSocketClient.h \
+    Communication/CommunicationTcpSocketServer.h
 
 DISTFILES +=
 
