@@ -8,6 +8,9 @@ QMAKE_CXXFLAGS_CXX11    = -std=c++1y
 QT += qml quick widgets
 QT += serialport
 
+QMAKE_CC = gcc-4.9
+QMAKE_CXX = g++-4.9
+
 SOURCES += main.cpp \
     szimulator.cpp \
     RobotState.cpp \
@@ -15,7 +18,11 @@ SOURCES += main.cpp \
     Communication/CommunicationSerialPort.cpp \
     Communication/CommunicationTcpSocket.cpp \
     Communication/CommunicationTcpSocketClient.cpp \
-    Communication/CommunicationTcpSocketServer.cpp
+    Communication/CommunicationTcpSocketServer.cpp \
+    MainWindowsEventHandling.cpp \
+    RobotProxy.cpp \
+    RobotStateHistory.cpp \
+    Application.cpp
 
 RESOURCES += qml.qrc
 
@@ -32,7 +39,11 @@ HEADERS += \
     Communication/CommunicationSerialPort.h \
     Communication/CommunicationTcpSocket.h \
     Communication/CommunicationTcpSocketClient.h \
-    Communication/CommunicationTcpSocketServer.h
+    Communication/CommunicationTcpSocketServer.h \
+    MainWindowsEventHandling.h \
+    RobotProxy.h \
+    RobotStateHistory.h \
+    Application.h
 
 DISTFILES +=
 
