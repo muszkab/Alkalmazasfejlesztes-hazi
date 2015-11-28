@@ -187,6 +187,10 @@ Item {
                 Layout.minimumWidth: 200
                 Layout.preferredWidth: 400
                 Layout.minimumHeight: 150
+
+                graphTimestamps: historyGraphTimestamps
+                graphVelocities: historyGraphVelocity
+                graphAccelerations: historyGraphAcceleration
            }
         }
     }
