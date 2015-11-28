@@ -98,7 +98,6 @@ Item {
             Text{ text: "Y: "}
             Text{ text: "V: "}
             Text{ text: "A: "}
-            Text{ text: "Kormányállás: " + kanyarSlider.value + "°"}
             Text{ text: "Lámpa: "}
         }
     }
@@ -115,6 +114,81 @@ Item {
         rotation: kanyarSlider.value
     }
 
-    // TODO lista és térkép
+    Text{
+        anchors.top: kormany.bottom
+        anchors.topMargin: 10
+        anchors.left: kormany.left
+        text: "Kormányállás: " + kanyarSlider.value + "°"
+    }
+
+    // History listának szüksége lesz egy delegate-re. Minden lista elem ennek a
+    // komponensnek egy példánya lesz.
+    Component{
+        id: stateDelegate
+        Row{
+            // A model a lista egyik eleme.
+            Text{ text: model.statusName }
+            Text{ text: "X: " + model.x.toFixed(3) }
+            Text{ text: "Y: " + model.y.toFixed(3) }
+            Text{ text: "V: " + model.v.toFixed(3) }
+            Text{ text: "A: " + model.A.toFixed(3) }
+            //Text{ text: "Szög: " + model.alfa.toFixed(3) }
+
+        }
+    }
+
+    // Állapotlista
+    GroupBox{
+        id: stateListGB
+        title: qsTr("Állapotlista")
+        // Oldalra és lefelé kitölti a szülőt
+        anchors.left: parent.left
+        anchors.leftMargin: 0
+        anchors.right: parent.right
+        anchors.rightMargin: 0
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 0
+        // Felfelé a leglejjebb lógó GB-hoz igazodik
+        anchors.top: (commandsGB.bottom > currValGB.bottom ? commandsGB.bottom : currValGB.bottom)
+        anchors.topMargin: 0
+
+        // Egymás mellett lista és grafikon
+        RowLayout{
+            anchors.fill: parent
+            spacing: 0
+            // A lista scrollozható
+            ScrollView{
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                Layout.minimumWidth: 250
+                Layout.preferredWidth: 250
+                Layout.maximumWidth: 300
+                Layout.minimumHeight: 150
+
+                // A tényleges lista
+                ListView{
+                    id: stateHistoryList
+                    model: historyModel
+                    delegate: stateDelegate
+
+                    onCountChanged: {
+                        stateHistoryList.currentIndex = stateHistoryList.count - 1;
+                    }
+                }
+            }
+
+            // TODO grafikon
+            HistoryGraph{
+                id: historyGraph
+                objectName: "historyGraph"
+
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                Layout.minimumWidth: 200
+                Layout.preferredWidth: 400
+                Layout.minimumHeight: 150
+           }
+        }
+    }
 }
 
