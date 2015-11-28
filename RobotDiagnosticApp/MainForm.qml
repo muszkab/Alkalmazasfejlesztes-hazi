@@ -11,6 +11,7 @@ Item {
     signal resetCommand
     signal accelerateCommand
     signal stopCommand
+    signal selfTestCommand
 
     // Parancsok csoportja
     GroupBox{
@@ -57,6 +58,17 @@ Item {
                 anchors.rightMargin: 0
                 anchors.leftMargin: 0
                 onClicked: stopCommand()
+            }
+
+            // Öntesztelés
+            Button{
+                id:selfTestBtn
+                anchors.left: parent.left
+                anchors.right: parent.right
+                text: qsTr("Önteszt")
+                anchors.rightMargin: 0
+                anchors.leftMargin: 0
+                onClicked: selfTestCommand()
             }
 
             // Kanyarodás

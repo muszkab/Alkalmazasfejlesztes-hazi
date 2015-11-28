@@ -14,6 +14,7 @@ ApplicationWindow {
     signal resetCommandCpp()
     signal accelerateCommandCpp()
     signal stopCommandCpp()
+    signal selfTestCommandCpp()
 
     menuBar: MenuBar{
         // Exit menü
@@ -38,6 +39,9 @@ ApplicationWindow {
         }
         onStopCommand: {
             stopCommandCpp();
+        }
+        onSelfTestCommand: {
+            selfTestCommandCpp()
         }
     }
 }
