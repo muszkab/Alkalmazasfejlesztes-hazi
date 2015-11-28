@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>MainForm.qml</file>
         <file>HistoryGraph.qml</file>
+        <file>kormany.png</file>
     </qresource>
 </RCC>
