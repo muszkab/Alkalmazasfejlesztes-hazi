@@ -17,12 +17,14 @@ Canvas{
         context.fillRect(0, 0, width, height);
 
         // koordináta tengelyek berajzolása
-        drawHorizontalLine(context, 0.0, "rgba(0,0,0,1)", 5.0)
-        drawVerticalLine(context, 0.0, "rgba(0,0,0,1)", 5.0)
-
+        drawHorizontalLine(context, 0.0, "rgba(0,0,0,1)", 1.0)
+        drawVerticalLine(context, 0.0, "rgba(0,0,0,1)", 1.0)
+        drawCircle(context, -50, 0, 50, 0, 280, "rgba(100,0,0,1)", 1.0);
         // adatsorok kirajzolása
-        drawDataset(context, graphVelocities, "rgba(110,220,110,1)", 5.0);
-        drawDataset(context, graphAccelerations, "rgba(220,110,110,1)", 5.0);
+        drawDataset(context, graphVelocities, "rgba(110,220,110,1)", 1.0);
+        drawDataset(context, graphAccelerations, "rgba(220,110,110,1)", 1.0);
+
+
     }
 
     // Vízszintes vonal rajzolása
@@ -72,6 +74,21 @@ Canvas{
     }
 
     // TODO körvonal húzása adott sugárral (?)
+    function drawCircle(context, dataValue1, dataValue2, radius, startAngle, endAngle, strokeStyle, verticalScaler)
+    {
+        var offsetw = width/2;
+        var offseth = height/2;
+
+        var startAngRad = startAngle*Math.PI/180;
+        var endAngRad = endAngle*Math.PI/180;
+
+        context.beginPath();
+        context.lineWidth = 3;
+        context.strokeStyle = strokeStyle;
+        context.arc(offsetw + verticalScaler * dataValue1, offseth - verticalScaler * dataValue2,
+                    radius, startAngRad, endAngRad, false)
+        context.stroke();
+    }
 
 }
 
