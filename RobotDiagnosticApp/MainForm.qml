@@ -98,6 +98,7 @@ Item {
             Text{ text: "Y: "}
             Text{ text: "V: "}
             Text{ text: "A: "}
+            Text{ text: "Kormányállás: " + kanyarSlider.value + "°"}
             Text{ text: "Lámpa: "}
         }
     }
@@ -114,6 +115,7 @@ Item {
         rotation: kanyarSlider.value
     }
 
+<<<<<<< HEAD
     Text{
         anchors.top: kormany.bottom
         anchors.topMargin: 10
@@ -194,5 +196,8 @@ Item {
            }
         }
     }
+=======
+    // TODO lista és térkép
+>>>>>>> parent of 71d87b2... stateHistoryList és historyGraph betéve
 }
 

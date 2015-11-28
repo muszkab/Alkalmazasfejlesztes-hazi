@@ -7,7 +7,7 @@ import QtQuick.Dialogs 1.2
 ApplicationWindow {
     title: qsTr("RobotDiagnosticApp")
     width: 640
-    height: 600
+    height: 480
     visible: true
 
     // Signalok TODO
