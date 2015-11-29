@@ -1,3 +1,4 @@
+#include <QtMath>
 #include "szimulator.h"
 
 #define alfa 15
@@ -24,8 +25,8 @@ RobotState::koord Szimulator::SetKoordinata(float x, float y, qint8 o)
 RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
-    newPos.x=prevPos.x+cos(prevPos.orient*alfa)*v*t;
-    newPos.y=prevPos.y+sin(prevPos.orient*alfa)*v*t;
+    newPos.x=prevPos.x+qCos(prevPos.orient*alfa)*v*t;
+    newPos.y=prevPos.y+qSin(prevPos.orient*alfa)*v*t;
     newPos.orient=prevPos.orient;
     return newPos;
     /*FÖLÖSLEGES

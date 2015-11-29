@@ -46,6 +46,7 @@ public:
         /** Orientáció, 0-tól 23-ig lehet értéke, 15 fok forgást jelent egy egység. 24*15=360
          * Sebesség irányát is ez írja le.*/
         qint8 orient;
+        int alfa;
     }koord;
 
     /**
