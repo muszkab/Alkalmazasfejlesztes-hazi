@@ -39,7 +39,7 @@ public:
     /** A paraméterül kapott állapot egy másolatát a history végéhez fűzi és aktuálissá teszi. */
     void Add(const RobotState& state);
 
-    /** \addtogroup Tárolók a követlen megjelenítéshez.
+    /** \addtogroup Tárolók a közvetlen megjelenítéshez.
      * Csak a legutolsó shownStateNumber számú elemet tárolják.
      * Az Add() frissíti.
      *  @{

@@ -32,7 +32,7 @@ void RobotProxy::accelerate()
 {
     RobotState newState;
     newState.setStatus(RobotState::Status::Accelerate);
-    newState.setA(0.1);
+    //newState.setA(0.1);
     communication.send(newState);
     qDebug() << "Gyorsítási parancs elküldve.";
 }
