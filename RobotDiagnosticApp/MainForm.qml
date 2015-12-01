@@ -143,8 +143,8 @@ Item {
             // A model a lista egyik eleme.
             Text{ text: model.statusName }
             //TODO model.x.toFixed ??
-            Text{ text: " X: " + model.modelData.pos.x.toFixed(3) }
-            Text{ text: " Y: " + model.y.toFixed(3) }
+           //Text{ text: " X: " + model.modelData.pos.x.toFixed(3) }
+            //Text{ text: " Y: " + model.y.toFixed(3) }
             Text{ text: " V: " + model.v.toFixed(3) }
             Text{ text: " A: " + model.a.toFixed(3) }
             //Text{ text: "Szög: " + model.alfa.toFixed(3) }

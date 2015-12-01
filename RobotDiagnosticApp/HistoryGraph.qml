@@ -64,13 +64,14 @@ Canvas{
         context.beginPath();
         context.lineWidth = 3;
         context.strokeStyle = strokeStyle;
-        context.moveTo(0, offset-datarow[0]);
+        /** TODO */
+        //context.moveTo(0, offset-datarow[0]);
         // A vektoron végigmenve behúzzuk a grafikon szakaszait.
-        for(var i=0; i<graphVelocities.length; i++)
+        /*for(var i=0; i<graphVelocities.length; i++)
         {
             context.lineTo(10*i, offset - verticalScaler * datarow[i]);
-        }
-        contex.stroke();
+        }*/
+        context.stroke();
     }
 
     // TODO körvonal húzása adott sugárral (?)

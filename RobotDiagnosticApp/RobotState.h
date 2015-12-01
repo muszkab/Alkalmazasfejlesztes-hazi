@@ -45,7 +45,7 @@ public:
         float x;
         /** Y koordináta */
         float y;
-        /** Orientáció, 0-tól 359-ig lehet értéke.
+        /** Orientáció, 0-tól 2*PI-ig lehet értéke.
          * Sebesség irányát is ez írja le.*/
         qint16 orient;
         /** Fordulás mértékét jellemzi */
