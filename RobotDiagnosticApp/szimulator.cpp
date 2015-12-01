@@ -208,8 +208,8 @@ void Szimulator::dataReady(QDataStream &inputStream)
         break;
     case RobotState::Status::Accelerate:
         qDebug() << "Szimulator: Gyorsítási parancs.";
-        state.setStatus(RobotState::Status::Default);
-        state.setA(receivedState.a());
+        state.setStatus(RobotState::Status::Accelerate);
+        //state.setA(receivedState.a()); tick() fgv-ben állítjuk be
         break;
     default:
         Q_UNREACHABLE();

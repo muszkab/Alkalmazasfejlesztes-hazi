@@ -2,6 +2,8 @@ import QtQuick 2.0
 import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.1
 
+import com.qmlcomponents 1.0
+
 Item {
     width: 640
     height: 480
@@ -141,7 +143,7 @@ Item {
             // A model a lista egyik eleme.
             Text{ text: model.statusName }
             //TODO model.x.toFixed ??
-            Text{ text: " X: " + model.koord.x.toFixed(3) }
+            Text{ text: " X: " + model.modelData.pos.x.toFixed(3) }
             Text{ text: " Y: " + model.y.toFixed(3) }
             Text{ text: " V: " + model.v.toFixed(3) }
             Text{ text: " A: " + model.a.toFixed(3) }
