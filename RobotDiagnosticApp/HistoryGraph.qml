@@ -17,8 +17,8 @@ Canvas{
         context.fillRect(0, 0, width, height);
 
         // koordináta tengelyek berajzolása
-        drawHorizontalLine(context, 0.0, "rgba(0,0,0,1)", 1.0)
-        drawVerticalLine(context, 0.0, "rgba(0,0,0,1)", 1.0)
+        drawHorizontalLine(context, 0.0, "rgba(0,0,0,1)", 1.0);
+        drawVerticalLine(context, 0.0, "rgba(0,0,0,1)", 1.0);
         drawCircle(context, -50, 0, 50, 0, 280, "rgba(100,0,0,1)", 1.0);
         // adatsorok kirajzolása
         drawDataset(context, graphVelocities, "rgba(110,220,110,1)", 1.0);

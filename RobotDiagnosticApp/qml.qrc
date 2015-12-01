@@ -4,5 +4,6 @@
         <file>MainForm.qml</file>
         <file>HistoryGraph.qml</file>
         <file>kormany.png</file>
+        <file>VectorGraph.qml</file>
     </qresource>
 </RCC>

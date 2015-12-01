@@ -3,8 +3,8 @@ import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.1
 
 Item {
-    width: 640
-    height: 480
+    width: 800
+    height: 600
     anchors.fill: parent
 
     // Signalok
@@ -117,9 +117,9 @@ Item {
     Image{
         id: kormany
         anchors.top: parent.top
-        anchors.topMargin: 20
+        anchors.topMargin: 15
         anchors.left: currValGB.right
-        anchors.leftMargin: 20
+        anchors.leftMargin: 15
         width: 150
         height: 150
         source: "kormany.png"
@@ -131,6 +131,37 @@ Item {
         anchors.topMargin: 10
         anchors.left: kormany.left
         text: "Kormányállás: " + kanyarSlider.value + "°"
+    }
+
+    GroupBox{
+        id: vectorGB
+        title: qsTr("Sebességvektor")
+        anchors.left: kormany.right
+        anchors.leftMargin: 15
+        //anchors.right: parent.right
+        //anchors.bottom: parent.bottom
+        anchors.top: parent.top
+        width: 165
+        height: 185
+
+        RowLayout{
+            anchors.fill: parent
+            spacing: 0
+            VectorGraph{
+                id: vectorGraph
+                objectName: "vectorGraph"
+
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                Layout.minimumWidth: 150
+                Layout.preferredWidth: 100
+                Layout.preferredHeight: 100
+                Layout.minimumHeight: 150
+            }
+        }
+
+
+
     }
 
     // History listának szüksége lesz egy delegate-re. Minden lista elem ennek a
