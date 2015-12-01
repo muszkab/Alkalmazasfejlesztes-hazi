@@ -7,7 +7,10 @@ QMAKE_CXXFLAGS_CXX11    = -std=c++1y
 
 QT += qml quick widgets
 QT += serialport
+<<<<<<< HEAD
 
+=======
+>>>>>>> masterdev
 
 SOURCES += main.cpp \
     szimulator.cpp \

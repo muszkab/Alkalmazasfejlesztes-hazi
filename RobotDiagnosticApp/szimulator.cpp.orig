@@ -25,9 +25,15 @@ RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint8 t)
 RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
+<<<<<<< HEAD
     newPos.orient=prevPos.orient+prevPos.turn;
     newPos.x=prevPos.x+cos(prevPos.orient)*v*t;
     newPos.y=prevPos.y+sin(prevPos.orient)*v*t;
+=======
+    newPos.x=prevPos.x+qCos(prevPos.orient*alfa)*v*t;
+    newPos.y=prevPos.y+qSin(prevPos.orient*alfa)*v*t;
+    newPos.orient=prevPos.orient;
+>>>>>>> masterdev
     return newPos;
 }
 
@@ -213,6 +219,10 @@ void Szimulator::dataReady(QDataStream &inputStream)
     case RobotState::Status::Accelerate:
         qDebug() << "Szimulator: Gyorsítási parancs.";
         state.setStatus(RobotState::Status::Accelerate);
+<<<<<<< HEAD
+=======
+        //state.setA(receivedState.a()); tick() fgv-ben állítjuk be
+>>>>>>> masterdev
         break;
     case RobotState::Status::Turn:
         qDebug() << "Szimulator: Fordulás parancs.";

@@ -1,19 +1,14 @@
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
-//#include <QDebug>
-#include "szimulator.h"
+#include <QDebug>
+#include <QQmlContext>
+#include <QtQml>
+#include "Application.h"
 
 int main(int argc, char *argv[])
 {
-    Q_UNUSED(argc);
-    Q_UNUSED(argv);
+    qmlRegisterType<RobotState>("com.qmlcomponents", 1, 0, "Robotstate");
+    Application app(argc, argv);
 
     Szimulator app(3333);
     app.start(1);
-
-    QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
-
     return 0;
 }
-
