@@ -32,10 +32,12 @@ public:
         /** Gyorsítási parancs a robotnak. A gyorsítás mértékét a robot
          * átveszi a RobotState::a tulajdonságból. */
         Accelerate = 3,
+        /** Kanyarodás parancs. A fordulás mértékét kívülről kapja. */
+        Turn=4,
         /** Jobbra kanyarodási parancs */
-        Right = 4,
+        Right = 5,
         /** Balra kanyarodási parancs */
-        Left = 5
+        Left = 6
     };
     /** Koordiáták és orientáció a pozició tárolásához */
     typedef struct koord{
@@ -43,9 +45,11 @@ public:
         float x;
         /** Y koordináta */
         float y;
-        /** Orientáció, 0-tól 23-ig lehet értéke, 15 fok forgást jelent egy egység. 24*15=360
+        /** Orientáció, 0-tól 359-ig lehet értéke.
          * Sebesség irányát is ez írja le.*/
-        qint8 orient;
+        qint16 orient;
+        /** Fordulás mértékét jellemzi */
+        qint8 turn;
     }koord;
 
     /**

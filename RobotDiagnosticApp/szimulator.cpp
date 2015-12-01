@@ -1,7 +1,6 @@
 #include "szimulator.h"
 
 #define alfa 15
-#define maxorientacio 360/alfa-1
 
 Szimulator::Szimulator(int port)
     : communication(port), state()
@@ -12,22 +11,26 @@ Szimulator::Szimulator(int port)
     connect(&timer, SIGNAL(timeout()), this, SLOT(tick()));
 }
 
-RobotState::koord Szimulator::SetKoordinata(float x, float y, qint8 o)
+RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint8 t)
 {
    RobotState::koord k;
    k.x=x;
    k.y=y;
    k.orient=o;
+   k.turn=t;
    return k;
 }
 
 RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
-    newPos.x=prevPos.x+cos(prevPos.orient*alfa)*v*t;
-    newPos.y=prevPos.y+sin(prevPos.orient*alfa)*v*t;
-    newPos.orient=prevPos.orient;
+    newPos.orient=prevPos.orient+prevPos.turn;
+    newPos.x=prevPos.x+cos(prevPos.orient)*v*t;
+    newPos.y=prevPos.y+sin(prevPos.orient)*v*t;
     return newPos;
+}
+
+
     /*FÖLÖSLEGES
     1. síknegyed: 0 és 6*15=90 fok között van az orientáció
      * x és y is nő
@@ -55,15 +58,13 @@ RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, floa
     }
     */
 
-}
-
 void Szimulator::start(float intervalSec)
 {
 
     dt = intervalSec;
     state.setStatus(RobotState::Status::Default);
     state.setTimestamp(0);
-    state.setPos(SetKoordinata(0,0,0));
+    state.setPos(SetKoordinata(0,0,0,0));
     state.setV(0.0F);
     state.setA(0.0F);
     state.setLight(0);
@@ -96,7 +97,7 @@ void Szimulator::tick()
     case RobotState::Status::Reset:
         qDebug() << "Szimulator: Reset";
         state.setStatus(RobotState::Status::Default);
-        state.setPos(SetKoordinata(0,0,0));
+        state.setPos(SetKoordinata(0,0,0,0));
         state.setV(0.0F);
         state.setA(0.0F);
         state.setLight(0);
@@ -145,29 +146,32 @@ void Szimulator::tick()
             state.setA(1.0F);
         }
         break;
+        /**  Nem biztos h kell bele
+         *
     case RobotState::Status::Right:
-        qDebug() << "Szimulator: Right parancs, 15 fok jobbra";
+        qDebug() << "Szimulator: Right parancs, alfa fok jobbra";
         if(state.pos().orient==0)
         {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, maxorientacio));
+            state.setPos(SetKoordinata(state.pos().x, state.pos().y, 359, state.pos().turn));
         }
         else
         {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, state.pos().orient-1));
+            state.setPos(SetKoordinata(state.pos().x, state.pos().y, state.pos().orient-state.pos().turn, state.pos().turn));
         }
 
         break;
     case RobotState::Status::Left:
-        qDebug() << "Szimulator: Left parancs, 15 fok balra";
-        if(state.pos().orient==maxorientacio)
+        qDebug() << "Szimulator: Left parancs, alfa fok balra";
+        if(state.pos().orient==359)
         {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, 0));
+            state.setPos(SetKoordinata(state.pos().x, state.pos().y, 0,state.pos().turn));
         }
         else
         {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, state.pos().orient+1));
+            state.setPos(SetKoordinata(state.pos().x, state.pos().y, state.pos().orient+alfa,state.pos().turn));
         }
         break;
+        */
     default:
         Q_UNREACHABLE();
     }
@@ -207,9 +211,12 @@ void Szimulator::dataReady(QDataStream &inputStream)
         break;
     case RobotState::Status::Accelerate:
         qDebug() << "Szimulator: Gyorsítási parancs.";
-        state.setStatus(RobotState::Status::Default);
-        state.setA(receivedState.a());
+        state.setStatus(RobotState::Status::Accelerate);
         break;
+    case RobotState::Status::Turn:
+        qDebug() << "Szimulator: Fordulás parancs.";
+        state.setPos(SetKoordinata(state.pos().x,state.pos().y,state.pos().orient, receivedState.pos().turn));
+    break;
     default:
         Q_UNREACHABLE();
     }
