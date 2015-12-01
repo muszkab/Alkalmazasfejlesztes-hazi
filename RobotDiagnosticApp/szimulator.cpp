@@ -25,9 +25,14 @@ RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint8 t)
 RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
-    newPos.orient=prevPos.orient+prevPos.turn;
-    newPos.x=prevPos.x+cos(prevPos.orient)*v*t;
-    newPos.y=prevPos.y+sin(prevPos.orient)*v*t;
+    if(v) newPos.orient=prevPos.orient+prevPos.turn;
+    else newPos.orient=prevPos.orient;
+    newPos.x=prevPos.x+cos((double)prevPos.orient/360*2*M_PI)*v*t;
+    newPos.y=prevPos.y+sin((double)prevPos.orient/360*2*M_PI)*v*t;
+    newPos.turn=prevPos.turn;
+    qDebug() << "sebesség y irány: " << sin((double)prevPos.orient/360*2*M_PI)*v*t;
+    qDebug() << "fordulás: " <<  newPos.turn;
+    qDebug() << "orient: " <<  newPos.orient;
     return newPos;
 }
 
@@ -65,7 +70,8 @@ void Szimulator::start(float intervalSec)
     dt = intervalSec;
     state.setStatus(RobotState::Status::Default);
     state.setTimestamp(0);
-    state.setPos(SetKoordinata(0,0,0,0));
+    state.setPos(SetKoordinata(0,0,0,30));
+    qDebug() << "turn: " << state.pos().turn;
     state.setV(0.0F);
     state.setA(0.0F);
     state.setLight(0);
@@ -135,7 +141,7 @@ void Szimulator::tick()
     case RobotState::Status::Accelerate:
         // Megjegyzés: Robotproxyban át kell írni!!
         //Ha max sebességgen van, nem gyorsítunk.
-        if(state.v()>10.0)
+        if(state.v()>=10.0)
         {
             state.setStatus(RobotState::Status::Default);
             state.setA(0.0F);
