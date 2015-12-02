@@ -34,10 +34,12 @@ public:
         Accelerate = 3,
         /** Kanyarodás parancs. A fordulás mértékét kívülről kapja. */
         Turn=4,
+        /** Öntesztelő állapot */
+        SelfTest=5,
         /** Jobbra kanyarodási parancs */
-        Right = 5,
+        Right = 6,
         /** Balra kanyarodási parancs */
-        Left = 6
+        Left = 7
     };
     /** Koordiáták és orientáció a pozició tárolásához */
     typedef struct koord{

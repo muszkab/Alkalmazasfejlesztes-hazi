@@ -28,6 +28,17 @@ void MainWindowsEventHandling::resetCommand()
     robot.reset();
 }
 
+void MainWindowsEventHandling::kormanyChanged()
+{
+    robot.turn();
+}
+
+void MainWindowsEventHandling::selfTestCommand()
+{
+    robot.reset();
+    robot.selftest();
+}
+
 void MainWindowsEventHandling::historyChanged()
 {
     // Ahhoz, hogy frissüljenek a QML oldali adatok, frissíteni kell a változók összekapcsolását.
@@ -37,6 +48,9 @@ void MainWindowsEventHandling::historyChanged()
     qmlContext.setContextProperty(QStringLiteral("historyGraphTimestamps"), QVariant::fromValue(history.graphTimestamps));
     qmlContext.setContextProperty(QStringLiteral("historyGraphVelocity"), QVariant::fromValue(history.graphVelocities));
     qmlContext.setContextProperty(QStringLiteral("historyGraphAcceleration"), QVariant::fromValue(history.graphAcceleration));
+    qmlContext.setContextProperty(QStringLiteral("historyGraphPositionX"), QVariant::fromValue(history.graphPositionX));
+    qmlContext.setContextProperty(QStringLiteral("historyGraphPositionY"), QVariant::fromValue(history.graphPositionY));
+    //qDebug() << "graphPositionX" << history.graphPositionX[history.graphPositionX.length()-1];
 
     // Jelzünk a QML controloknak, hogy újrarajzolhatják magukat, beállítottuk az új értékeket.
     emit historyContextUpdated();

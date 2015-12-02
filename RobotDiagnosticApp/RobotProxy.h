@@ -44,6 +44,16 @@ public:
      */
     void stop();
 
+    /**
+     * @brief Kanyarodás parancs a robotnak.
+     */
+    void turn();
+
+    /**
+     * @brief Önteszteli a robotot.
+     */
+    void selftest();
+
 public slots:
     /**
      * Akkor hívódik, ha új állapot érkezett a robottól.

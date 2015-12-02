@@ -100,6 +100,7 @@ void Szimulator::tick()
     switch(state.status())
     {
     case RobotState::Status::Default:
+        state.setA(0.0F); //Semmiképp se legyen gyorsulás az alap állapotban, csak tartsa a sebbességet
         break;
     case RobotState::Status::Reset:
         qDebug() << "Szimulator: Reset";
@@ -222,6 +223,7 @@ void Szimulator::dataReady(QDataStream &inputStream)
         break;
     case RobotState::Status::Turn:
         qDebug() << "Szimulator: Fordulás parancs.";
+        //state.setStatus(RobotState::Status::Default);
         state.setPos(SetKoordinata(state.pos().x,state.pos().y,state.pos().orient, receivedState.pos().turn));
     break;
     default:

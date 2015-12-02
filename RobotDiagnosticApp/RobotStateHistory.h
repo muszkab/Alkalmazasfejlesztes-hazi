@@ -47,6 +47,10 @@ public:
     QList<int> graphTimestamps;
     QList<int> graphVelocities;
     QList<int> graphAcceleration;
+    QList<float> graphPositionX;
+    QList<float> graphPositionY;
+    // turn!!
+
     /** @}*/
 
     /** A megjelenítendő állapotok száma. */
