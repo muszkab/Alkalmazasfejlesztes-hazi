@@ -6,6 +6,7 @@ Canvas{
     property var graphTimestamps;
     property var graphVelocities;
     property var graphAccelerations
+    property var graphPositions;
 
     // Paint signal esetén újra kell rajzolni a grafikon
     onPaint: {
@@ -19,9 +20,10 @@ Canvas{
         // koordináta tengelyek berajzolása
         drawHorizontalLine(context, 0.0, "rgba(0,0,0,1)", 1.0);
         drawVerticalLine(context, 0.0, "rgba(0,0,0,1)", 1.0);
+
         // adatsorok kirajzolása
-        drawDataset(context, graphVelocities, "rgba(110,220,110,1)", 1.0);
-        drawDataset(context, graphAccelerations, "rgba(220,110,110,1)", 1.0);
+        drawDataset(context, graphPositions, "rgba(0,0,255,1)", 1.0);
+
     }
 
     // Vízszintes vonal rajzolása
@@ -56,16 +58,19 @@ Canvas{
 
     function drawDataset(context, datarow, strokeStyle, verticalScaler)
     {
-        var offset = height/2;
+        var offsetw = width/2;
+        var offseth = height/2;
 
         context.beginPath();
         context.lineWidth = 3;
         context.strokeStyle = strokeStyle;
-        context.moveTo(0, offset-datarow[0]);
-        // A vektoron végigmenve behúzzuk a grafikon szakaszait.
-        for(var i=0; i<graphVelocities.length; i++)
+
+        context.moveTo(offsetw, offseth);
+
+        // A vektoron végigmenve behúzzuk a pálya szakaszait.
+        for(var i=0; i<graphPositions.length; i++)
         {
-            context.lineTo(10*i, offset - verticalScaler * datarow[i]);
+            context.lineTo(offsetw - verticalScaler * datarow[i][0], offseth - verticalScaler * datarow[i][1]);
         }
         contex.stroke();
     }
