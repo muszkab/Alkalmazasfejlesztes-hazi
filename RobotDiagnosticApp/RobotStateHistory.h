@@ -47,8 +47,8 @@ public:
     QList<int> graphTimestamps;
     QList<int> graphVelocities;
     QList<int> graphAcceleration;
-    QList<float> graphPositionX;
-    QList<float> graphPositionY;
+    QList<int> graphPositionX; //float típussal nem  működik, pedig jó lenne
+    QList<int> graphPositionY;
     // turn!!
 
     /** @}*/

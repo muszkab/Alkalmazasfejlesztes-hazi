@@ -50,7 +50,6 @@ void MainWindowsEventHandling::historyChanged()
     qmlContext.setContextProperty(QStringLiteral("historyGraphAcceleration"), QVariant::fromValue(history.graphAcceleration));
     qmlContext.setContextProperty(QStringLiteral("historyGraphPositionX"), QVariant::fromValue(history.graphPositionX));
     qmlContext.setContextProperty(QStringLiteral("historyGraphPositionY"), QVariant::fromValue(history.graphPositionY));
-    //qDebug() << "graphPositionX" << history.graphPositionX[history.graphPositionX.length()-1];
 
     // Jelzünk a QML controloknak, hogy újrarajzolhatják magukat, beállítottuk az új értékeket.
     emit historyContextUpdated();
