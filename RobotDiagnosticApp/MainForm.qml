@@ -2,11 +2,9 @@ import QtQuick 2.0
 import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.1
 
-import com.qmlcomponents 1.0
-
 Item {
-    width: 640
-    height: 480
+    width: 800
+    height: 600
     anchors.fill: parent
 
     // Signalok
@@ -82,8 +80,8 @@ Item {
                 anchors.leftMargin: 0
                 anchors.rightMargin: 0
                 value: 0.5
-                maximumValue: 90
-                minimumValue: -90
+                maximumValue: 60
+                minimumValue: -60
                 stepSize: 1
             }
         }
@@ -106,22 +104,22 @@ Item {
             anchors.left: parent.left
 
             // TODO
-            Text{ text: "Állapot: "}
-            Text{ text: "Idő: "}
-            Text{ text: "X: "}
-            Text{ text: "Y: "}
-            Text{ text: "V: "}
-            Text{ text: "A: "}
-            Text{ text: "Lámpa: "}
+            Text{ text: "Állapot: " (currentState != null ? currenState.statusName : "?")}
+            Text{ text: "Idő: " (currentState != null ? currenState.timestamp : "?")}
+            Text{ text: "X: " (currentState != null ? currenState.x.toFixed(3) : "?")}
+            Text{ text: "Y: " (currentState != null ? currenState.y.toFixed(3) : "?")}
+            Text{ text: "V: " (currentState != null ? currenState.v.toFixed(3) : "?")}
+            Text{ text: "A: " (currentState != null ? currenState.a.toFixed(3) : "?")}
+            Text{ text: "Lámpa: " (currentState != null ? currenState.light.toString() : "?")}
         }
     }
 
     Image{
         id: kormany
         anchors.top: parent.top
-        anchors.topMargin: 20
+        anchors.topMargin: 15
         anchors.left: currValGB.right
-        anchors.leftMargin: 20
+        anchors.leftMargin: 15
         width: 150
         height: 150
         source: "kormany.png"
@@ -135,6 +133,37 @@ Item {
         text: "Kormányállás: " + kanyarSlider.value + "°"
     }
 
+    GroupBox{
+        id: vectorGB
+        title: qsTr("Vektorkijelző")
+        anchors.left: kormany.right
+        anchors.leftMargin: 15
+        //anchors.right: parent.right
+        //anchors.bottom: parent.bottom
+        anchors.top: parent.top
+        width: 165
+        height: 185
+
+        RowLayout{
+            anchors.fill: parent
+            spacing: 0
+            VectorGraph{
+                id: vectorGraph
+                objectName: "vectorGraph"
+
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                Layout.minimumWidth: 150
+                Layout.preferredWidth: 100
+                Layout.preferredHeight: 100
+                Layout.minimumHeight: 150
+            }
+        }
+
+
+
+    }
+
     // History listának szüksége lesz egy delegate-re. Minden lista elem ennek a
     // komponensnek egy példánya lesz.
     Component{
@@ -142,11 +171,10 @@ Item {
         Row{
             // A model a lista egyik eleme.
             Text{ text: model.statusName }
-            //TODO model.x.toFixed ??
-           //Text{ text: " X: " + model.modelData.pos.x.toFixed(3) }
-            //Text{ text: " Y: " + model.y.toFixed(3) }
-            Text{ text: " V: " + model.v.toFixed(3) }
-            Text{ text: " A: " + model.a.toFixed(3) }
+            //Text{ text: "X: " + model.x.toFixed(3) }
+            //Text{ text: "Y: " + model.y.toFixed(3) }
+            Text{ text: "V: " + model.v.toFixed(3) }
+            Text{ text: "A: " + model.a.toFixed(3) }
             //Text{ text: "Szög: " + model.alfa.toFixed(3) }
 
         }
@@ -173,6 +201,10 @@ Item {
             spacing: 0
             // A lista scrollozható
             ScrollView{
+                // A scrollohzató elem igazítása a szölő RowLayouthoz.
+                // Itt a ScrollViewon belül adjuk meg, hogy a RowLayoutban
+                //  mik legyenek a rá (ScrollViewra) vonatkozó méret beállítások,
+                //  mert ezeket a RowLayout kezeli ebben az esetben.
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Layout.minimumWidth: 250
@@ -183,32 +215,52 @@ Item {
                 // A tényleges lista
                 ListView{
                     id: stateHistoryList
+                    // A model az, ahonnan az adatokat vesszük.
+                    // A historyModel változót a MainWindowsEventHandling::historyChanged metódus teszi
+                    //  elérhetővé a QML oldalon is.
+                    //  Típusa QList<QObject*>, a tárolt pointerek valójában RobotState-ekre mutatnak.
                     model: historyModel
+                    // A delegate megadása, vagyis hogy egy listaelem hogyan jelenjen meg.
+                    //  (Már fentebb definiáltuk.)
                     delegate: stateDelegate
 
+                    // Eseménykezelő, az elemek darabszámának változása esetén a kijelölést
+                    //  a legalsó elemre viszi. Ezzel oldja meg, hogy folyamatosan scrollozódjon
+                    //  a lista és a legutoló elem mindig látható legyen.
                     onCountChanged: {
                         stateHistoryList.currentIndex = stateHistoryList.count - 1;
                     }
                 }
             }
 
-            // TODO grafikon
+            // A HistoryGraph példányosítása, melyet külön fájlban definiáltunk.
+            //  (A rendszer név alapján találja meg a fájlt.)
             HistoryGraph{
                 id: historyGraph
+                // Az objectName akkor jó, ha C++ oldalról kell megkeresnünk egy QML oldalon definiált
+                //  objektumot a findChild metódus rekurzív hívásaival.
                 objectName: "historyGraph"
 
+                // A RowLayout erre az elemre vonatkozó elhelyezés beállításai.
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Layout.minimumWidth: 200
                 Layout.preferredWidth: 400
                 Layout.minimumHeight: 150
 
-                //graphTimestamps: historyGraphTimestamps
-                //graphVelocities: historyGraphVelocity
+                // Ezek pedig a HistoryGraph tulajdonságai, amiket majd ott definiálunk,
+                //  itt pedig értéket adunk nekik. Az alábbi változókat (pl. historyGraphTimestamps)
+                //  szintén a MainWindowsEventHandling::historyChanged metódus teszi elérhetővé
+                //  a QML oldal számára.
+                // Ezek az értékek C++ oldalon folyamatosan változnak. Minden változás esetén
+                //  lefut a MainWindowsEventHandling::historyChanged és ezeket újraregisztrálja a QML
+                //  oldal számára, így frissülni fog a HistoryGraph tulajdonság is.
+                graphTimestamps: historyGraphTimestamps
+                graphVelocities: historyGraphVelocity
                 //graphAccelerations: historyGraphAcceleration
+                graphPositionX: historyGraphPositionX
+                graphPositionY: historyGraphPositionY
            }
         }
     }
-    // TODO lista és térkép
 }
-
