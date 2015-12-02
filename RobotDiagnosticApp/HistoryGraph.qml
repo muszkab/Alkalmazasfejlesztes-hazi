@@ -23,7 +23,7 @@ Canvas{
         drawVerticalLine(context, 0.0, "rgba(0,0,0,1)", 1.0);
 
         // adatsorok kirajzolása
-        drawDataset(context, graphPositionX,graphPositionY, "rgba(0,0,255,1)", 1.0);
+        drawDataset(context, graphPositionX, graphPositionY, "rgba(0,0,255,1)", 1.0);
 
     }
 

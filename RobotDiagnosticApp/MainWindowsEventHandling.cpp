@@ -48,8 +48,10 @@ void MainWindowsEventHandling::historyChanged()
     qmlContext.setContextProperty(QStringLiteral("historyGraphTimestamps"), QVariant::fromValue(history.graphTimestamps));
     qmlContext.setContextProperty(QStringLiteral("historyGraphVelocity"), QVariant::fromValue(history.graphVelocities));
     qmlContext.setContextProperty(QStringLiteral("historyGraphAcceleration"), QVariant::fromValue(history.graphAcceleration));
+
     qmlContext.setContextProperty(QStringLiteral("historyGraphPositionX"), QVariant::fromValue(history.graphPositionX));
     qmlContext.setContextProperty(QStringLiteral("historyGraphPositionY"), QVariant::fromValue(history.graphPositionY));
+    qmlContext.setContextProperty(QStringLiteral("historyvectorOrient"), QVariant::fromValue(history.vectorOrient));
 
     // Jelzünk a QML controloknak, hogy újrarajzolhatják magukat, beállítottuk az új értékeket.
     emit historyContextUpdated();

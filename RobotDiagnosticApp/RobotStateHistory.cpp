@@ -24,6 +24,7 @@ void RobotStateHistory::Add(const RobotState& state)
     graphAcceleration.clear();
     graphPositionX.clear();
     graphPositionY.clear();
+    vectorOrient.clear();
 
     int graphStateNumber = stateList.size() < shownStateNumber ? stateList.size() : shownStateNumber;
     auto it = container.end()-graphStateNumber;
@@ -35,6 +36,7 @@ void RobotStateHistory::Add(const RobotState& state)
         graphAcceleration.append(currentState->a());
         graphPositionX.append(currentState->pos().x);
         graphPositionY.append(currentState->pos().y);
+        vectorOrient.append(currentState->pos().orient);
     }
 
     // Jelezzük a history változását.
