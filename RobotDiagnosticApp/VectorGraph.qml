@@ -6,15 +6,22 @@ Canvas{
     property var graphVelocities;
     property var graphAccelerations;
 
+    // Paint signal esetén újra kell rajzolni a grafikon
     onPaint: {
+        // "drawing context", amire rajzolunk
         var context = getContext("2d");
 
+        // Kitöltés fehérre
         context.fillStyle ="white"
         context.fillRect(0, 0, width, height);
 
+        // tengelyek és kör kirajzolása
         drawVerticalLine(context, 0.0, "rgba(0,0,0,1)", 1.0)
         drawHorizontalLine(context, 0.0, "rgba(0,0,0,1)", 1.0)
         drawCircle(context, 70, "rgba(0,0,0,1)")
+
+        // Vektor kirajzolása
+        drawVector(context, 60, 50, "rgba(255,0,0,1)");
 
     }
 
@@ -59,6 +66,22 @@ Canvas{
         // kör kirajzolása
         context.arc(offsetw, offsetw, radius, 0, 360, false);
         context.stroke();
+    }
+
+    function drawVector(context, arg, abs, strokeStyle)
+    {
+        var offsetw = width/2;
+        var offseth = height/2;
+        context.beginPath();
+        context.lineWidth = 3;
+        context. strokeStyle = strokeStyle;
+        // Mozgás az origóba
+        context.moveTo(offsetw, offseth);
+        // Mozgás a vektor végéig
+        context.lineTo(offsetw - abs*Math.cos(Math.PI- arg*Math.PI/180), offseth - abs*Math.sin(Math.PI - arg*Math.PI/180));
+        context.stroke();
+
+
     }
 
 

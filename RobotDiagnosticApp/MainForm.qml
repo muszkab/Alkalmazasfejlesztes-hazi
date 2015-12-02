@@ -80,8 +80,8 @@ Item {
                 anchors.leftMargin: 0
                 anchors.rightMargin: 0
                 value: 0.5
-                maximumValue: 90
-                minimumValue: -90
+                maximumValue: 60
+                minimumValue: -60
                 stepSize: 1
             }
         }
@@ -135,7 +135,7 @@ Item {
 
     GroupBox{
         id: vectorGB
-        title: qsTr("Sebességvektor")
+        title: qsTr("Vektorkijelző")
         anchors.left: kormany.right
         anchors.leftMargin: 15
         //anchors.right: parent.right
