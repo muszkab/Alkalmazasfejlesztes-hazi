@@ -72,7 +72,7 @@ Canvas{
         {
             context.lineTo(offsetw - verticalScaler * datarow[i][0], offseth - verticalScaler * datarow[i][1]);
         }
-        contex.stroke();
+        context.stroke();
     }
 }
 
