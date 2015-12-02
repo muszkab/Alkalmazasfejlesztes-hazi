@@ -39,4 +39,8 @@ Makefile*
 [Dd]ebug*/
 *.Debug
 *.Release
+<<<<<<< HEAD
 build-*/*
+=======
+build-*/*
+>>>>>>> masterdev

@@ -34,12 +34,10 @@ public:
         Accelerate = 3,
         /** Kanyarodás parancs. A fordulás mértékét kívülről kapja. */
         Turn=4,
-        /** Öntesztelő állapot */
-        SelfTest=5,
         /** Jobbra kanyarodási parancs */
-        Right = 6,
+        Right = 5,
         /** Balra kanyarodási parancs */
-        Left = 7
+        Left = 6
     };
     /** Koordiáták és orientáció a pozició tárolásához */
     typedef struct koord{
@@ -47,11 +45,16 @@ public:
         float x;
         /** Y koordináta */
         float y;
-        /** Orientáció, 0-tól 2*PI-ig lehet értéke.
+        /** Orientáció, 0-tól 359-ig lehet értéke.
          * Sebesség irányát is ez írja le.*/
+<<<<<<< HEAD
         qint16 orient;
         /** Fordulás mértékét jellemzi */
         qint8 turn;
+=======
+        qint8 orient;
+        int alfa;
+>>>>>>> masterdev
     }koord;
 
     /**
