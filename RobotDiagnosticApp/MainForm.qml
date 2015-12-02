@@ -12,6 +12,7 @@ Item {
     signal accelerateCommand
     signal stopCommand
     signal selfTestCommand
+    signal kormanyChanged
 
     // Parancsok csoportja
     GroupBox{
@@ -83,6 +84,7 @@ Item {
                 maximumValue: 60
                 minimumValue: -60
                 stepSize: 1
+                onValueChanged: kormanyChanged()
             }
         }
     }
