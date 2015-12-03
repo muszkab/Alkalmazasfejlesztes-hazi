@@ -99,19 +99,19 @@ Item {
 
         // Oszlopba rendezés
         ColumnLayout{
-            transformOrigin: Item.Center
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             anchors.left: parent.left
 
             // TODO
-            Text{ text: "Állapot: " /*(currentState != null ? currenState.statusName : "?")*/}
-            Text{ text: "Idő: " (currentState!=null ? currenState.timestamp : "?")}
-            Text{ text: "X: " ,historyGraphPositionX[historyGraphPositionX.length-1]}
-            Text{ text: "Y: " ,historyvectorOrient[historyvectorOrient.length-1] }
-            Text{ text: "V: " (currentState != null ? currenState.v.toFixed(3) : "?")}
-            Text{ text: "A: " (currentState != null ? currenState.a.toFixed(3) : "?")}
-            Text{ text: "Lámpa: " (currentState != null ? currenState.light.toString() : "?")}
+            Text{ text: "Állapot: " + (current != null ? current.statusName : "?")}
+            Text{ text: "Idő: " + (current!=null ? current.timestamp : "?")}
+            Text{ text: "X: " + (current!=null ? current.x.toFixed(3) : "?")}
+            Text{ text: "Y: " + (current!=null ? current.y.toFixed(3) : "?")}
+            Text{ text: "Szög: " + (current!=null ? current.orient%360: "?")}
+            Text{ text: "V: " + (current != null ? current.v.toFixed(3) : "?")}
+            Text{ text: "A: " + (current != null ? current.a.toFixed(3) : "?")}
+            Text{ text: "Lámpa: " + (current != null ? current.light.toString() : "?")}
         }
     }
 
@@ -176,11 +176,11 @@ Item {
         Row{
             // A model a lista egyik eleme.
             Text{ text: model.statusName }
-            Text{ text: " X:" + historyGraphPositionX[historyGraphPositionX.length-1].toFixed(3) }
-            Text{ text: " Y:" + historyGraphPositionY[historyGraphPositionY.length-1].toFixed(3) }
+            Text{ text: " X:" + model.x.toFixed(3) ; }
+            Text{ text: " Y:" + model.y.toFixed(3) }
+            Text{ text: " Szög:" + model.orient%360 }
             Text{ text: " V:" + model.v.toFixed(3) }
             Text{ text: " A:" + model.a.toFixed(3) }
-            //Text{ text: "Szög: " + model.alfa.toFixed(3) }
 
         }
     }

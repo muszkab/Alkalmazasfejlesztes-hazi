@@ -30,6 +30,9 @@ public:
      */
     QList<QObject*> stateList;
 
+    /** */
+    QList<double> XpositionList;
+
     /** Mutató a legutolsó érvényes állapotra. Az add() frissíti. */
     RobotState *currentState;
 
@@ -40,22 +43,13 @@ public:
     void Add(const RobotState& state);
 
     /** \addtogroup Tárolók a közvetlen megjelenítéshez.
-     * Csak a legutolsó shownStateNumber számú elemet tárolják.
+     * Minden elemet tárolnak elemet tárolják.
      * Az Add() frissíti.
      *  @{
      */
-    QList<int> graphTimestamps;
-    QList<int> graphVelocities;
-    QList<int> graphAcceleration;
-    QList<double> graphPositionX; //float típussal nem  működik, pedig jó lenne. De double az jó, csak kevesebb jegy kéne
-    QList<int> graphPositionY;
+    QList<double> graphPositionX;
+    QList<double> graphPositionY;
     QList<int> vectorOrient;
-    // turn!!
-
-    /** @}*/
-
-    /** A megjelenítendő állapotok száma. */
-    const int shownStateNumber = 20;
 
 signals:
     /** Add() után kiadott signal. */

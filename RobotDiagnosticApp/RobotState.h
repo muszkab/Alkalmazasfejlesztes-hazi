@@ -86,9 +86,24 @@ public:
     void setTimestamp(const qint64 timestamp) { _timestamp = timestamp; }
 
     /** Pozíció (méter) */
-    Q_PROPERTY(koord pos READ pos WRITE setPos MEMBER _pos NOTIFY xChanged)
+    Q_PROPERTY(koord pos READ pos WRITE setPos MEMBER _pos NOTIFY posChanged)
     koord pos() const { return _pos; }
     void setPos(koord pos) { _pos = pos; }
+
+    /** X koordináta (méter) */
+    Q_PROPERTY(float x READ x WRITE setX MEMBER _pos NOTIFY xChanged)
+    float x() const { return _pos.x; }
+    void setX(float x) { _pos.x = x; }
+
+    /** Y koordináta (méter) */
+    Q_PROPERTY(float y READ y WRITE setY MEMBER _pos NOTIFY yChanged)
+    float y() const { return _pos.y; }
+    void setY(float y) { _pos.y = y; }
+
+    /** Orientáció (fok) */
+    Q_PROPERTY(qint16 orient READ orient WRITE setOrient MEMBER _pos NOTIFY orientChanged)
+    qint16 orient() const { return _pos.orient; }
+    void setOrient(qint16 orient) { _pos.orient = orient; }
 
     /** Sebesség (m/s) */
     Q_PROPERTY(float v READ v WRITE setV MEMBER _v NOTIFY vChanged)
@@ -126,7 +141,10 @@ signals:
     // Ezeket a signalokat most nem használjuk */
     void statusChanged();
     void timestampChanged();
+    void posChanged();
     void xChanged();
+    void yChanged();
+    void orientChanged();
     void vChanged();
     void aChanged();
     void lightChanged();

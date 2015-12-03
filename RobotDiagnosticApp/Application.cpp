@@ -5,7 +5,7 @@ Application::Application(int argc, char *argv[])
       robot(history, communication), handler(robot, *engine.rootContext(), history)
 {
     // Szimulátor indítása
-    simulator.start(0.5F);
+    simulator.start(1.0F); //ha kisebb mint egy, nem számolja a pillanatnyi értékeknél az időt
 
     // Csatlakozás a szimulátorhoz.
     communication.connect(QStringLiteral("localhost"),3333);
@@ -30,6 +30,7 @@ Application::Application(int argc, char *argv[])
     handler.ConnectQmlSignals(rootObject);
 
     // Bekötjük a nyomógombok signaljait.
+    //TODO kormanyChanged
     QObject::connect(rootObject, SIGNAL(resetCommandCpp()),
                      &handler, SLOT(resetCommand()));
     QObject::connect(rootObject, SIGNAL(accelerateCommandCpp()),
