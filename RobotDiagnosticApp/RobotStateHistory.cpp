@@ -12,6 +12,9 @@ void RobotStateHistory::Add(const RobotState& state)
     std::unique_ptr<RobotState> newState = std::make_unique<RobotState>();
     newState->CopyFrom(state);
     stateList.append(newState.get());
+    //X koordinátákat külön listában tároljuk
+    XpositionList.append(newState.get()->pos().x);
+
     currentState = (RobotState*)newState.get(); // This has to be done before moving ownership
     container.push_back(std::move(newState));
 
@@ -19,6 +22,19 @@ void RobotStateHistory::Add(const RobotState& state)
     // Ezek a listák QList<int> típusú listák, amiket direkt arra hozunk létre, hogy a QML elemek
     //  ezekből olvassák ki az adatokat, mivel erre a fenti container nem alkalmas. (Az std::vector
     //  nem támogatja a Qt metaobject rendszerét.)
+
+    //Teljesen más megoldás, nekünk minden egyes lista elem kell a megjelenítéshez
+    //TODO shownstatenumber, graphTimestamps,graphVelocities, graphAcceleration törlése
+    graphTimestamps.append(currentState->timestamp());
+    graphVelocities.append(currentState->v());
+    graphAcceleration.append(currentState->a());
+    graphPositionX.append(currentState->pos().x);
+    graphPositionY.append(currentState->pos().y);
+    vectorOrient.append(currentState->pos().orient);
+
+
+    /*
+
     graphTimestamps.clear();
     graphVelocities.clear();
     graphAcceleration.clear();
@@ -38,6 +54,7 @@ void RobotStateHistory::Add(const RobotState& state)
         graphPositionY.append(currentState->pos().y);
         vectorOrient.append(currentState->pos().orient);
     }
+    */
 
     // Jelezzük a history változását.
     emit historyChanged();

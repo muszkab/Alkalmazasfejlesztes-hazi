@@ -43,7 +43,11 @@ void MainWindowsEventHandling::historyChanged()
 {
     // Ahhoz, hogy frissüljenek a QML oldali adatok, frissíteni kell a változók összekapcsolását.
     qmlContext.setContextProperty(QStringLiteral("historyModel"), QVariant::fromValue(history.stateList));
-    qmlContext.setContextProperty(QStringLiteral("currentState"), QVariant::fromValue(history.currentState));
+    qmlContext.setContextProperty(QStringLiteral("historyModelX"), QVariant::fromValue(history.XpositionList));
+
+    qmlContext.setContextProperty(QStringLiteral("current"), QVariant::fromValue(history.currentState));
+    //qmlContext.setContextProperty(QStringLiteral("currentStateX"), QVariant::fromValue(history.currentState));
+   // qmlContext.setContextProperty(QStringLiteral("currentStateY"), QVariant::fromValue(history.currentState));
 
     qmlContext.setContextProperty(QStringLiteral("historyGraphTimestamps"), QVariant::fromValue(history.graphTimestamps));
     qmlContext.setContextProperty(QStringLiteral("historyGraphVelocity"), QVariant::fromValue(history.graphVelocities));

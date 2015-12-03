@@ -30,6 +30,7 @@ Application::Application(int argc, char *argv[])
     handler.ConnectQmlSignals(rootObject);
 
     // Bekötjük a nyomógombok signaljait.
+    //TODO kormanyChanged
     QObject::connect(rootObject, SIGNAL(resetCommandCpp()),
                      &handler, SLOT(resetCommand()));
     QObject::connect(rootObject, SIGNAL(accelerateCommandCpp()),

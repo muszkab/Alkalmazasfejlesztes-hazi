@@ -30,6 +30,9 @@ public:
      */
     QList<QObject*> stateList;
 
+    /** */
+    QList<double> XpositionList;
+
     /** Mutató a legutolsó érvényes állapotra. Az add() frissíti. */
     RobotState *currentState;
 
@@ -55,7 +58,7 @@ public:
     /** @}*/
 
     /** A megjelenítendő állapotok száma. */
-    const int shownStateNumber = 20;
+    const int shownStateNumber = 1000;
 
 signals:
     /** Add() után kiadott signal. */

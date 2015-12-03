@@ -30,39 +30,8 @@ RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, floa
     newPos.x=prevPos.x+cos((double)prevPos.orient/360*2*M_PI)*v*t;
     newPos.y=prevPos.y+sin((double)prevPos.orient/360*2*M_PI)*v*t;
     newPos.turn=prevPos.turn;
-    qDebug() << "sebesség y irány: " << sin((double)prevPos.orient/360*2*M_PI)*v*t;
-    qDebug() << "fordulás: " <<  newPos.turn;
-    qDebug() << "orient: " <<  newPos.orient;
     return newPos;
 }
-
-
-    /*FÖLÖSLEGES
-    1. síknegyed: 0 és 6*15=90 fok között van az orientáció
-     * x és y is nő
-    if(prevPos.orient>=0 && prevPos.orient<6)
-    {
-
-    }
-    2. síknegyed: 90 és 12*15=180 fok között van az orientáció
-     * x csökken, y nő
-    else if(prevPos.orient>=6 && prevPos.orient<12)
-    {
-
-    }
-    3. síknegyed: 180 és 18*15=270 fok között van az orientáció
-     * x és y is csökken
-    else if(prevPos.orient>=12 && prevPos.orient<18)
-    {
-
-    }
-    4. síknegyed: 270 és 23*15=360 fok között van az orientáció
-     * x nő, y csökken
-    else if(prevPos.orient>=18 && prevPos.orient<24)
-    {
-
-    }
-    */
 
 void Szimulator::start(float intervalSec)
 {
@@ -70,7 +39,7 @@ void Szimulator::start(float intervalSec)
     dt = intervalSec;
     state.setStatus(RobotState::Status::Default);
     state.setTimestamp(0);
-    state.setPos(SetKoordinata(0,0,0,30));
+    state.setPos(SetKoordinata(0,0,0,10));
     qDebug() << "turn: " << state.pos().turn;
     state.setV(0.0F);
     state.setA(0.0F);
