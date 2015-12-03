@@ -22,7 +22,7 @@ Canvas{
         drawCircle(context, 70, "rgba(0,0,0,1)")
 
         // Vektor kirajzolása
-        drawVector(context, 40, graphVelocities[graphVelocities.length-1], "rgba(255,0,0,1)");
+        drawVector(context, vectorOrient[vectorOrient.length-1], 7*graphVelocities[graphVelocities.length-1], "rgba(255,0,0,1)");
 
     }
 

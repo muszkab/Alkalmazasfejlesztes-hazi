@@ -47,6 +47,8 @@ public:
      * Az Add() frissíti.
      *  @{
      */
+
+    QList<int> graphVelocities;
     QList<double> graphPositionX;
     QList<double> graphPositionY;
     QList<int> vectorOrient;

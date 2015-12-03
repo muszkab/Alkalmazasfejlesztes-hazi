@@ -71,7 +71,7 @@ Canvas{
         // A vektoron végigmenve behúzzuk a pálya szakaszait.
         for(var i=0; i<graphPositionX.length; i++)
         {
-            context.lineTo(offsetw - verticalScaler * datarow1[i], offseth - verticalScaler * datarow2[i]);
+            context.lineTo(offsetw + verticalScaler * datarow1[i], offseth - verticalScaler * datarow2[i]);
         }
         context.stroke();
     }
