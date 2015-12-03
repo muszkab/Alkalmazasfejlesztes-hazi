@@ -34,12 +34,10 @@ public:
         Accelerate = 3,
         /** Kanyarodás parancs. A fordulás mértékét kívülről kapja. */
         Turn=4,
-        /** Öntesztelő állapot */
-        SelfTest=5,
         /** Jobbra kanyarodási parancs */
-        Right = 6,
+        Right = 5,
         /** Balra kanyarodási parancs */
-        Left = 7
+        Left = 6
     };
     /** Koordiáták és orientáció a pozició tárolásához */
     typedef struct koord{
@@ -47,11 +45,16 @@ public:
         float x;
         /** Y koordináta */
         float y;
-        /** Orientáció, 0-tól 2*PI-ig lehet értéke.
+        /** Orientáció, 0-tól 359-ig lehet értéke.
          * Sebesség irányát is ez írja le.*/
+<<<<<<< HEAD
         qint16 orient;
         /** Fordulás mértékét jellemzi */
         qint8 turn;
+=======
+        qint8 orient;
+        int alfa;
+>>>>>>> masterdev
     }koord;
 
     /**
@@ -86,24 +89,9 @@ public:
     void setTimestamp(const qint64 timestamp) { _timestamp = timestamp; }
 
     /** Pozíció (méter) */
-    Q_PROPERTY(koord pos READ pos WRITE setPos MEMBER _pos NOTIFY posChanged)
+    Q_PROPERTY(koord pos READ pos WRITE setPos MEMBER _pos NOTIFY xChanged)
     koord pos() const { return _pos; }
     void setPos(koord pos) { _pos = pos; }
-
-    /** X koordináta (méter) */
-    Q_PROPERTY(float x READ x WRITE setX MEMBER _pos NOTIFY xChanged)
-    float x() const { return _pos.x; }
-    void setX(float x) { _pos.x = x; }
-
-    /** Y koordináta (méter) */
-    Q_PROPERTY(float y READ y WRITE setY MEMBER _pos NOTIFY yChanged)
-    float y() const { return _pos.y; }
-    void setY(float y) { _pos.y = y; }
-
-    /** Orientáció (fok) */
-    Q_PROPERTY(qint16 orient READ orient WRITE setOrient MEMBER _pos NOTIFY orientChanged)
-    qint16 orient() const { return _pos.orient; }
-    void setOrient(qint16 orient) { _pos.orient = orient; }
 
     /** Sebesség (m/s) */
     Q_PROPERTY(float v READ v WRITE setV MEMBER _v NOTIFY vChanged)
@@ -141,10 +129,7 @@ signals:
     // Ezeket a signalokat most nem használjuk */
     void statusChanged();
     void timestampChanged();
-    void posChanged();
     void xChanged();
-    void yChanged();
-    void orientChanged();
     void vChanged();
     void aChanged();
     void lightChanged();
