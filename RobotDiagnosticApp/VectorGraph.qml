@@ -1,13 +1,11 @@
 import QtQuick 2.0
 
-// A HistoryGraph egy Canvas, mivel arra lehet rajzolni.
 Canvas{
-    // Kintről kapott tulajdonságai
+
     property var graphTimestamps;
     property var graphVelocities;
-    property var graphAccelerations
-    property var graphPositionX;
-    property var graphPositionY;
+    property var graphAccelerations;
+    property var vectorOrient;
 
     // Paint signal esetén újra kell rajzolni a grafikon
     onPaint: {
@@ -15,15 +13,16 @@ Canvas{
         var context = getContext("2d");
 
         // Kitöltés fehérre
-        context.fillStyle = "white"
+        context.fillStyle ="white"
         context.fillRect(0, 0, width, height);
 
-        // koordináta tengelyek berajzolása
-        drawHorizontalLine(context, 0.0, "rgba(0,0,0,1)", 1.0);
-        drawVerticalLine(context, 0.0, "rgba(0,0,0,1)", 1.0);
+        // tengelyek és kör kirajzolása
+        drawVerticalLine(context, 0.0, "rgba(0,0,0,1)", 1.0)
+        drawHorizontalLine(context, 0.0, "rgba(0,0,0,1)", 1.0)
+        drawCircle(context, 70, "rgba(0,0,0,1)")
 
-        // adatsorok kirajzolása
-        drawDataset(context, graphPositionX, graphPositionY, "rgba(0,0,255,1)", 1.0);
+        // Vektor kirajzolása
+        drawVector(context, 40, graphVelocities[graphVelocities.length-1], "rgba(255,0,0,1)");
 
     }
 
@@ -57,22 +56,34 @@ Canvas{
         context.stroke();
     }
 
-    function drawDataset(context, datarow1, datarow2, strokeStyle, verticalScaler)
+    function drawCircle(context, radius, strokeStyle)
     {
         var offsetw = width/2;
         var offseth = height/2;
-
         context.beginPath();
-        context.lineWidth = 3;
+        context.lineWidth = 1;
         context.strokeStyle = strokeStyle;
 
-        context.moveTo(offsetw, offseth);
-
-        // A vektoron végigmenve behúzzuk a pálya szakaszait.
-        for(var i=0; i<graphPositionX.length; i++)
-        {
-            context.lineTo(offsetw - verticalScaler * datarow1[i], offseth - verticalScaler * datarow2[i]);
-        }
+        // kör kirajzolása
+        context.arc(offsetw, offsetw, radius, 0, 360, false);
         context.stroke();
     }
+
+    function drawVector(context, arg, abs, strokeStyle)
+    {
+        var offsetw = width/2;
+        var offseth = height/2;
+        context.beginPath();
+        context.lineWidth = 3;
+        context. strokeStyle = strokeStyle;
+        // Mozgás az origóba
+        context.moveTo(offsetw, offseth);
+        // Mozgás a vektor végéig
+        context.lineTo(offsetw - abs*Math.cos(Math.PI- arg*Math.PI/180), offseth - abs*Math.sin(Math.PI - arg*Math.PI/180));
+        context.stroke();
+
+
+    }
+
+
 }
