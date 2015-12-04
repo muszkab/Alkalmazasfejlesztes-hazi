@@ -121,7 +121,7 @@ Item {
     Image{
         id: kormany
         anchors.top: parent.top
-        anchors.topMargin: 15
+        anchors.topMargin: 20
         anchors.left: currValGB.right
         anchors.leftMargin: 15
         width: 150
@@ -130,11 +130,64 @@ Item {
         rotation: kanyarSlider.value
     }
 
-    Text{
+    Rectangle{
+        id: indexBal
         anchors.top: kormany.bottom
         anchors.topMargin: 10
         anchors.left: kormany.left
-        text: "Kormányállás: " + kanyarSlider.value + "°"
+        width: 20
+        height: 30
+        border.color: "black"
+        color:
+        {
+            if(kanyarSlider.value < 0) "yellow"
+            else "white"
+        }
+    }
+
+    Rectangle{
+        id: feklampaBal
+        anchors.top: kormany.bottom
+        anchors.topMargin: 10
+        anchors.left: indexBal.right
+        width: 50
+        height: 30
+        border.color: "black"
+        color:
+        {
+            if(current.statusName === "Megállás") "red"
+            else "white"
+        }
+    }
+
+    Rectangle{
+        id: feklampaJobb
+        anchors.top: kormany.bottom
+        anchors.topMargin: 10
+        anchors.right: indexJobb.left
+        width: 50
+        height: 30
+        border.color: "black"
+        color:
+        {
+            if(current.statusName === "Megállás") "red"
+            else "white"
+        }
+    }
+
+    Rectangle{
+        id: indexJobb
+        anchors.top: kormany.bottom
+        anchors.topMargin: 10
+        anchors.right: kormany.right
+        width: 20
+        height: 30
+        border.color: "black"
+        color:
+        {
+            if(kanyarSlider.value > 0) "yellow"
+            else "white"
+        }
     }
 
     GroupBox{
@@ -155,22 +208,14 @@ Item {
                 id: vectorGraph
                 objectName: "vectorGraph"
 
-                //vectorOrient: historyvectorOrient
-
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Layout.minimumWidth: 150
                 Layout.preferredWidth: 100
                 Layout.preferredHeight: 100
                 Layout.minimumHeight: 150
-
-                graphVelocities: historyGraphVelocity
-                vectorOrient: historyVectorOrient
             }
         }
-
-
-
     }
 
     // History listának szüksége lesz egy delegate-re. Minden lista elem ennek a
@@ -264,9 +309,6 @@ Item {
                 // Ezek az értékek C++ oldalon folyamatosan változnak. Minden változás esetén
                 //  lefut a MainWindowsEventHandling::historyChanged és ezeket újraregisztrálja a QML
                 //  oldal számára, így frissülni fog a HistoryGraph tulajdonság is.
-                //graphTimestamps: historyGraphTimestamps
-                graphVelocities: historyGraphVelocity
-                //graphAccelerations: historyGraphAcceleration
                 graphPositionX: historyGraphPositionX
                 graphPositionY: historyGraphPositionY
            }

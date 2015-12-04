@@ -3,9 +3,6 @@ import QtQuick 2.0
 // A HistoryGraph egy Canvas, mivel arra lehet rajzolni.
 Canvas{
     // Kintről kapott tulajdonságai
-    property var graphTimestamps;
-    property var graphVelocities;
-    property var graphAccelerations
     property var graphPositionX;
     property var graphPositionY;
 

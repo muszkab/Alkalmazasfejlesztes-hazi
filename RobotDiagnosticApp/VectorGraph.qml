@@ -2,11 +2,6 @@ import QtQuick 2.0
 
 Canvas{
 
-    property var graphTimestamps;
-    property var graphVelocities;
-    property var graphAccelerations;
-    property var vectorOrient;
-
     // Paint signal esetén újra kell rajzolni a grafikon
     onPaint: {
         // "drawing context", amire rajzolunk
