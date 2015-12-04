@@ -51,7 +51,7 @@ public:
          * Sebesség irányát is ez írja le.*/
         qint16 orient;
         /** Fordulás mértékét jellemzi */
-        qint8 turn;
+        qint16 turn;
     }koord;
 
     /**
@@ -105,6 +105,11 @@ public:
     qint16 orient() const { return _pos.orient; }
     void setOrient(qint16 orient) { _pos.orient = orient; }
 
+    /** Kanyarodás (fok: orientáció változás egy tick alatt) */
+    Q_PROPERTY(qint16 turn READ turn WRITE setTurn MEMBER _pos NOTIFY turnChanged)
+    qint16 turn() const { return _pos.turn; }
+    void setTurn(qint16 turn) { _pos.turn = turn; }
+
     /** Sebesség (m/s) */
     Q_PROPERTY(float v READ v WRITE setV MEMBER _v NOTIFY vChanged)
     float v() const { return _v; }
@@ -145,6 +150,7 @@ signals:
     void xChanged();
     void yChanged();
     void orientChanged();
+    void turnChanged();
     void vChanged();
     void aChanged();
     void lightChanged();

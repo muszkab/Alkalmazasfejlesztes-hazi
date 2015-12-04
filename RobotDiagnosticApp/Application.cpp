@@ -37,4 +37,6 @@ Application::Application(int argc, char *argv[])
                      &handler, SLOT(accelerateCommand()));
     QObject::connect(rootObject, SIGNAL(stopCommandCpp()),
                      &handler, SLOT(stopCommand()));
+    QObject::connect(rootObject, SIGNAL(kormanyChangedCpp()),
+                     &handler, SLOT(kormanyChanged()));
 }

@@ -45,12 +45,13 @@ void RobotProxy::stop()
     qDebug() << "Stop parancs elküldve.";
 }
 
-void RobotProxy::turn()
+void RobotProxy::turn(qint16 fok)
 {
     RobotState newState;
     newState.setStatus(RobotState::Status::Turn);
+    newState.setTurn(fok);
     communication.send(newState);
-    qDebug() << "Kanyarodási parancs elküldve.";
+    qDebug() << "Kanyarodási parancs elküldve." << newState.turn();
 
 }
 

@@ -47,7 +47,7 @@ public:
     /**
      * @brief Kanyarodás parancs a robotnak.
      */
-    void turn();
+    void turn(qint16 fok);
 
     /**
      * @brief Önteszteli a robotot.

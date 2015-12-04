@@ -15,6 +15,7 @@ ApplicationWindow {
     signal accelerateCommandCpp()
     signal stopCommandCpp()
     signal selfTestCommandCpp()
+    signal kormanyChangedCpp()
 
     menuBar: MenuBar{
         // Exit menü
@@ -42,6 +43,9 @@ ApplicationWindow {
         }
         onSelfTestCommand: {
             selfTestCommandCpp()
+        }
+        onKormanyChanged: {
+            kormanyChangedCpp();
         }
     }
 }

@@ -30,7 +30,8 @@ void MainWindowsEventHandling::resetCommand()
 
 void MainWindowsEventHandling::kormanyChanged()
 {
-    robot.turn();
+
+    robot.turn(0);
 }
 
 void MainWindowsEventHandling::selfTestCommand()

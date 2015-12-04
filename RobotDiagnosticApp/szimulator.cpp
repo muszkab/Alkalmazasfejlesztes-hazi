@@ -12,7 +12,7 @@ Szimulator::Szimulator(int port)
     connect(&timer, SIGNAL(timeout()), this, SLOT(tick()));
 }
 
-RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint8 t)
+RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint16 t)
 {
    RobotState::koord k;
    k.x=x;
@@ -40,7 +40,7 @@ void Szimulator::start(float intervalSec)
     state.setStatus(RobotState::Status::Default);
     state.setTimestamp(0);
     state.setPos(SetKoordinata(0,0,0,20));
-    qDebug() << "turn: " << state.pos().turn;
+    qDebug() << "turn: " << state.turn();
     state.setV(0.0F);
     state.setA(0.0F);
     state.setLight(0);
@@ -118,7 +118,7 @@ void Szimulator::tick()
         }
         else
         {
-            qDebug() << "Szimulator: Gyorítás.";
+            qDebug() << "Szimulator: Gyorsítás.";
             state.setStatus(RobotState::Status::Accelerate);
             state.setA(1.0F);
         }
@@ -155,9 +155,9 @@ void Szimulator::tick()
 
     qDebug() << "Szimulator: tick (" << state.timestamp()
              << "): állapot=" << state.getStatusName()
-             << ", x=" << state.pos().x
-             << ", y=" << state.pos().y
-             << ", v=" << state.v()
+             << ", x=" << state.x()
+             << ", y=" << state.y()
+             << ", v=" << state.turn()
              << ", a=" << state.a()
              << ", lámpa:" << state.light();
 
@@ -193,7 +193,10 @@ void Szimulator::dataReady(QDataStream &inputStream)
     case RobotState::Status::Turn:
         qDebug() << "Szimulator: Fordulás parancs.";
         //state.setStatus(RobotState::Status::Default);
-        state.setPos(SetKoordinata(state.pos().x,state.pos().y,state.pos().orient, receivedState.pos().turn));
+
+        qDebug() << receivedState.turn();
+        qDebug() << state.turn();
+        state.setTurn(receivedState.turn());
     break;
     default:
         Q_UNREACHABLE();
