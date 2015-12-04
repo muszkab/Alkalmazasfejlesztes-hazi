@@ -110,90 +110,97 @@ Item {
             Text{ text: "Idő: " + (current!=null ? current.timestamp : "?")}
             Text{ text: "X: " + (current!=null ? current.x.toFixed(3) : "?")}
             Text{ text: "Y: " + (current!=null ? current.y.toFixed(3) : "?")}
-            Text{ text: "Szög: " + (current!=null ? current.orient%360: "?")}
-            Text{ text: "Kormány: " + (current!=null ? current.turn: "?")}
+            Text{ text: "Orientáció: " + (current!=null ? current.orient%360+"°": "?")}
+            Text{ text: "Kormány: " + (current!=null ? current.turn+"°": "?")}
             Text{ text: "V: " + (current != null ? current.v.toFixed(3) : "?")}
             Text{ text: "A: " + (current != null ? current.a.toFixed(3) : "?")}
             Text{ text: "Lámpa: " + (current != null ? current.light.toString() : "?")}
         }
     }
 
-    Image{
-        id: kormany
+    GroupBox{
+        id: panel
+        title: "Kijelzőpanel"
         anchors.top: parent.top
-        anchors.topMargin: 20
         anchors.left: currValGB.right
-        anchors.leftMargin: 15
-        width: 150
-        height: 150
-        source: "kormany.png"
-        rotation: kanyarSlider.value
-    }
+        width: 170
 
-    Rectangle{
-        id: indexBal
-        anchors.top: kormany.bottom
-        anchors.topMargin: 10
-        anchors.left: kormany.left
-        width: 20
-        height: 30
-        border.color: "black"
-        color:
-        {
-            if(kanyarSlider.value < 0) "yellow"
-            else "white"
+        Image{
+            id: kormany
+            anchors.top: parent.top
+            anchors.left: currValGB.right
+            anchors.leftMargin: 15
+            width: 150
+            height: 150
+            source: "kormany.png"
+            rotation: kanyarSlider.value
         }
-    }
 
-    Rectangle{
-        id: feklampaBal
-        anchors.top: kormany.bottom
-        anchors.topMargin: 10
-        anchors.left: indexBal.right
-        width: 50
-        height: 30
-        border.color: "black"
-        color:
-        {
-            if(current.statusName === "Megállás") "red"
-            else "white"
+        Rectangle{
+            id: indexBal
+            anchors.top: kormany.bottom
+            anchors.topMargin: 10
+            anchors.left: kormany.left
+            width: 20
+            height: 30
+            border.color: "black"
+            color:
+            {
+                if(kanyarSlider.value < 0) "yellow"
+                else "white"
+            }
         }
-    }
 
-    Rectangle{
-        id: feklampaJobb
-        anchors.top: kormany.bottom
-        anchors.topMargin: 10
-        anchors.right: indexJobb.left
-        width: 50
-        height: 30
-        border.color: "black"
-        color:
-        {
-            if(current.statusName === "Megállás") "red"
-            else "white"
+        Rectangle{
+            id: feklampaBal
+            anchors.top: kormany.bottom
+            anchors.topMargin: 10
+            anchors.left: indexBal.right
+            width: 50
+            height: 30
+            border.color: "black"
+            color:
+            {
+                if(current.statusName === "Megállás") "red"
+                else "white"
+            }
         }
-    }
 
-    Rectangle{
-        id: indexJobb
-        anchors.top: kormany.bottom
-        anchors.topMargin: 10
-        anchors.right: kormany.right
-        width: 20
-        height: 30
-        border.color: "black"
-        color:
-        {
-            if(kanyarSlider.value > 0) "yellow"
-            else "white"
+        Rectangle{
+            id: feklampaJobb
+            anchors.top: kormany.bottom
+            anchors.topMargin: 10
+            anchors.right: indexJobb.left
+            width: 50
+            height: 30
+            border.color: "black"
+            color:
+            {
+                if(current.statusName === "Megállás") "red"
+                else "white"
+            }
+        }
+
+        Rectangle{
+            id: indexJobb
+            anchors.top: kormany.bottom
+            anchors.topMargin: 10
+            anchors.right: kormany.right
+            width: 20
+            height: 30
+            border.color: "black"
+            color:
+            {
+                if(kanyarSlider.value > 0) "yellow"
+                else "white"
+            }
         }
     }
 
     GroupBox{
         id: vectorGB
         title: qsTr("Vektorkijelző")
-        anchors.left: kormany.right
+        anchors.left: panel.right
         anchors.leftMargin: 15
         //anchors.right: parent.right
         //anchors.bottom: parent.bottom
@@ -225,12 +232,11 @@ Item {
         Row{
             // A model a lista egyik eleme.
             Text{ text: model.statusName }
-            Text{ text: " X:" + model.x.toFixed(3) ; }
-            Text{ text: " Y:" + model.y.toFixed(3) }
+            Text{ text: " X:" + model.x.toFixed(2) ; }
+            Text{ text: " Y:" + model.y.toFixed(2) }
             Text{ text: " Szög:" + model.orient%360 }
-            Text{ text: " V:" + model.v.toFixed(3) }
-            Text{ text: " A:" + model.a.toFixed(3) }
-
+            Text{ text: " V:" + model.v.toFixed(2) }
+            Text{ text: " A:" + model.a.toFixed(2) }
         }
     }
 
@@ -262,8 +268,8 @@ Item {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Layout.minimumWidth: 250
-                Layout.preferredWidth: 250
-                Layout.maximumWidth: 300
+                Layout.preferredWidth: 330
+                Layout.maximumWidth: 350
                 Layout.minimumHeight: 150
 
                 // A tényleges lista
