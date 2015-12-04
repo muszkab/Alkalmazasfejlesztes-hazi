@@ -12,6 +12,7 @@ Item {
     signal accelerateCommand
     signal stopCommand
     signal selfTestCommand
+    signal kormanyChanged(int fok)
 
     // Parancsok csoportja
     GroupBox{
@@ -79,10 +80,11 @@ Item {
                 anchors.right: parent.right
                 anchors.leftMargin: 0
                 anchors.rightMargin: 0
-                value: 0.5
+                value: 0.5 //?biztos
                 maximumValue: 60
                 minimumValue: -60
                 stepSize: 1
+                onValueChanged: kormanyChanged(kanyarSlider.value)
             }
         }
     }
@@ -109,6 +111,7 @@ Item {
             Text{ text: "X: " + (current!=null ? current.x.toFixed(3) : "?")}
             Text{ text: "Y: " + (current!=null ? current.y.toFixed(3) : "?")}
             Text{ text: "Szög: " + (current!=null ? current.orient%360: "?")}
+            Text{ text: "Kormány: " + (current!=null ? current.turn: "?")}
             Text{ text: "V: " + (current != null ? current.v.toFixed(3) : "?")}
             Text{ text: "A: " + (current != null ? current.a.toFixed(3) : "?")}
             Text{ text: "Lámpa: " + (current != null ? current.light.toString() : "?")}
@@ -261,7 +264,7 @@ Item {
                 // Ezek az értékek C++ oldalon folyamatosan változnak. Minden változás esetén
                 //  lefut a MainWindowsEventHandling::historyChanged és ezeket újraregisztrálja a QML
                 //  oldal számára, így frissülni fog a HistoryGraph tulajdonság is.
-                graphTimestamps: historyGraphTimestamps
+                //graphTimestamps: historyGraphTimestamps
                 graphVelocities: historyGraphVelocity
                 //graphAccelerations: historyGraphAcceleration
                 graphPositionX: historyGraphPositionX

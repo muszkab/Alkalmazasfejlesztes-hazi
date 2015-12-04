@@ -12,7 +12,7 @@ RobotProxy::RobotProxy(RobotStateHistory& history, Communication &communication)
 
 void RobotProxy::dataReady(QDataStream &stream)
 {
-    // Új robot állapto érkezett, elmentjük a historyba.
+    // Új robot állapot érkezett, elmentjük a historyba.
     //  (Onnan vesszük majd azt is, hogy mi az aktuális állapot.)
     RobotState state;
     state.ReadFrom(stream);
@@ -45,12 +45,13 @@ void RobotProxy::stop()
     qDebug() << "Stop parancs elküldve.";
 }
 
-void RobotProxy::turn()
+void RobotProxy::turn(qint16 fok)
 {
     RobotState newState;
     newState.setStatus(RobotState::Status::Turn);
+    newState.setTurn(fok);
     communication.send(newState);
-    qDebug() << "Kanyarodási parancs elküldve.";
+    qDebug() << "Kanyarodás parancs elküldve.";
 
 }
 

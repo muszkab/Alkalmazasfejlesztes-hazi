@@ -12,7 +12,7 @@ Szimulator::Szimulator(int port)
     connect(&timer, SIGNAL(timeout()), this, SLOT(tick()));
 }
 
-RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint8 t)
+RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint16 t)
 {
    RobotState::koord k;
    k.x=x;
@@ -25,7 +25,7 @@ RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint8 t)
 RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
-    if(v) newPos.orient=prevPos.orient+prevPos.turn;
+    if(v>0.1F) newPos.orient=prevPos.orient-prevPos.turn;
     else newPos.orient=prevPos.orient;
     newPos.x=prevPos.x+cos((double)prevPos.orient/360*2*M_PI)*v*t;
     newPos.y=prevPos.y+sin((double)prevPos.orient/360*2*M_PI)*v*t;
@@ -40,7 +40,6 @@ void Szimulator::start(float intervalSec)
     state.setStatus(RobotState::Status::Default);
     state.setTimestamp(0);
     state.setPos(SetKoordinata(0,0,0,0));
-    qDebug() << "turn: " << state.pos().turn;
     state.setV(0.0F);
     state.setA(0.0F);
     state.setLight(0);
@@ -118,7 +117,7 @@ void Szimulator::tick()
         }
         else
         {
-            qDebug() << "Szimulator: Gyorítás.";
+            qDebug() << "Szimulator: Gyorsítás.";
             state.setStatus(RobotState::Status::Accelerate);
             state.setA(1.0F);
         }
@@ -155,8 +154,9 @@ void Szimulator::tick()
 
     qDebug() << "Szimulator: tick (" << state.timestamp()
              << "): állapot=" << state.getStatusName()
-             << ", x=" << state.pos().x
-             << ", y=" << state.pos().y
+             << ", turn=" << state.turn()
+             << ", x=" << state.x()
+             << ", y=" << state.y()
              << ", v=" << state.v()
              << ", a=" << state.a()
              << ", lámpa:" << state.light();
@@ -191,9 +191,8 @@ void Szimulator::dataReady(QDataStream &inputStream)
         state.setStatus(RobotState::Status::Accelerate);
         break;
     case RobotState::Status::Turn:
-        qDebug() << "Szimulator: Fordulás parancs.";
-        //state.setStatus(RobotState::Status::Default);
-        state.setPos(SetKoordinata(state.pos().x,state.pos().y,state.pos().orient, receivedState.pos().turn));
+        qDebug() << "Szimulator: Kanyarodás parancs.";
+        state.setTurn(receivedState.turn());
     break;
     default:
         Q_UNREACHABLE();
