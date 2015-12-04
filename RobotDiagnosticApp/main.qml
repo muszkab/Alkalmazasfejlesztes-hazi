@@ -6,7 +6,7 @@ import QtQuick.Dialogs 1.2
 // Főablak
 ApplicationWindow {
     title: qsTr("RobotDiagnosticApp")
-    width: 640
+    width: 800
     height: 600
     visible: true
 

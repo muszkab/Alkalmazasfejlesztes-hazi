@@ -21,6 +21,7 @@ void RobotStateHistory::Add(const RobotState& state)
     //  nem támogatja a Qt metaobject rendszerét.)
 
     //Teljesen más megoldás, nekünk minden egyes lista elem kell a megjelenítéshez, nincs törlés, mindig egyet hozzá adunk
+    graphVelocities.append(currentState->v());
     graphPositionX.append(currentState->pos().x);
     graphPositionY.append(currentState->pos().y);
     vectorOrient.append(currentState->pos().orient);

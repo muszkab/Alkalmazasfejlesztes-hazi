@@ -39,7 +39,7 @@ void Szimulator::start(float intervalSec)
     dt = intervalSec;
     state.setStatus(RobotState::Status::Default);
     state.setTimestamp(0);
-    state.setPos(SetKoordinata(0,0,0,10));
+    state.setPos(SetKoordinata(0,0,0,0));
     qDebug() << "turn: " << state.pos().turn;
     state.setV(0.0F);
     state.setA(0.0F);
