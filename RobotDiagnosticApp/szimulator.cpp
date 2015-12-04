@@ -122,6 +122,10 @@ void Szimulator::tick()
             state.setA(1.0F);
         }
         break;
+    case RobotState::Status::SelfTest:
+
+
+        break;
         /**  Nem biztos h kell bele
          *
     case RobotState::Status::Right:

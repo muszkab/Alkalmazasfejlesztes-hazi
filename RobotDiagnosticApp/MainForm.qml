@@ -36,7 +36,7 @@ Item {
                 text: qsTr("Reset")
                 anchors.leftMargin: 0
                 anchors.rightMargin: 0
-                onClicked: resetCommand()
+                onClicked: reset()
             }
 
             // Gyorsítás nyomógomb
@@ -272,4 +272,12 @@ Item {
            }
         }
     }
+
+    function reset()
+    {
+        kanyarSlider.value = 0;
+        resetCommand();
+    }
 }
+
+

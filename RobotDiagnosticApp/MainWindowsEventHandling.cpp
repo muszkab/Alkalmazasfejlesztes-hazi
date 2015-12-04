@@ -25,6 +25,8 @@ void MainWindowsEventHandling::stopCommand()
 
 void MainWindowsEventHandling::resetCommand()
 {
+    history.graphPositionX.clear();
+    history.graphPositionY.clear();
     robot.reset();
 }
 

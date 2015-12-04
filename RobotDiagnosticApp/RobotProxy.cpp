@@ -58,7 +58,7 @@ void RobotProxy::turn(qint16 fok)
 void RobotProxy::selftest()
 {
     RobotState newState;
-    newState.setStatus(RobotState::Status::SelfTest); //
+    newState.setStatus(RobotState::Status::SelfTest);
     communication.send(newState);
-    qDebug() << "Önteszteleséi parancs elküldve.";
+    qDebug() << "Öntesztelési parancs elküldve.";
 }
