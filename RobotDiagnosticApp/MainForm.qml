@@ -161,7 +161,8 @@ Item {
                 Layout.preferredHeight: 100
                 Layout.minimumHeight: 150
 
-                vectorOrient: historyvectorOrient
+                graphVelocities: historyGraphVelocity
+                vectorOrient: historyVectorOrient
             }
         }
 
