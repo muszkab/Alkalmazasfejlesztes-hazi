@@ -50,7 +50,7 @@ public slots:
     void resetCommand();
 
     /**  A kormány csúszka eseménykezelője*/
-    void kormanyChanged();
+    void kormanyChanged(int fok);
 
     /** Önteszt */
     void selfTestCommand();

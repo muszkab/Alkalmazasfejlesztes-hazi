@@ -25,7 +25,7 @@ RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint16 t
 RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
-    if(v>0.1F) newPos.orient=prevPos.orient+prevPos.turn;
+    if(v>0.1F) newPos.orient=prevPos.orient-prevPos.turn;
     else newPos.orient=prevPos.orient;
     newPos.x=prevPos.x+cos((double)prevPos.orient/360*2*M_PI)*v*t;
     newPos.y=prevPos.y+sin((double)prevPos.orient/360*2*M_PI)*v*t;
@@ -39,8 +39,7 @@ void Szimulator::start(float intervalSec)
     dt = intervalSec;
     state.setStatus(RobotState::Status::Default);
     state.setTimestamp(0);
-    state.setPos(SetKoordinata(0,0,0,20));
-    qDebug() << "turn: " << state.turn();
+    state.setPos(SetKoordinata(0,0,0,0));
     state.setV(0.0F);
     state.setA(0.0F);
     state.setLight(0);

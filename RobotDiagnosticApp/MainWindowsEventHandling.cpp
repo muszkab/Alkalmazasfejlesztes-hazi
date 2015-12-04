@@ -28,10 +28,10 @@ void MainWindowsEventHandling::resetCommand()
     robot.reset();
 }
 
-void MainWindowsEventHandling::kormanyChanged()
+void MainWindowsEventHandling::kormanyChanged(int fok)
 {
 
-    robot.turn(15);
+    robot.turn(fok);
 }
 
 void MainWindowsEventHandling::selfTestCommand()

@@ -84,7 +84,7 @@ Item {
                 maximumValue: 60
                 minimumValue: -60
                 stepSize: 1
-                onValueChanged: kormanyChanged(value)
+                onValueChanged: kormanyChanged(kanyarSlider.value)
             }
         }
     }
