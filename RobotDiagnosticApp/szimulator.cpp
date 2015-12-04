@@ -25,7 +25,7 @@ RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint16 t
 RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
-    if(v) newPos.orient=prevPos.orient+prevPos.turn;
+    if(v>0.1F) newPos.orient=prevPos.orient+prevPos.turn;
     else newPos.orient=prevPos.orient;
     newPos.x=prevPos.x+cos((double)prevPos.orient/360*2*M_PI)*v*t;
     newPos.y=prevPos.y+sin((double)prevPos.orient/360*2*M_PI)*v*t;
@@ -155,9 +155,10 @@ void Szimulator::tick()
 
     qDebug() << "Szimulator: tick (" << state.timestamp()
              << "): állapot=" << state.getStatusName()
+             << ", turn=" << state.turn()
              << ", x=" << state.x()
              << ", y=" << state.y()
-             << ", v=" << state.turn()
+             << ", v=" << state.v()
              << ", a=" << state.a()
              << ", lámpa:" << state.light();
 
@@ -191,11 +192,7 @@ void Szimulator::dataReady(QDataStream &inputStream)
         state.setStatus(RobotState::Status::Accelerate);
         break;
     case RobotState::Status::Turn:
-        qDebug() << "Szimulator: Fordulás parancs.";
-        //state.setStatus(RobotState::Status::Default);
-
-        qDebug() << receivedState.turn();
-        qDebug() << state.turn();
+        qDebug() << "Szimulator: Kanyarodás parancs.";
         state.setTurn(receivedState.turn());
     break;
     default:
