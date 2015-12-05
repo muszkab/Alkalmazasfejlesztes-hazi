@@ -110,7 +110,7 @@ Item {
             Text{ text: "Idő: " + (current!=null ? current.timestamp : "?")}
             Text{ text: "X: " + (current!=null ? current.x.toFixed(3) : "?")}
             Text{ text: "Y: " + (current!=null ? current.y.toFixed(3) : "?")}
-            Text{ text: "Orientáció: " + (current!=null ? (current.orient+360)%360+"°": "?")}
+            Text{ text: "Orientáció: " + (current!=null ? current.orient+"°": "?")}
             Text{ text: "Kormány: " + (current!=null ? current.turn+"°": "?")}
             Text{ text: "V: " + (current != null ? current.v.toFixed(3) : "?")}
             Text{ text: "A: " + (current != null ? current.a.toFixed(3) : "?")}
@@ -234,7 +234,7 @@ Item {
             Text{ text: model.statusName }
             Text{ text: " X:" + model.x.toFixed(2) ; }
             Text{ text: " Y:" + model.y.toFixed(2) }
-            Text{ text: " Szög:" + (model.orient+360)%360 }
+            Text{ text: " Szög:" + model.orient }
             Text{ text: " V:" + model.v.toFixed(2) }
             Text{ text: " A:" + model.a.toFixed(2) }
         }
