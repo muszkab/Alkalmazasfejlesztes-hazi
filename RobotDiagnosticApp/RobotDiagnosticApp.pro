@@ -4,8 +4,8 @@ QT += qml quick
 CONFIG += c++11
 
 QMAKE_CXXFLAGS_CXX11    = -std=c++1y
-QMAKE_CC = gcc-4.9
-QMAKE_CXX = g++-4.9
+#QMAKE_CC = gcc-4.9
+#QMAKE_CXX = g++-4.9
 
 QT += qml quick widgets
 QT += serialport

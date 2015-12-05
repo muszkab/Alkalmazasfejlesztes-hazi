@@ -126,32 +126,6 @@ void Szimulator::tick()
 
 
         break;
-        /**  Nem biztos h kell bele
-         *
-    case RobotState::Status::Right:
-        qDebug() << "Szimulator: Right parancs, alfa fok jobbra";
-        if(state.pos().orient==0)
-        {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, 359, state.pos().turn));
-        }
-        else
-        {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, state.pos().orient-state.pos().turn, state.pos().turn));
-        }
-
-        break;
-    case RobotState::Status::Left:
-        qDebug() << "Szimulator: Left parancs, alfa fok balra";
-        if(state.pos().orient==359)
-        {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, 0,state.pos().turn));
-        }
-        else
-        {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, state.pos().orient+alfa,state.pos().turn));
-        }
-        break;
-        */
     default:
         Q_UNREACHABLE();
     }
