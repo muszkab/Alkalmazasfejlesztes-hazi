@@ -31,7 +31,7 @@ public:
     void start(float intervalSec);
 
     /** A pozíció számoláshoz szükséges függvények */
-    RobotState::koord SetKoordinata(float x, float y, qint16 o, qint8 t);
+    RobotState::koord SetKoordinata(float x, float y, qint16 o, qint16 t);
     RobotState::koord PositionCalculate (RobotState::koord prevPos, float v, float t);
 
 private:

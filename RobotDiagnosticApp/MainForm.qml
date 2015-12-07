@@ -12,161 +12,220 @@ Item {
     signal accelerateCommand
     signal stopCommand
     signal selfTestCommand
+    signal kormanyChanged(int fok)
 
-    // Parancsok csoportja
     GroupBox{
-        id: commandsGB
-        title: "Parancsok"
-        anchors.left: parent.left
-        anchors.top: parent.top
-        width: 250
-
-        // Gombok oszlopbarendezése
-        ColumnLayout{
-            id: colBtn
-            // töltse ki a rendelkezésre álló teret
-            anchors.fill: parent
-
-            // Reset nyomógomb
-            Button{
-                id: resetBtn
-                anchors.left: parent.left
-                anchors.right: parent.right
-                text: qsTr("Reset")
-                anchors.leftMargin: 0
-                anchors.rightMargin: 0
-                onClicked: resetCommand()
-            }
-
-            // Gyorsítás nyomógomb
-            Button{
-                id: accelerateBtn
-                anchors.left: parent.left
-                anchors.right: parent.right
-                text: qsTr("Gyorsítás")
-                anchors.rightMargin: 0
-                anchors.leftMargin: 0
-                onClicked: accelerateCommand()
-            }
-
-            // Stop nyomógomb
-            Button{
-                id: stopBtn
-                anchors.left: parent.left
-                anchors.right: parent.right
-                text: qsTr("Stop")
-                anchors.rightMargin: 0
-                anchors.leftMargin: 0
-                onClicked: stopCommand()
-            }
-
-            // Öntesztelés
-            Button{
-                id:selfTestBtn
-                anchors.left: parent.left
-                anchors.right: parent.right
-                text: qsTr("Önteszt")
-                anchors.rightMargin: 0
-                anchors.leftMargin: 0
-                onClicked: selfTestCommand()
-            }
-
-            // Kanyarodás
-            Slider{
-                id: kanyarSlider
-                antialiasing: true
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.leftMargin: 0
-                anchors.rightMargin: 0
-                value: 0.5
-                maximumValue: 60
-                minimumValue: -60
-                stepSize: 1
-            }
-        }
-    }
-
-    // Aktuális értékek
-    GroupBox{
-        id: currValGB
-        title: "Pillanatnyi értékek"
-        // Fent és jobbra kitölti a szülőt
-        // balra a parancs GB jobb oldalához illeszkedik
-        anchors.top: parent.top
-        anchors.left: commandsGB.right
-        width: 200
-
-        // Oszlopba rendezés
-        ColumnLayout{
-            anchors.top: parent.top
-            anchors.bottom: parent.bottom
+            id: felsoGB
             anchors.left: parent.left
+            anchors.top: parent.top
+        // Parancsok csoportja
+        GroupBox{
+            id: commandsGB
+            title: "Parancsok"
+            anchors.left: parent.left
+            anchors.top: parent.top
+            width: 250
 
-            // TODO
-            Text{ text: "Állapot: " + (current != null ? current.statusName : "?")}
-            Text{ text: "Idő: " + (current!=null ? current.timestamp : "?")}
-            Text{ text: "X: " + (current!=null ? current.x.toFixed(3) : "?")}
-            Text{ text: "Y: " + (current!=null ? current.y.toFixed(3) : "?")}
-            Text{ text: "Szög: " + (current!=null ? current.orient%360: "?")}
-            Text{ text: "V: " + (current != null ? current.v.toFixed(3) : "?")}
-            Text{ text: "A: " + (current != null ? current.a.toFixed(3) : "?")}
-            Text{ text: "Lámpa: " + (current != null ? current.light.toString() : "?")}
-        }
-    }
+            // Gombok oszlopbarendezése
+            ColumnLayout{
+                id: colBtn
+                // töltse ki a rendelkezésre álló teret
+                anchors.fill: parent
 
-    Image{
-        id: kormany
-        anchors.top: parent.top
-        anchors.topMargin: 15
-        anchors.left: currValGB.right
-        anchors.leftMargin: 15
-        width: 150
-        height: 150
-        source: "kormany.png"
-        rotation: kanyarSlider.value
-    }
+                // Reset nyomógomb
+                Button{
+                    id: resetBtn
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    text: qsTr("Reset")
+                    anchors.leftMargin: 0
+                    anchors.rightMargin: 0
+                    onClicked: reset()
+                }
 
-    Text{
-        anchors.top: kormany.bottom
-        anchors.topMargin: 10
-        anchors.left: kormany.left
-        text: "Kormányállás: " + kanyarSlider.value + "°"
-    }
+                // Gyorsítás nyomógomb
+                Button{
+                    id: accelerateBtn
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    text: qsTr("Gyorsítás")
+                    anchors.rightMargin: 0
+                    anchors.leftMargin: 0
+                    onClicked: accelerateCommand()
+                }
 
-    GroupBox{
-        id: vectorGB
-        title: qsTr("Vektorkijelző")
-        anchors.left: kormany.right
-        anchors.leftMargin: 15
-        //anchors.right: parent.right
-        //anchors.bottom: parent.bottom
-        anchors.top: parent.top
-        width: 165
-        height: 185
+                // Stop nyomógomb
+                Button{
+                    id: stopBtn
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    text: qsTr("Stop")
+                    anchors.rightMargin: 0
+                    anchors.leftMargin: 0
+                    onClicked: stopCommand()
+                }
 
-        RowLayout{
-            anchors.fill: parent
-            spacing: 0
-            VectorGraph{
-                id: vectorGraph
-                objectName: "vectorGraph"
+                // Öntesztelés
+                Button{
+                    id:selfTestBtn
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    text: qsTr("Önteszt")
+                    anchors.rightMargin: 0
+                    anchors.leftMargin: 0
+                    onClicked: selfTestCommand()
+                }
 
-                //vectorOrient: historyvectorOrient
-
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                Layout.minimumWidth: 150
-                Layout.preferredWidth: 100
-                Layout.preferredHeight: 100
-                Layout.minimumHeight: 150
-
-                vectorOrient: historyvectorOrient
+                // Kanyarodás
+                Slider{
+                    id: kanyarSlider
+                    antialiasing: true
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.leftMargin: 0
+                    anchors.rightMargin: 0
+                    value: 0.5 //?biztos
+                    maximumValue: 60
+                    minimumValue: -60
+                    stepSize: 5
+                    tickmarksEnabled: true
+                    onValueChanged: kormanyChanged(kanyarSlider.value)
+                }
             }
         }
 
+        // Aktuális értékek
+        GroupBox{
+            id: currValGB
+            title: "Pillanatnyi értékek"
+            // Fent és jobbra kitölti a szülőt
+            // balra a parancs GB jobb oldalához illeszkedik
+            anchors.top: parent.top
+            anchors.left: commandsGB.right
+            width: 200
 
+            // Oszlopba rendezés
+            ColumnLayout{
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                anchors.left: parent.left
 
+                // TODO
+                Text{ text: "Állapot: " + (current != null ? current.statusName : "?")}
+                Text{ text: "Idő: " + (current!=null ? current.timestamp : "?")}
+                Text{ text: "X: " + (current!=null ? current.x.toFixed(3) : "?")}
+                Text{ text: "Y: " + (current!=null ? current.y.toFixed(3) : "?")}
+                Text{ text: "Orientáció: " + (current!=null ? current.orient%360+"°": "?")}
+                Text{ text: "Kormány: " + (current!=null ? current.turn+"°": "?")}
+                Text{ text: "V: " + (current != null ? current.v.toFixed(3) : "?")}
+                Text{ text: "A: " + (current != null ? current.a.toFixed(3) : "?")}
+            }
+        }
+
+        GroupBox{
+            id: panel
+            title: "Kijelzőpanel"
+            anchors.top: parent.top
+            anchors.left: currValGB.right
+            width: 170
+
+            Image{
+                id: kormany
+                anchors.top: parent.top
+                anchors.left: currValGB.right
+                anchors.leftMargin: 15
+                width: 150
+                height: 150
+                source: "kormany.png"
+                rotation: kanyarSlider.value
+            }
+
+            Rectangle{
+                id: indexBal
+                anchors.top: kormany.bottom
+                anchors.topMargin: 10
+                anchors.left: kormany.left
+                width: 20
+                height: 30
+                border.color: "black"
+                color:
+                {
+                    if(kanyarSlider.value < 0) "yellow"
+                    else "white"
+                }
+            }
+
+            Rectangle{
+                id: feklampaBal
+                anchors.top: kormany.bottom
+                anchors.topMargin: 10
+                anchors.left: indexBal.right
+                width: 50
+                height: 30
+                border.color: "black"
+                color:
+                {
+                    if(current.statusName === "Megállás") "red"
+                    else "white"
+                }
+            }
+
+            Rectangle{
+                id: feklampaJobb
+                anchors.top: kormany.bottom
+                anchors.topMargin: 10
+                anchors.right: indexJobb.left
+                width: 50
+                height: 30
+                border.color: "black"
+                color:
+                {
+                    if(current.statusName === "Megállás") "red"
+                    else "white"
+                }
+            }
+
+            Rectangle{
+                id: indexJobb
+                anchors.top: kormany.bottom
+                anchors.topMargin: 10
+                anchors.right: kormany.right
+                width: 20
+                height: 30
+                border.color: "black"
+                color:
+                {
+                    if(kanyarSlider.value > 0) "yellow"
+                    else "white"
+                }
+            }
+        }
+
+        GroupBox{
+            id: vectorGB
+            title: qsTr("Vektorkijelző")
+            anchors.left: panel.right
+            anchors.leftMargin: 15
+            anchors.top: parent.top
+            width: 165
+            height: 180
+
+            RowLayout{
+                anchors.fill: parent
+                spacing: 0
+                VectorGraph{
+                    id: vectorGraph
+                    objectName: "vectorGraph"
+
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.minimumWidth: 150
+                    Layout.preferredWidth: 100
+                    Layout.preferredHeight: 100
+                    Layout.minimumHeight: 150
+                }
+            }
+        }
     }
 
     // History listának szüksége lesz egy delegate-re. Minden lista elem ennek a
@@ -176,12 +235,11 @@ Item {
         Row{
             // A model a lista egyik eleme.
             Text{ text: model.statusName }
-            Text{ text: " X:" + model.x.toFixed(3) ; }
-            Text{ text: " Y:" + model.y.toFixed(3) }
+            Text{ text: " X:" + model.x.toFixed(2) ; }
+            Text{ text: " Y:" + model.y.toFixed(2) }
             Text{ text: " Szög:" + model.orient%360 }
-            Text{ text: " V:" + model.v.toFixed(3) }
-            Text{ text: " A:" + model.a.toFixed(3) }
-
+            Text{ text: " V:" + model.v.toFixed(2) }
+            Text{ text: " A:" + model.a.toFixed(2) }
         }
     }
 
@@ -197,7 +255,7 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 0
         // Felfelé a leglejjebb lógó GB-hoz igazodik
-        anchors.top: (commandsGB.bottom > currValGB.bottom ? commandsGB.bottom : currValGB.bottom)
+        anchors.top: felsoGB.bottom
         anchors.topMargin: 0
 
         // Egymás mellett lista és grafikon
@@ -213,8 +271,8 @@ Item {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Layout.minimumWidth: 250
-                Layout.preferredWidth: 250
-                Layout.maximumWidth: 300
+                Layout.preferredWidth: 330
+                Layout.maximumWidth: 350
                 Layout.minimumHeight: 150
 
                 // A tényleges lista
@@ -260,12 +318,15 @@ Item {
                 // Ezek az értékek C++ oldalon folyamatosan változnak. Minden változás esetén
                 //  lefut a MainWindowsEventHandling::historyChanged és ezeket újraregisztrálja a QML
                 //  oldal számára, így frissülni fog a HistoryGraph tulajdonság is.
-                graphTimestamps: historyGraphTimestamps
-                graphVelocities: historyGraphVelocity
-                //graphAccelerations: historyGraphAcceleration
                 graphPositionX: historyGraphPositionX
                 graphPositionY: historyGraphPositionY
            }
         }
+    }
+
+    function reset()
+    {
+        kanyarSlider.value = 0;
+        resetCommand();
     }
 }

@@ -41,10 +41,10 @@ void RobotState::WriteTo(QDataStream& stream) const
 {
     stream << (qint32)_status;
     stream << _timestamp;
-    //Nem biztos h jó, hibalehetőség!
     stream << _pos.x;
     stream << _pos.y;
     stream << _pos.orient;
+    stream << _pos.turn;
     stream << _v;
     stream << _a;
     stream << _light;
@@ -56,10 +56,10 @@ void RobotState::ReadFrom(QDataStream& stream)
     stream >> tmpQint32;
     _status = (Status)tmpQint32;
     stream >> _timestamp;
-    //Nem biztos h jó, hibalehetőség!
     stream >> _pos.x;
     stream >> _pos.y;
     stream >> _pos.orient;
+    stream >> _pos.turn;
     stream >> _v;
     stream >> _a;
     stream >> _light;

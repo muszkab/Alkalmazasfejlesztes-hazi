@@ -52,7 +52,7 @@ void CommunicationTcpSocket::sendBufferContent()
         return;
     }
 
-    qDebug() << "CommunicationTcpSocket::send() " << sendBuffer.size() << " bájt:\n" << sendBuffer.toHex();
+  //  qDebug() << "CommunicationTcpSocket::send() " << sendBuffer.size() << " bájt:\n" << sendBuffer.toHex();
     socket->write(sendBuffer);
     sendBuffer.clear();
 }

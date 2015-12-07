@@ -2,11 +2,6 @@ import QtQuick 2.0
 
 Canvas{
 
-    property var graphTimestamps;
-    property var graphVelocities;
-    property var graphAccelerations;
-    property var vectorOrient;
-
     // Paint signal esetén újra kell rajzolni a grafikon
     onPaint: {
         // "drawing context", amire rajzolunk
@@ -22,8 +17,7 @@ Canvas{
         drawCircle(context, 70, "rgba(0,0,0,1)")
 
         // Vektor kirajzolása
-        drawVector(context, 40, graphVelocities[graphVelocities.length-1], "rgba(255,0,0,1)");
-
+        drawVector(context, current.orient%360, 7*current.v, "rgba(255,0,0,1)"); //current állapottal egyszerűbb
     }
 
     // Vízszintes vonal rajzolása

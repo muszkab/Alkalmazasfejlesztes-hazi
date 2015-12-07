@@ -3,9 +3,6 @@ import QtQuick 2.0
 // A HistoryGraph egy Canvas, mivel arra lehet rajzolni.
 Canvas{
     // Kintről kapott tulajdonságai
-    property var graphTimestamps;
-    property var graphVelocities;
-    property var graphAccelerations
     property var graphPositionX;
     property var graphPositionY;
 
@@ -71,7 +68,7 @@ Canvas{
         // A vektoron végigmenve behúzzuk a pálya szakaszait.
         for(var i=0; i<graphPositionX.length; i++)
         {
-            context.lineTo(offsetw - verticalScaler * datarow1[i], offseth - verticalScaler * datarow2[i]);
+            context.lineTo(offsetw + verticalScaler * datarow1[i], offseth - verticalScaler * datarow2[i]);
         }
         context.stroke();
     }

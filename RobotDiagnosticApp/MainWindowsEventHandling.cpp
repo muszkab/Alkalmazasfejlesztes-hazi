@@ -25,12 +25,15 @@ void MainWindowsEventHandling::stopCommand()
 
 void MainWindowsEventHandling::resetCommand()
 {
+    history.graphPositionX.clear();
+    history.graphPositionY.clear();
     robot.reset();
 }
 
-void MainWindowsEventHandling::kormanyChanged()
+void MainWindowsEventHandling::kormanyChanged(int fok)
 {
-    robot.turn();
+
+    robot.turn(fok);
 }
 
 void MainWindowsEventHandling::selfTestCommand()
@@ -46,12 +49,12 @@ void MainWindowsEventHandling::historyChanged()
     qmlContext.setContextProperty(QStringLiteral("current"), QVariant::fromValue(history.currentState));
 
     //qmlContext.setContextProperty(QStringLiteral("historyGraphTimestamps"), QVariant::fromValue(history.graphTimestamps));
-   // qmlContext.setContextProperty(QStringLiteral("historyGraphVelocity"), QVariant::fromValue(history.graphVelocities));
+    qmlContext.setContextProperty(QStringLiteral("historyGraphVelocity"), QVariant::fromValue(history.graphVelocities));
    // qmlContext.setContextProperty(QStringLiteral("historyGraphAcceleration"), QVariant::fromValue(history.graphAcceleration));
 
     qmlContext.setContextProperty(QStringLiteral("historyGraphPositionX"), QVariant::fromValue(history.graphPositionX));
     qmlContext.setContextProperty(QStringLiteral("historyGraphPositionY"), QVariant::fromValue(history.graphPositionY));
-    //qmlContext.setContextProperty(QStringLiteral("historyvectorOrient"), QVariant::fromValue(history.vectorOrient));
+    qmlContext.setContextProperty(QStringLiteral("historyVectorOrient"), QVariant::fromValue(history.vectorOrient));
 
     // Jelzünk a QML controloknak, hogy újrarajzolhatják magukat, beállítottuk az új értékeket.
     emit historyContextUpdated();
@@ -86,9 +89,11 @@ QQuickItem* MainWindowsEventHandling::FindItemByName(QObject *rootObject, const 
 void MainWindowsEventHandling::ConnectQmlSignals(QObject *rootObject)
 {
     QQuickItem *historyGraph = FindItemByName(rootObject,QString("historyGraph"));
+    QQuickItem *vectorGraph = FindItemByName(rootObject, QString("vectorGraph"));
     if (historyGraph)
     {
         QObject::connect(this, SIGNAL(historyContextUpdated()), historyGraph, SLOT(requestPaint()));
+        QObject::connect(this, SIGNAL(historyContextUpdated()), vectorGraph, SLOT(requestPaint()));
     }
     else
     {
