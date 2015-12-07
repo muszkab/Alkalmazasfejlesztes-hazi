@@ -85,8 +85,8 @@ Item {
                     anchors.leftMargin: 0
                     anchors.rightMargin: 0
                     value: 0.5 //?biztos
-                    maximumValue: 60
-                    minimumValue: -60
+                    maximumValue: 40
+                    minimumValue: -40
                     stepSize: 5
                     tickmarksEnabled: true
                     onValueChanged: kormanyChanged(kanyarSlider.value)
