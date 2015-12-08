@@ -109,7 +109,11 @@ void Szimulator::tick()
         break;
     case RobotState::Status::SelfTest:
 
+        if(true){
+            qDebug() << "Szimulator: Önteszt";
+        }
         break;
+
         /**  Nem biztos h kell bele
          *
     case RobotState::Status::Right:
@@ -181,6 +185,9 @@ void Szimulator::dataReady(QDataStream &inputStream)
     case RobotState::Status::Turn:
         qDebug() << "Szimulator: Kanyarodás parancs.";
         state.setTurn(receivedState.turn());
+    case RobotState::Status::SelfTest:
+        qDebug() << "Szimulator: Önteszt parancs.";
+        state.setStatus(RobotState::Status::SelfTest);
     break;
     default:
         Q_UNREACHABLE();

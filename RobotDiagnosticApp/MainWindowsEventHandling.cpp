@@ -38,7 +38,7 @@ void MainWindowsEventHandling::kormanyChanged(int fok)
 
 void MainWindowsEventHandling::selfTestCommand()
 {
-    robot.reset();
+   // robot.reset();
     robot.selftest();
 }
 

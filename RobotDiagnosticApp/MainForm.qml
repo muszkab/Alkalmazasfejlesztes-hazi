@@ -150,7 +150,7 @@ Item {
                 border.color: "black"
                 color:
                 {
-                    if(kanyarSlider.value < 0) "yellow"
+                    if(kanyarSlider.value < 0 | current.statusName === "Önteszt") "yellow"
                     else "white"
                 }
             }
@@ -165,7 +165,7 @@ Item {
                 border.color: "black"
                 color:
                 {
-                    if(current.statusName === "Megállás") "red"
+                    if(current.statusName === "Megállás" | current.statusName === "Önteszt") "red"
                     else "white"
                 }
             }
@@ -180,7 +180,7 @@ Item {
                 border.color: "black"
                 color:
                 {
-                    if(current.statusName === "Megállás") "red"
+                    if(current.statusName === "Megállás" | current.statusName === "Önteszt") "red"
                     else "white"
                 }
             }
@@ -195,7 +195,7 @@ Item {
                 border.color: "black"
                 color:
                 {
-                    if(kanyarSlider.value > 0) "yellow"
+                    if(kanyarSlider.value > 0 | current.statusName === "Önteszt") "yellow"
                     else "white"
                 }
             }
