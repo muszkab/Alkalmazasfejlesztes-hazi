@@ -38,7 +38,8 @@ void MainWindowsEventHandling::kormanyChanged(int fok)
 
 void MainWindowsEventHandling::selfTestCommand()
 {
-    robot.reset();
+    history.graphPositionX.clear();
+    history.graphPositionY.clear();
     robot.selftest();
 }
 

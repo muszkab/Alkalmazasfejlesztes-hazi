@@ -27,6 +27,7 @@ void RobotState::initStatusNames()
         statusNames[(int)Status::Right] = QString("Jobb kanyar");
         statusNames[(int)Status::Left] = QString("Bal kanyar");
         statusNames[(int)Status::Turn] = QString("Fordulás");
+        statusNames[(int)Status::SelfTest] = QString("Önteszt");
     }
 }
 

@@ -82,8 +82,8 @@ public:
 
     /** Időbélyeg (ms) */
     Q_PROPERTY(float timestamp READ timestamp WRITE setTimestamp MEMBER _timestamp NOTIFY timestampChanged)
-    qint64 timestamp() const { return _timestamp; }
-    void setTimestamp(const qint64 timestamp) { _timestamp = timestamp; }
+    float timestamp() const { return _timestamp; }
+    void setTimestamp(const float timestamp) { _timestamp = timestamp; }
 
     /** Pozíció (méter) */
     Q_PROPERTY(koord pos READ pos WRITE setPos MEMBER _pos NOTIFY posChanged)
@@ -157,7 +157,7 @@ signals:
 
 private:
     Status _status;
-    qint64 _timestamp;
+    float _timestamp;
     koord _pos;   /** Pozíció (koordináta) */
     float _v;   /** Sebesség (m/s) */
     float _a;   /** Gyorsulás (m/s2) */
