@@ -58,8 +58,6 @@ void Szimulator::tick()
         state.setV( 10.0F );
     }
 
-    //state.setLight( state.v()<=0.1F ? 1.0F : 0.0F );
-
     // Magasabb szintű funkciók
     switch(state.status())
     {
@@ -75,6 +73,7 @@ void Szimulator::tick()
         state.setLight(0);
         break;
     case RobotState::Status::Stopping:
+        state.setLight(0); //önteszt funkció végleges befejezése, felirat eltüntetése
         if (state.v() > 0)
         {
             qDebug() << "Szimulator: Stop parancs, lassítás";
@@ -89,7 +88,7 @@ void Szimulator::tick()
         }
         break;
     case RobotState::Status::Accelerate:
-        // Megjegyzés: Robotproxyban át kell írni!!
+        state.setLight(0); //önteszt funkció végleges befejezése, felirat eltüntetése
         //Ha max sebességgen van, nem gyorsítunk.
         if(state.v()>=10.0)
         {
@@ -116,21 +115,40 @@ void Szimulator::tick()
             if(state.turn()<20)
                 state.setTurn(state.turn()+5);
             else
-                state.setLight(3);
+            {
+                if(state.turn()<=20)
+                {
+                    qDebug() << "Szimulator: Jobbra kanyarodás működik.";
+                    state.setLight(3);
+                }
+                else state.setLight(-1);
+            }
             break;
         case 3:
             if(state.turn()>-20)
                 state.setTurn(state.turn()-5);
             else
-                state.setLight(4);
+            {
+                if(state.turn()>=-20)
+                {
+                    qDebug() << "Szimulator: Balra kanyarodás működik.";
+                    state.setLight(4);
+                }
+                else state.setLight(-1);
+            }
             break;
         case 4:
             if(state.turn()<0)
                 state.setTurn(state.turn()+5);
             else
             {
-                state.setTurn(0);
-                state.setLight(5);
+                if(state.turn()>=0)
+                {
+                    state.setTurn(0);
+                    qDebug() << "Szimulator: Kormány alaphelyzetbe";
+                    state.setLight(5);
+                }
+                else state.setLight(-1);
             }
             break;
         case 5:
@@ -139,8 +157,13 @@ void Szimulator::tick()
             }
             else
             {
-                state.setA(0.0F);
-                state.setLight(6);
+                if(state.v()>=5)
+                {
+                    state.setA(0.0F);
+                    qDebug() << "Szimulator: Gyorsítás működik.";
+                    state.setLight(6);
+                }
+                else state.setLight(-1);
             }
             break;
         case 6:
@@ -149,20 +172,31 @@ void Szimulator::tick()
             }
             else
             {
-                state.setA(0.0F);
-                state.setLight(7);
+                if(state.v()<=0)
+                {
+                    state.setA(0.0F);
+                    qDebug() << "Szimulator: Lassítás működik.";
+                    state.setLight(7);
+                }
+                else state.setLight(-1);
             }
             break;
         case 7:
             state.setA(0.0F);
             state.setV(0.0F);
-            state.setLight(0);
-            state.setStatus(RobotState::Status::Default);
-            qDebug() << "Szimulator: Sikeres Önteszt.";
+            state.setLight(8);
+            break;
+        case 8:
+            if(state.v()==0 && state.a()==0)
+            {
+                state.setStatus(RobotState::Status::Default);
+                qDebug() << "Szimulator: Sikeres önteszt.";
+            }
+            else state.setLight(-1);
             break;
         default:
-            state.setStatus(RobotState::Status::Reset);
-            qDebug() << "Szimulator: Sikertelen Önteszt.";
+            //state.setStatus(RobotState::Status::Reset);
+            qDebug() << "Szimulator: Sikertelen önteszt, reset szükséges.";
         }
         break;
     default:
@@ -176,7 +210,7 @@ void Szimulator::tick()
              << ", y=" << state.y()
              << ", v=" << state.v()
              << ", a=" << state.a()
-             << ", lámpa:" << state.light();
+             << ", Önteszt állapot:" << state.light();
 
     // Állapot küldése
     if (communication.isConnected())
@@ -200,7 +234,7 @@ void Szimulator::dataReady(QDataStream &inputStream)
         state.setStatus(RobotState::Status::Reset);
         break;
     case RobotState::Status::Stopping:
-        if(state.light()==0)
+        if(state.light()==0 || state.light()==8)
         {
             qDebug() << "Szimulator: Stop parancs.";
             state.setStatus(RobotState::Status::Stopping);
@@ -209,7 +243,7 @@ void Szimulator::dataReady(QDataStream &inputStream)
             qDebug() << "Szimulator: Önteszt folyamatban, a parancs nem elérhető.";
         break;
     case RobotState::Status::Accelerate:        
-        if(state.light()==0)
+        if(state.light()==0 || state.light()==8)
         {
             qDebug() << "Szimulator: Gyorsítási parancs.";
             state.setStatus(RobotState::Status::Accelerate);
@@ -218,7 +252,7 @@ void Szimulator::dataReady(QDataStream &inputStream)
             qDebug() << "Szimulator: Önteszt folyamatban, a parancs nem elérhető.";
         break;
     case RobotState::Status::Turn:
-        if(state.light()==0)
+        if(state.light()==0 || state.light()==8)
         {
             qDebug() << "Szimulator: Kanyarodás parancs.";
             state.setTurn(receivedState.turn());
@@ -227,9 +261,14 @@ void Szimulator::dataReady(QDataStream &inputStream)
             qDebug() << "Szimulator: Önteszt folyamatban, a parancs nem elérhető.";
         break;
     case RobotState::Status::SelfTest:
-        qDebug() << "Szimulator: Önteszt parancs.";
-        state.setStatus(RobotState::Status::SelfTest);
-        state.setLight(1.0F);
+        if(state.light()==0|| state.light()==8)
+        {
+            qDebug() << "Szimulator: Önteszt parancs.";
+            state.setStatus(RobotState::Status::SelfTest);
+            state.setLight(1);
+        }
+        else
+            qDebug() << "Szimulator: Önteszt folyamatban, a parancs nem elérhető.";
         break;
     default:
         Q_UNREACHABLE();

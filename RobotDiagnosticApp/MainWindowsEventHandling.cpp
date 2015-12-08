@@ -25,9 +25,9 @@ void MainWindowsEventHandling::stopCommand()
 
 void MainWindowsEventHandling::resetCommand()
 {
+    robot.reset();
     history.graphPositionX.clear();
     history.graphPositionY.clear();
-    robot.reset();
 }
 
 void MainWindowsEventHandling::kormanyChanged(int fok)
@@ -38,9 +38,9 @@ void MainWindowsEventHandling::kormanyChanged(int fok)
 
 void MainWindowsEventHandling::selfTestCommand()
 {
-    history.graphPositionX.clear();
-    history.graphPositionY.clear();
     robot.selftest();
+    history.graphPositionX.clear();
+    history.graphPositionY.clear();;
 }
 
 void MainWindowsEventHandling::historyChanged()

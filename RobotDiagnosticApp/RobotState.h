@@ -36,10 +36,6 @@ public:
         Turn=4,
         /** Öntesztelő állapot */
         SelfTest=5,
-        /** Jobbra kanyarodási parancs */
-        Right = 6,
-        /** Balra kanyarodási parancs */
-        Left = 7
     };
     /** Koordiáták és orientáció a pozició tárolásához */
     typedef struct koord{
@@ -121,9 +117,9 @@ public:
     void setA(float a) { _a = a; }
 
     /** A robot lámpájának állapota. */
-    Q_PROPERTY(bool light READ light WRITE setLight MEMBER _light NOTIFY lightChanged)
-    qint8 light() const { return _light; }
-    void setLight(qint8 light) { _light = light; }
+    Q_PROPERTY(qint16 light READ light WRITE setLight MEMBER _light NOTIFY lightChanged)
+    qint16 light() const { return _light; }
+    void setLight(qint16 light) { _light = light; }
 
     /** Az aktuális állapot QStringként. */
     // In QML, it will be accessible as model.statusName
@@ -158,10 +154,10 @@ signals:
 private:
     Status _status;
     float _timestamp;
-    koord _pos;   /** Pozíció (koordináta) */
+    koord _pos;   /** Pozíció (koordináta, orientáció) */
     float _v;   /** Sebesség (m/s) */
     float _a;   /** Gyorsulás (m/s2) */
-    qint8 _light;
+    qint16 _light;
 
     /** Az állapotok és szöveges verziójuk közti megfeleltetés.
      * A getStatusName() használja. */

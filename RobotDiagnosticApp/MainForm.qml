@@ -111,11 +111,21 @@ Item {
                 anchors.left: parent.left
 
                 // TODO
-                Text{ text: "Állapot: " + (current != null ? current.statusName : "?")}
+                Text{ text:{ if(current.light===0) { "Állapot: " + current.statusName }
+                             else if(current.light===2) "Állapot: Öntesztelés indul"
+                             else if(current.light===3) "Állapot: Jobbra kanyarodás működik."
+                             else if(current.light===4) "Állapot: Balra kanyarodás működik"
+                             else if(current.light===5) "Állapot: Kormány alaphelyzetbe"
+                             else if(current.light===6) "Állapot: Gyorsítás működik"
+                             else if(current.light===7) "Állapot: Lassítás működik"
+                             else if(current.light===8) "Állapot: Sikeres önteszt"
+                             else "Állapot: Sikertelen önteszt, reseteljen!"
+                      }
+                    }
                 Text{ text: "Idő: " + (current!=null ? current.timestamp.toFixed(1) : "?")}
                 Text{ text: "X: " + (current!=null ? current.x.toFixed(3) : "?")}
                 Text{ text: "Y: " + (current!=null ? current.y.toFixed(3) : "?")}
-            Text{ text: "Orientáció: " + (current!=null ? current.orient+"°": "?")}
+                Text{ text: "Orientáció: " + (current!=null ? current.orient+"°": "?")}
                 Text{ text: "Kormány: " + (current!=null ? current.turn+"°": "?")}
                 Text{ text: "V: " + (current != null ? current.v.toFixed(3) : "?")}
                 Text{ text: "A: " + (current != null ? current.a.toFixed(3) : "?")}
