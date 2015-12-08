@@ -5,7 +5,7 @@ Application::Application(int argc, char *argv[])
       robot(history, communication), handler(robot, *engine.rootContext(), history)
 {
     // Szimulátor indítása
-    simulator.start(1.0F); //ha kisebb mint egy, nem számolja a pillanatnyi értékeknél az időt
+    simulator.start(0.5F); //ha kisebb mint egy, nem számolja a pillanatnyi értékeknél az időt
 
     // Csatlakozás a szimulátorhoz.
     communication.connect(QStringLiteral("localhost"),3333);

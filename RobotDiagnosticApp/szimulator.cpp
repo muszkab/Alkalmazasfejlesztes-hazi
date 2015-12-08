@@ -79,32 +79,17 @@ void Szimulator::tick()
         state.setLight(0);
         break;
     case RobotState::Status::Stopping:
-        if (state.v() > 1.5F)
+        if (state.v() > 0)
         {
             qDebug() << "Szimulator: Stop parancs, gyors lassítás";
             state.setA(-1.0F);
         }
-        else if (state.v() > 0.1F)
-        {
-            qDebug() << "Szimulator: Stop parancs, lassú lassítás";
-            state.setA(-0.05F);
-        }
-        else if (state.v() < -1.5F)
-        {
-            qDebug() << "Szimulator: Stop parancs, gyorsítás előre";
-            state.setA(1.0F);
-        }
-        else if (state.v() < -0.1F)
-        {
-            qDebug() << "Szimulator: Stop parancs, lassú gyorsítás előre";
-            state.setA(0.05F);
-        }
         else
         {
-            // Majdnem megállt
             qDebug() << "Szimulator: Megállt.";
             state.setStatus(RobotState::Status::Default);
             state.setA(0.0F);
+            state.setV(0.0F);
         }
         break;
     case RobotState::Status::Accelerate:
@@ -123,7 +108,6 @@ void Szimulator::tick()
         }
         break;
     case RobotState::Status::SelfTest:
-
 
         break;
         /**  Nem biztos h kell bele

@@ -85,8 +85,8 @@ Item {
                     anchors.leftMargin: 0
                     anchors.rightMargin: 0
                     value: 0.5 //?biztos
-                    maximumValue: 40
-                    minimumValue: -40
+                    maximumValue: 20
+                    minimumValue: -20
                     stepSize: 5
                     tickmarksEnabled: true
                     onValueChanged: kormanyChanged(kanyarSlider.value)
@@ -112,7 +112,7 @@ Item {
 
                 // TODO
                 Text{ text: "Állapot: " + (current != null ? current.statusName : "?")}
-                Text{ text: "Idő: " + (current!=null ? current.timestamp : "?")}
+                Text{ text: "Idő: " + (current!=null ? current.timestamp.toFixed(1) : "?")}
                 Text{ text: "X: " + (current!=null ? current.x.toFixed(3) : "?")}
                 Text{ text: "Y: " + (current!=null ? current.y.toFixed(3) : "?")}
                 Text{ text: "Orientáció: " + (current!=null ? current.orient%360+"°": "?")}
