@@ -25,8 +25,8 @@ RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint16 t
 RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
-    if(v>0.0F) newPos.orient=prevPos.orient-prevPos.turn;
-    else newPos.orient=prevPos.orient;
+    if(v==0 || state.light()) newPos.orient=prevPos.orient;
+    else newPos.orient=(prevPos.orient-prevPos.turn+360)%360;
     newPos.x=prevPos.x+cos((double)prevPos.orient/360*2*M_PI)*v*t;
     newPos.y=prevPos.y+sin((double)prevPos.orient/360*2*M_PI)*v*t;
     newPos.turn=prevPos.turn;
@@ -103,26 +103,66 @@ void Szimulator::tick()
         }
         break;
     case RobotState::Status::SelfTest:
-        qDebug() << "Szimulator: Önteszt.";
-        if(state.light())
+        switch(state.light())
         {
+        case 1:
+            qDebug() << "Szimulator: Öntesztelés indul.";
             state.setPos(SetKoordinata(0,0,0,0));
             state.setV(0.0F);
             state.setA(0.0F);
-            state.setLight(0);
-        }
-        else
-        {
-            state.setTurn(0);
-            if(state.v()<5 && state.a() == 0){
-                state.setA(1.0F);}
-            if(state.v()>=5 && state.a() == 1){
-                state.setA(-1.0F);}
-            if (state.v()<0 && state.a() == -1){
+            state.setLight(2);
+            break;
+        case 2:
+            if(state.turn()<20)
+                state.setTurn(state.turn()+5);
+            else
+                state.setLight(3);
+            break;
+        case 3:
+            if(state.turn()>-20)
+                state.setTurn(state.turn()-5);
+            else
+                state.setLight(4);
+            break;
+        case 4:
+            if(state.turn()<0)
+                state.setTurn(state.turn()+5);
+            else
+            {
+                state.setTurn(0);
+                state.setLight(5);
+            }
+            break;
+        case 5:
+            if(state.v()<5){
+                state.setA(1.0F);
+            }
+            else
+            {
                 state.setA(0.0F);
-                state.setV(0.0F);
-                state.setStatus(RobotState::Status::Default);}
-                qDebug() << "Szimulator: Sikeres Önteszt.";
+                state.setLight(6);
+            }
+            break;
+        case 6:
+            if(state.v()>0){
+                state.setA(-1.0F);
+            }
+            else
+            {
+                state.setA(0.0F);
+                state.setLight(7);
+            }
+            break;
+        case 7:
+            state.setA(0.0F);
+            state.setV(0.0F);
+            state.setLight(0);
+            state.setStatus(RobotState::Status::Default);
+            qDebug() << "Szimulator: Sikeres Önteszt.";
+            break;
+        default:
+            state.setStatus(RobotState::Status::Reset);
+            qDebug() << "Szimulator: Sikertelen Önteszt.";
         }
         break;
     default:
@@ -160,16 +200,31 @@ void Szimulator::dataReady(QDataStream &inputStream)
         state.setStatus(RobotState::Status::Reset);
         break;
     case RobotState::Status::Stopping:
-        qDebug() << "Szimulator: Stop parancs.";
-        state.setStatus(RobotState::Status::Stopping);
+        if(state.light()==0)
+        {
+            qDebug() << "Szimulator: Stop parancs.";
+            state.setStatus(RobotState::Status::Stopping);
+        }
+        else
+            qDebug() << "Szimulator: Önteszt folyamatban, a parancs nem elérhető.";
         break;
-    case RobotState::Status::Accelerate:
-        qDebug() << "Szimulator: Gyorsítási parancs.";
-        state.setStatus(RobotState::Status::Accelerate);
+    case RobotState::Status::Accelerate:        
+        if(state.light()==0)
+        {
+            qDebug() << "Szimulator: Gyorsítási parancs.";
+            state.setStatus(RobotState::Status::Accelerate);
+        }
+        else
+            qDebug() << "Szimulator: Önteszt folyamatban, a parancs nem elérhető.";
         break;
     case RobotState::Status::Turn:
-        qDebug() << "Szimulator: Kanyarodás parancs.";
-        state.setTurn(receivedState.turn());
+        if(state.light()==0)
+        {
+            qDebug() << "Szimulator: Kanyarodás parancs.";
+            state.setTurn(receivedState.turn());
+        }
+        else
+            qDebug() << "Szimulator: Önteszt folyamatban, a parancs nem elérhető.";
         break;
     case RobotState::Status::SelfTest:
         qDebug() << "Szimulator: Önteszt parancs.";

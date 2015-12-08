@@ -122,8 +122,8 @@ public:
 
     /** A robot lámpájának állapota. */
     Q_PROPERTY(bool light READ light WRITE setLight MEMBER _light NOTIFY lightChanged)
-    float light() const { return _light; }
-    void setLight(float light) { _light = light; }
+    qint8 light() const { return _light; }
+    void setLight(qint8 light) { _light = light; }
 
     /** Az aktuális állapot QStringként. */
     // In QML, it will be accessible as model.statusName
