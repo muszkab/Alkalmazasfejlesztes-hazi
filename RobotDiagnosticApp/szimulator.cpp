@@ -25,7 +25,7 @@ RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint16 t
 RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
-    if(v>0.1F) newPos.orient=prevPos.orient-prevPos.turn;
+    if(v>0.0F) newPos.orient=prevPos.orient-prevPos.turn;
     else newPos.orient=prevPos.orient;
     newPos.x=prevPos.x+cos((double)prevPos.orient/360*2*M_PI)*v*t;
     newPos.y=prevPos.y+sin((double)prevPos.orient/360*2*M_PI)*v*t;
@@ -53,16 +53,12 @@ void Szimulator::tick()
     state.setPos(PositionCalculate(state.pos(),state.v(),dt));
     state.setV(state.v() + state.a()*dt);
 
-    if (state.v()<-10.0)
-    {
-        state.setV( -10.0F );
-    }
     if (state.v()>10.0)
     {
         state.setV( 10.0F );
     }
 
-    state.setLight( state.v()<=0.1F ? 1.0F : 0.0F );
+    //state.setLight( state.v()<=0.1F ? 1.0F : 0.0F );
 
     // Magasabb szintű funkciók
     switch(state.status())
@@ -81,7 +77,7 @@ void Szimulator::tick()
     case RobotState::Status::Stopping:
         if (state.v() > 0)
         {
-            qDebug() << "Szimulator: Stop parancs, gyors lassítás";
+            qDebug() << "Szimulator: Stop parancs, lassítás";
             state.setA(-1.0F);
         }
         else
@@ -103,52 +99,34 @@ void Szimulator::tick()
         else
         {
             qDebug() << "Szimulator: Gyorsítás.";
-            state.setStatus(RobotState::Status::Accelerate);
             state.setA(1.0F);
         }
         break;
     case RobotState::Status::SelfTest:
         qDebug() << "Szimulator: Önteszt.";
-
-        if(state.v()<5 && state.a() == 0){
-            state.setA(1.0F);}
-        if(state.v()>=5 && state.a() == 1){
-            state.setA(-1.0F);}
-        if (state.v()<0 && state.a() == -1){
-            qDebug() << "Szimulator: Sikeres Önteszt.";
-            state.setA(0.0F);
+        if(state.light())
+        {
+            state.setPos(SetKoordinata(0,0,0,0));
             state.setV(0.0F);
-            state.setStatus(RobotState::Status::Default);}
-        break;
-
-        /**  Nem biztos h kell bele
-         *
-    case RobotState::Status::Right:
-        qDebug() << "Szimulator: Right parancs, alfa fok jobbra";
-        if(state.pos().orient==0)
-        {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, 359, state.pos().turn));
+            state.setA(0.0F);
+            state.setLight(0);
         }
         else
         {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, state.pos().orient-state.pos().turn, state.pos().turn));
-        }
-
-        break;
-    case RobotState::Status::Left:
-        qDebug() << "Szimulator: Left parancs, alfa fok balra";
-        if(state.pos().orient==359)
-        {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, 0,state.pos().turn));
-        }
-        else
-        {
-            state.setPos(SetKoordinata(state.pos().x, state.pos().y, state.pos().orient+alfa,state.pos().turn));
+            state.setTurn(0);
+            if(state.v()<5 && state.a() == 0){
+                state.setA(1.0F);}
+            if(state.v()>=5 && state.a() == 1){
+                state.setA(-1.0F);}
+            if (state.v()<0 && state.a() == -1){
+                state.setA(0.0F);
+                state.setV(0.0F);
+                state.setStatus(RobotState::Status::Default);}
+                qDebug() << "Szimulator: Sikeres Önteszt.";
         }
         break;
-        */
-  //  default:
-   //     Q_UNREACHABLE();
+    default:
+        Q_UNREACHABLE();
     }
 
     qDebug() << "Szimulator: tick (" << state.timestamp()
@@ -196,6 +174,7 @@ void Szimulator::dataReady(QDataStream &inputStream)
     case RobotState::Status::SelfTest:
         qDebug() << "Szimulator: Önteszt parancs.";
         state.setStatus(RobotState::Status::SelfTest);
+        state.setLight(1.0F);
         break;
     default:
         Q_UNREACHABLE();
