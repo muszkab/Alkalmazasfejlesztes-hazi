@@ -108,10 +108,17 @@ void Szimulator::tick()
         }
         break;
     case RobotState::Status::SelfTest:
+        qDebug() << "Szimulator: Önteszt.";
 
-        if(true){
-            qDebug() << "Szimulator: Önteszt";
-        }
+        if(state.v()<5 && state.a() == 0){
+            state.setA(1.0F);}
+        if(state.v()>=5 && state.a() == 1){
+            state.setA(-1.0F);}
+        if (state.v()<0 && state.a() == -1){
+            qDebug() << "Szimulator: Sikeres Önteszt.";
+            state.setA(0.0F);
+            state.setV(0.0F);
+            state.setStatus(RobotState::Status::Default);}
         break;
 
         /**  Nem biztos h kell bele
@@ -140,8 +147,8 @@ void Szimulator::tick()
         }
         break;
         */
-    default:
-        Q_UNREACHABLE();
+  //  default:
+   //     Q_UNREACHABLE();
     }
 
     qDebug() << "Szimulator: tick (" << state.timestamp()
@@ -185,10 +192,11 @@ void Szimulator::dataReady(QDataStream &inputStream)
     case RobotState::Status::Turn:
         qDebug() << "Szimulator: Kanyarodás parancs.";
         state.setTurn(receivedState.turn());
+        break;
     case RobotState::Status::SelfTest:
         qDebug() << "Szimulator: Önteszt parancs.";
         state.setStatus(RobotState::Status::SelfTest);
-    break;
+        break;
     default:
         Q_UNREACHABLE();
     }
