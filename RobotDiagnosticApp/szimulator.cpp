@@ -1,5 +1,6 @@
 #include <QtMath>
 #include "szimulator.h"
+#include <QMessageBox>
 
 #define alfa 15
 
@@ -203,8 +204,11 @@ void Szimulator::tick()
             //alaphelyzetbe állítás
             if(state.v()==0 && state.a()==0)
             {
+                QMessageBox msgBox;
+                msgBox.setText("Sikeres önteszt!");
+                msgBox.exec();
                 state.setStatus(RobotState::Status::Default);
-                qDebug() << "Szimulator: Sikeres önteszt.";
+                qDebug() << "Szimulator: Sikeres önteszt!";
             }
             else state.setLight(-1);
             break;

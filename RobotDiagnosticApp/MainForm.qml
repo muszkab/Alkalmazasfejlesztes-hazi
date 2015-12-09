@@ -116,7 +116,7 @@ Item {
                              else if(current.light===5) "Állapot: Kormány alaphelyzet"
                              else if(current.light===6) "Állapot: Gyorsítás OK"
                              else if(current.light===7) "Állapot: Lassítás OK"
-                             else if(current.light===8) "Állapot: Sikeres önteszt"
+                             else if(current.light===8) "Állapot:" + current.statusName;
                              else                       "Állapot: Sikertelen önteszt!"
                       }
                     }
