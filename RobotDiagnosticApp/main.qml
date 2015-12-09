@@ -10,7 +10,7 @@ ApplicationWindow {
     height: 600
     visible: true
 
-    // Signalok TODO
+    // Signalok
     signal resetCommandCpp()
     signal accelerateCommandCpp()
     signal stopCommandCpp()
@@ -49,4 +49,3 @@ ApplicationWindow {
         }
     }
 }
-

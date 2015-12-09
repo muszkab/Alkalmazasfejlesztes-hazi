@@ -21,14 +21,12 @@ Canvas{
 
         // adatsorok kirajzolása
         drawDataset(context, graphPositionX, graphPositionY, "rgba(0,0,255,1)", 1.0);
-
     }
 
     // Vízszintes vonal rajzolása
     function drawHorizontalLine(context, dataValue, strokeStyle, verticalScaler)
     {
         var offset = height/2;
-
         context.beginPath();
         context.lineWidth = 1;
         context.strokeStyle = strokeStyle;
@@ -43,7 +41,6 @@ Canvas{
     function drawVerticalLine(context, dataValue, strokeStyle, horizontalScaler)
     {
         var offset = width/2;
-
         context.beginPath();
         context.lineWidth = 1;
         context.strokeStyle = strokeStyle;
@@ -57,14 +54,11 @@ Canvas{
     function drawDataset(context, datarow1, datarow2, strokeStyle, verticalScaler)
     {
         var offsetw = width/2;
-        var offseth = height/2;
-
+        var offseth = height/2;      
         context.beginPath();
         context.lineWidth = 3;
         context.strokeStyle = strokeStyle;
-
         context.moveTo(offsetw, offseth);
-
         // A vektoron végigmenve behúzzuk a pálya szakaszait.
         for(var i=0; i<graphPositionX.length; i++)
         {

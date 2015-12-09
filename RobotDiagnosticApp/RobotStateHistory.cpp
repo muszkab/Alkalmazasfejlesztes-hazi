@@ -20,7 +20,7 @@ void RobotStateHistory::Add(const RobotState& state)
     //  ezekből olvassák ki az adatokat, mivel erre a fenti container nem alkalmas. (Az std::vector
     //  nem támogatja a Qt metaobject rendszerét.)
 
-    //Teljesen más megoldás, nekünk minden egyes lista elem kell a megjelenítéshez, nincs törlés, mindig egyet hozzá adunk
+    //Nekünk minden egyes lista elem kell a megjelenítéshez, nincs törlés, mindig egyet hozzá adunk
     graphVelocities.append(currentState->v());
     graphPositionX.append(currentState->x());
     graphPositionY.append(currentState->y());

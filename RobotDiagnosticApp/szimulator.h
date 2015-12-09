@@ -30,8 +30,22 @@ public:
      */
     void start(float intervalSec);
 
-    /** A pozíció számoláshoz szükséges függvények */
+    /**
+     * @brief A pozíció beállításához szükséges függvény.
+     * @param x X koordinátát állítja be.
+     * @param y Y koordinátát állítja be.
+     * @param o Orientációt adhatjuk meg.
+     * @param t Kanyarodás mértéke.
+     */
     RobotState::koord SetKoordinata(float x, float y, qint16 o, qint16 t);
+
+    /**
+     * @brief Pozíciót (x,y) számítja ki minden egyes tick-nél.
+     * @param prevPos Előző állapot pozíció adatai.
+     * @param v Sebesség
+     * @param t Kanyarosád mértéke fokban
+     * @return
+     */
     RobotState::koord PositionCalculate (RobotState::koord prevPos, float v, float t);
 
 private:

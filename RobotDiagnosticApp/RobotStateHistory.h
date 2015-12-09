@@ -43,15 +43,15 @@ public:
     void Add(const RobotState& state);
 
     /** \addtogroup Tárolók a közvetlen megjelenítéshez.
-     * Minden elemet tárolnak elemet tárolják.
+     * Minden elemet tárolnak.
      * Az Add() frissíti.
      *  @{
      */
-
     QList<int> graphVelocities;
     QList<double> graphPositionX;
     QList<double> graphPositionY;
     QList<int> vectorOrient;
+    /** @}*/
 
 signals:
     /** Add() után kiadott signal. */

@@ -17,14 +17,13 @@ Canvas{
         drawCircle(context, 70, "rgba(0,0,0,1)")
 
         // Vektor kirajzolása
-        drawVector(context, current.orient%360, 7*current.v, "rgba(255,0,0,1)"); //current állapottal egyszerűbb
+        drawVector(context, current.orient%360, 7*current.v, "rgba(255,0,0,1)");
     }
 
     // Vízszintes vonal rajzolása
     function drawHorizontalLine(context, dataValue, strokeStyle, verticalScaler)
     {
         var offset = height/2;
-
         context.beginPath();
         context.lineWidth = 1;
         context.strokeStyle = strokeStyle;
@@ -39,7 +38,6 @@ Canvas{
     function drawVerticalLine(context, dataValue, strokeStyle, horizontalScaler)
     {
         var offset = width/2;
-
         context.beginPath();
         context.lineWidth = 1;
         context.strokeStyle = strokeStyle;
@@ -57,7 +55,6 @@ Canvas{
         context.beginPath();
         context.lineWidth = 1;
         context.strokeStyle = strokeStyle;
-
         // kör kirajzolása
         context.arc(offsetw, offsetw, radius, 0, 360, false);
         context.stroke();
@@ -75,9 +72,5 @@ Canvas{
         // Mozgás a vektor végéig
         context.lineTo(offsetw - abs*Math.cos(Math.PI- arg*Math.PI/180), offseth - abs*Math.sin(Math.PI - arg*Math.PI/180));
         context.stroke();
-
-
     }
-
-
 }

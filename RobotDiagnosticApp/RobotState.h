@@ -29,8 +29,7 @@ public:
         Reset = 1,
         /** Stop parancs. Ez az állapot akkor is érvényes marad, ha megállt a robot. */
         Stopping = 2,
-        /** Gyorsítási parancs a robotnak. A gyorsítás mértékét a robot
-         * átveszi a RobotState::a tulajdonságból. */
+        /** Gyorsítási parancs a robotnak. */
         Accelerate = 3,
         /** Kanyarodás parancs. A fordulás mértékét kívülről kapja. */
         Turn=4,
@@ -43,10 +42,10 @@ public:
         float x;
         /** Y koordináta */
         float y;
-        /** Orientáció, 0-tól 2*PI-ig lehet értéke.
+        /** Orientáció, 0-tól 360-ig lehet értéke.
          * Sebesség irányát is ez írja le.*/
         qint16 orient;
-        /** Fordulás mértékét jellemzi */
+        /** Fordulás mértékét jellemzi fokban. */
         qint16 turn;
     }koord;
 
@@ -59,10 +58,10 @@ public:
      * @brief Konstruktor adott értékekkel.
      * @param status    Robot állapot
      * @param timestamp Időbélyeg
-     * @param pos Pozíció
+     * @param pos Pozíció: x és y koordináta, orientáció, kanyarodás mértéke
      * @param v Sebesség
      * @param a Gyorsulás
-     * @param light Robot lámpájának állapota
+     * @param light Robot öntesztelő folyamatának állapota (1-8)
      */
     RobotState(Status status, qint64 timestamp,
        koord pos, float v, float a, qint8 light);
@@ -116,7 +115,7 @@ public:
     float a() const { return _a; }
     void setA(float a) { _a = a; }
 
-    /** A robot lámpájának állapota. */
+    /** A robot lámpájának (önteszt használja) állapota. */
     Q_PROPERTY(qint16 light READ light WRITE setLight MEMBER _light NOTIFY lightChanged)
     qint16 light() const { return _light; }
     void setLight(qint16 light) { _light = light; }
@@ -152,12 +151,12 @@ signals:
     void lightChanged();
 
 private:
-    Status _status;
-    float _timestamp;
+    Status _status;   /** Robot állapot */
+    float _timestamp; /** Időpillanat */
     koord _pos;   /** Pozíció (koordináta, orientáció) */
     float _v;   /** Sebesség (m/s) */
     float _a;   /** Gyorsulás (m/s2) */
-    qint16 _light;
+    qint16 _light; /** Robot önteszt funkciója használja */
 
     /** Az állapotok és szöveges verziójuk közti megfeleltetés.
      * A getStatusName() használja. */

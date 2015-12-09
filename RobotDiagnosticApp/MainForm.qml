@@ -84,7 +84,7 @@ Item {
                     anchors.right: parent.right
                     anchors.leftMargin: 0
                     anchors.rightMargin: 0
-                    value: 0.5 //?biztos
+                    value: 0
                     maximumValue: 20
                     minimumValue: -20
                     stepSize: 5
@@ -109,8 +109,6 @@ Item {
                 anchors.top: parent.top
                 anchors.bottom: parent.bottom
                 anchors.left: parent.left
-
-                // TODO
                 Text{ text:{ if(current.light===0) { "Állapot: " + current.statusName }
                              else if(current.light===2) "Állapot: Öntesztelés indul"
                              else if(current.light===3) "Állapot: Jobbra kanyarodás OK"
@@ -230,7 +228,6 @@ Item {
                 VectorGraph{
                     id: vectorGraph
                     objectName: "vectorGraph"
-
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     Layout.minimumWidth: 150
@@ -268,7 +265,6 @@ Item {
         anchors.rightMargin: 0
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 0
-        // Felfelé a leglejjebb lógó GB-hoz igazodik
         anchors.top: felsoGB.bottom
         anchors.topMargin: 0
 
@@ -317,21 +313,19 @@ Item {
                 // Az objectName akkor jó, ha C++ oldalról kell megkeresnünk egy QML oldalon definiált
                 //  objektumot a findChild metódus rekurzív hívásaival.
                 objectName: "historyGraph"
-
                 // A RowLayout erre az elemre vonatkozó elhelyezés beállításai.
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Layout.minimumWidth: 200
                 Layout.preferredWidth: 400
                 Layout.minimumHeight: 150
-
                 // Ezek pedig a HistoryGraph tulajdonságai, amiket majd ott definiálunk,
-                //  itt pedig értéket adunk nekik. Az alábbi változókat (pl. historyGraphTimestamps)
-                //  szintén a MainWindowsEventHandling::historyChanged metódus teszi elérhetővé
-                //  a QML oldal számára.
+                // itt pedig értéket adunk nekik. Az alábbi változókat (pl. historyGraphTimestamps)
+                // szintén a MainWindowsEventHandling::historyChanged metódus teszi elérhetővé
+                // a QML oldal számára.
                 // Ezek az értékek C++ oldalon folyamatosan változnak. Minden változás esetén
-                //  lefut a MainWindowsEventHandling::historyChanged és ezeket újraregisztrálja a QML
-                //  oldal számára, így frissülni fog a HistoryGraph tulajdonság is.
+                // lefut a MainWindowsEventHandling::historyChanged és ezeket újraregisztrálja a QML
+                // oldal számára, így frissülni fog a HistoryGraph tulajdonság is.
                 graphPositionX: historyGraphPositionX
                 graphPositionY: historyGraphPositionY
            }

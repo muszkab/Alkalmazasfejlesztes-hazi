@@ -26,6 +26,7 @@ void MainWindowsEventHandling::stopCommand()
 void MainWindowsEventHandling::resetCommand()
 {
     robot.reset();
+    //Töröljük a térképen az eddig kirajzolt utat.
     history.graphPositionX.clear();
     history.graphPositionY.clear();
 }
@@ -39,6 +40,7 @@ void MainWindowsEventHandling::kormanyChanged(int fok)
 void MainWindowsEventHandling::selfTestCommand()
 {
     robot.selftest();
+    //Töröljük a térképen az eddig kirajzolt utat.
     history.graphPositionX.clear();
     history.graphPositionY.clear();;
 }
@@ -48,11 +50,7 @@ void MainWindowsEventHandling::historyChanged()
     // Ahhoz, hogy frissüljenek a QML oldali adatok, frissíteni kell a változók összekapcsolását.
     qmlContext.setContextProperty(QStringLiteral("historyModel"), QVariant::fromValue(history.stateList));
     qmlContext.setContextProperty(QStringLiteral("current"), QVariant::fromValue(history.currentState));
-
-    //qmlContext.setContextProperty(QStringLiteral("historyGraphTimestamps"), QVariant::fromValue(history.graphTimestamps));
     qmlContext.setContextProperty(QStringLiteral("historyGraphVelocity"), QVariant::fromValue(history.graphVelocities));
-   // qmlContext.setContextProperty(QStringLiteral("historyGraphAcceleration"), QVariant::fromValue(history.graphAcceleration));
-
     qmlContext.setContextProperty(QStringLiteral("historyGraphPositionX"), QVariant::fromValue(history.graphPositionX));
     qmlContext.setContextProperty(QStringLiteral("historyGraphPositionY"), QVariant::fromValue(history.graphPositionY));
     qmlContext.setContextProperty(QStringLiteral("historyVectorOrient"), QVariant::fromValue(history.vectorOrient));

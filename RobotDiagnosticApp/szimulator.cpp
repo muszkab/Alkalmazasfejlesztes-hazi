@@ -25,10 +25,15 @@ RobotState::koord Szimulator::SetKoordinata(float x, float y, qint16 o, qint16 t
 RobotState::koord Szimulator::PositionCalculate (RobotState::koord prevPos, float v, float t)
 {
     RobotState::koord newPos;
+    //Ha áll a robot, nem változik az orientáció. Ha öntesztelő állapotban, nem lehet kanyarodni.
     if(v==0 || state.light()) newPos.orient=prevPos.orient;
+    //Orientációhoz hozzáadjuk az aktuális turn értéket (negatív előjellel), csak pozitív és 360-nál kisebb értéke lehet.
     else newPos.orient=(prevPos.orient-prevPos.turn+360)%360;
+    //X koordináta számolása az orientáció, sebesség alapján (koszinusz)
     newPos.x=prevPos.x+cos((double)prevPos.orient/360*2*M_PI)*v*t;
+    //Y koordináta számolása az orientáció, sebesség alapján (szinusz)
     newPos.y=prevPos.y+sin((double)prevPos.orient/360*2*M_PI)*v*t;
+    //A kanyarodás (turn) mértékét kívülről kapja a Robotproxy felől,a csúszka állásának megfelelően.
     newPos.turn=prevPos.turn;
     return newPos;
 }
@@ -53,7 +58,7 @@ void Szimulator::tick()
     state.setPos(PositionCalculate(state.pos(),state.v(),dt));
     state.setV(state.v() + state.a()*dt);
 
-    if (state.v()>10.0)
+    if (state.v()>10.0) //Maximum 10 m/s-val megy a robot
     {
         state.setV( 10.0F );
     }
@@ -89,7 +94,7 @@ void Szimulator::tick()
         break;
     case RobotState::Status::Accelerate:
         state.setLight(0); //önteszt funkció végleges befejezése, felirat eltüntetése
-        //Ha max sebességgen van, nem gyorsítunk.
+        //Ha max sebességgen van, nem gyorsítunk, alap állapotba lépünk.
         if(state.v()>=10.0)
         {
             state.setStatus(RobotState::Status::Default);
@@ -102,9 +107,11 @@ void Szimulator::tick()
         }
         break;
     case RobotState::Status::SelfTest:
+        //light változó alapján megy végig az önteszt fázisain
         switch(state.light())
         {
         case 1:
+            //reseteljük a paramétereket
             qDebug() << "Szimulator: Öntesztelés indul.";
             state.setPos(SetKoordinata(0,0,0,0));
             state.setV(0.0F);
@@ -112,6 +119,7 @@ void Szimulator::tick()
             state.setLight(2);
             break;
         case 2:
+            //kanyarodás teszt
             if(state.turn()<20)
                 state.setTurn(state.turn()+5);
             else
@@ -125,6 +133,7 @@ void Szimulator::tick()
             }
             break;
         case 3:
+            //kanyarodás teszt
             if(state.turn()>-20)
                 state.setTurn(state.turn()-5);
             else
@@ -138,6 +147,7 @@ void Szimulator::tick()
             }
             break;
         case 4:
+            //kanyarodás teszt
             if(state.turn()<0)
                 state.setTurn(state.turn()+5);
             else
@@ -152,6 +162,7 @@ void Szimulator::tick()
             }
             break;
         case 5:
+            //gyorsítás teszt
             if(state.v()<5){
                 state.setA(1.0F);
             }
@@ -167,6 +178,7 @@ void Szimulator::tick()
             }
             break;
         case 6:
+            //lassítás teszt
             if(state.v()>0){
                 state.setA(-1.0F);
             }
@@ -182,11 +194,13 @@ void Szimulator::tick()
             }
             break;
         case 7:
+            //megállás
             state.setA(0.0F);
             state.setV(0.0F);
             state.setLight(8);
             break;
         case 8:
+            //alaphelyzetbe állítás
             if(state.v()==0 && state.a()==0)
             {
                 state.setStatus(RobotState::Status::Default);
@@ -195,7 +209,6 @@ void Szimulator::tick()
             else state.setLight(-1);
             break;
         default:
-            //state.setStatus(RobotState::Status::Reset);
             qDebug() << "Szimulator: Sikertelen önteszt, reset szükséges.";
         }
         break;
