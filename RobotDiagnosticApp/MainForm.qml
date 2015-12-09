@@ -147,7 +147,11 @@ Item {
                 width: 150
                 height: 150
                 source: "kormany.png"
-                rotation: 3*current.turn
+                rotation:
+                {
+                    if(current.light) 3*current.turn
+                    else 3*kanyarSlider.value
+                }
             }
 
             Rectangle{
