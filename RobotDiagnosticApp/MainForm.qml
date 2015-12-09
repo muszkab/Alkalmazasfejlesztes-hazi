@@ -113,13 +113,13 @@ Item {
                 // TODO
                 Text{ text:{ if(current.light===0) { "Állapot: " + current.statusName }
                              else if(current.light===2) "Állapot: Öntesztelés indul"
-                             else if(current.light===3) "Állapot: Jobbra kanyarodás működik."
-                             else if(current.light===4) "Állapot: Balra kanyarodás működik"
+                             else if(current.light===3) "Állapot: Jobbra kanyarodás OK."
+                             else if(current.light===4) "Állapot: Balra kanyarodás OK"
                              else if(current.light===5) "Állapot: Kormány alaphelyzetbe"
-                             else if(current.light===6) "Állapot: Gyorsítás működik"
-                             else if(current.light===7) "Állapot: Lassítás működik"
-                             else if(current.light===8) "Állapot: Sikeres önteszt"
-                             else "Állapot: Sikertelen önteszt, reseteljen!"
+                             else if(current.light===6) "Állapot: Gyorsítás OK"
+                             else if(current.light===7) "Állapot: Lassítás OK"
+                             else if(current.light===8) "Állapot:" + current.statusName;
+                             else "Állapot: Sikertelen önteszt!"
                       }
                     }
                 Text{ text: "Idő: " + (current!=null ? current.timestamp.toFixed(1) : "?")}
