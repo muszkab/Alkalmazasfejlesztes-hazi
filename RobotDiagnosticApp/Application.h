@@ -18,7 +18,7 @@ class Application : public QApplication
 {
 public:
     /** Konstruktor. Alapvető példányosítások és signal bekötések. */
-    Application(int argc, char *argv[]);
+    Application(int & argc, char ** argv);
     ~Application() = default;
 
 private:

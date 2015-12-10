@@ -6,7 +6,7 @@ import QtQuick.Dialogs 1.2
 // Főablak
 ApplicationWindow {
     title: qsTr("RobotDiagnosticApp")
-    width: 800
+    width: 810
     height: 600
     visible: true
 
@@ -42,7 +42,7 @@ ApplicationWindow {
             stopCommandCpp();
         }
         onSelfTestCommand: {
-            selfTestCommandCpp()
+            selfTestCommandCpp();
         }
         onKormanyChanged:   {
             kormanyChangedCpp(fok);

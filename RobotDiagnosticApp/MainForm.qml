@@ -140,7 +140,7 @@ Item {
             Image{
                 id: kormany
                 anchors.top: parent.top
-                anchors.left: currValGB.right
+                anchors.left: parent.left
                 anchors.leftMargin: 15
                 width: 150
                 height: 150

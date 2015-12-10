@@ -1,6 +1,6 @@
 #include "Application.h"
 
-Application::Application(int argc, char *argv[])
+Application::Application(int & argc, char ** argv)
     : QApplication(argc, argv), simulator(3333), engine(), history(), communication(),
       robot(history, communication), handler(robot, *engine.rootContext(), history)
 {
