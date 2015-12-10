@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writeto',['WriteTo',['../class_robot_state.html#a20af6823886f0e71aedc22927bdfe670',1,'RobotState']]]
+  ['updatestripes',['updateStripes',['../dynsections_8js.html#a8f7493ad859d4fbf2523917511ee7177',1,'dynsections.js']]]
 ];

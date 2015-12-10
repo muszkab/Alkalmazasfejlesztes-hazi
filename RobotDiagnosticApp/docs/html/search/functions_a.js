@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['operator_3c_3c',['operator&lt;&lt;',['../_robot_state_8cpp.html#af4f0db12d4912206a8c0c3c9de90cdcb',1,'operator&lt;&lt;(QDataStream &amp;stream, const RobotState &amp;state):&#160;RobotState.cpp'],['../_robot_state_8h.html#a32f2c1974f6e43c209b2c3a18e666cae',1,'operator&lt;&lt;(QDataStream &amp;, const RobotState &amp;):&#160;RobotState.cpp']]],
-  ['operator_3e_3e',['operator&gt;&gt;',['../_robot_state_8cpp.html#a806e1633661916ae5400a787676425cf',1,'operator&gt;&gt;(QDataStream &amp;stream, RobotState &amp;state):&#160;RobotState.cpp'],['../_robot_state_8h.html#ae544fc2f81c7b6015ee43b164250d6d5',1,'operator&gt;&gt;(QDataStream &amp;, RobotState &amp;):&#160;RobotState.cpp']]],
-  ['orient',['orient',['../class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b',1,'RobotState']]],
-  ['orientchanged',['orientChanged',['../class_robot_state.html#a0d655b72fff39b3b8bf36e19dd97bea4',1,'RobotState']]]
+  ['main',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['mainwindowseventhandling',['MainWindowsEventHandling',['../class_main_windows_event_handling.html#a3bff792b78f5ac6762547d03b3d8ddde',1,'MainWindowsEventHandling']]]
 ];

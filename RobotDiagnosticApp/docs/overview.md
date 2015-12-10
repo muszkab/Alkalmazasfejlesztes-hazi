@@ -1,4 +1,4 @@
-@mainpage
+﻿@mainpage
 @tableofcontents
 
 <a href="https://www.youtube.com/watch?v=DFJsDSGP1IQ&ab_channel=GyulaSzab%C3%B3"> A funkciókat bemutató videó</a>
@@ -100,4 +100,10 @@ Az alábbi képeken látszódik, hogy a fejlesztés során használtunk több k�
 ![Git Extensions](diagram/Git_branchek.png)
 
 ![Git Extensions](diagram/Git_branchek_2.png)
+
+@section Bónuszpontok Bónuszpontok
+
+Az alábbi bónuszfeladatokat tartalmazza a program:
+
+  * Önteszt funkció
 

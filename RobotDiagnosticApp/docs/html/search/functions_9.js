@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['mainwindowseventhandling',['MainWindowsEventHandling',['../class_main_windows_event_handling.html#a3bff792b78f5ac6762547d03b3d8ddde',1,'MainWindowsEventHandling']]]
+  ['light',['light',['../class_robot_state.html#aef8dc84153eeab852d62e15c63922e18',1,'RobotState']]],
+  ['lightchanged',['lightChanged',['../class_robot_state.html#a78580428d5406a316d577af101ca1928',1,'RobotState']]]
 ];

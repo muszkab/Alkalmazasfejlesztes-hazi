@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['light',['light',['../class_robot_state.html#aef8dc84153eeab852d62e15c63922e18',1,'RobotState']]],
-  ['lightchanged',['lightChanged',['../class_robot_state.html#a78580428d5406a316d577af101ca1928',1,'RobotState']]]
+  ['kormanychanged',['kormanyChanged',['../class_main_windows_event_handling.html#aba3ac50d366afceb4c638e5d0bc487cb',1,'MainWindowsEventHandling']]]
 ];

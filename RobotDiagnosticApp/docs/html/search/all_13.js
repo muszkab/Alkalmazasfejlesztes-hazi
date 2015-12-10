@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['_7eapplication',['~Application',['../class_application.html#a062db49b40383051e3d3c2bd50ec9670',1,'Application']]],
-  ['_7ecommunication',['~Communication',['../class_communication.html#a75ba08ce908d45251e28e4c1db94e6f4',1,'Communication']]],
-  ['_7ecommunicationserialport',['~CommunicationSerialPort',['../class_communication_serial_port.html#ac631532ede844a11573ec022827927eb',1,'CommunicationSerialPort']]],
-  ['_7ecommunicationtcpsocket',['~CommunicationTcpSocket',['../class_communication_tcp_socket.html#a29a454a1cd1e2373d181c4d0c05c7e94',1,'CommunicationTcpSocket']]],
-  ['_7ecommunicationtcpsocketclient',['~CommunicationTcpSocketClient',['../class_communication_tcp_socket_client.html#a5b19ff422ca1bb012a6f402f24bcebdc',1,'CommunicationTcpSocketClient']]],
-  ['_7ecommunicationtcpsocketserver',['~CommunicationTcpSocketServer',['../class_communication_tcp_socket_server.html#a30c6d60f852cac341e568535a324f724',1,'CommunicationTcpSocketServer']]],
-  ['_7emainwindowseventhandling',['~MainWindowsEventHandling',['../class_main_windows_event_handling.html#a115bb94592f9b3ef188f70b037c48377',1,'MainWindowsEventHandling']]],
-  ['_7erobotproxy',['~RobotProxy',['../class_robot_proxy.html#a25c17a84527c3df0e85ae52f650f8f10',1,'RobotProxy']]],
-  ['_7erobotstate',['~RobotState',['../class_robot_state.html#a87369e3d52968fc5061d5c6a7d52250e',1,'RobotState']]],
-  ['_7erobotstatehistory',['~RobotStateHistory',['../class_robot_state_history.html#a9a57af7dcd7db519e5fc0a2e757146c0',1,'RobotStateHistory']]],
-  ['_7eszimulator',['~Szimulator',['../class_szimulator.html#ad6c62c6b6373dffe04c99c5716ce4a75',1,'Szimulator']]]
+  ['v',['v',['../class_robot_state.html#aa573299aa7b4ba08edba13e316f5974e',1,'RobotState::v()'],['../class_robot_state.html#ac97616dc44e3a9845e4d06b328bcdbf2',1,'RobotState::v() const '],['../jquery_8js.html#a8b88915d3d3a06e98248a89807b077fa',1,'V():&#160;jquery.js']]],
+  ['variables_5f0_2ejs',['variables_0.js',['../variables__0_8js.html',1,'']]],
+  ['variables_5f1_2ejs',['variables_1.js',['../variables__1_8js.html',1,'']]],
+  ['variables_5f2_2ejs',['variables_2.js',['../variables__2_8js.html',1,'']]],
+  ['variables_5f3_2ejs',['variables_3.js',['../variables__3_8js.html',1,'']]],
+  ['variables_5f4_2ejs',['variables_4.js',['../variables__4_8js.html',1,'']]],
+  ['variables_5f5_2ejs',['variables_5.js',['../variables__5_8js.html',1,'']]],
+  ['variables_5f6_2ejs',['variables_6.js',['../variables__6_8js.html',1,'']]],
+  ['variables_5f7_2ejs',['variables_7.js',['../variables__7_8js.html',1,'']]],
+  ['variables_5f8_2ejs',['variables_8.js',['../variables__8_8js.html',1,'']]],
+  ['vchanged',['vChanged',['../class_robot_state.html#ae84b6f4d81097590cea92f109b94e71f',1,'RobotState']]],
+  ['vectororient',['vectorOrient',['../group___t_xC3_xA1rol_xC3_xB3k.html#gab13a5c3bc64237cc95301c3359a757c8',1,'RobotStateHistory']]]
 ];

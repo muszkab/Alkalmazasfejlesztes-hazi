@@ -1,7 +1,29 @@
 var searchData=
 [
-  ['timestamp',['timestamp',['../class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a',1,'RobotState']]],
-  ['timestampchanged',['timestampChanged',['../class_robot_state.html#a3a1fcbe5c815beeae93fad74089e0a36',1,'RobotState']]],
-  ['turn',['turn',['../class_robot_proxy.html#a93819bfa826907c9f36138db4f3252f8',1,'RobotProxy::turn()'],['../class_robot_state.html#a625109036cc72e8b01bb5cc559a40f57',1,'RobotState::turn()']]],
-  ['turnchanged',['turnChanged',['../class_robot_state.html#abf8f666b74dbbdeea6902e22d69a7d2f',1,'RobotState']]]
+  ['searchbox',['SearchBox',['../search_8js.html#a52066106482f8136aa9e0ec859e8188f',1,'search.js']]],
+  ['searchresults',['SearchResults',['../search_8js.html#a9189b9f7a32b6bc78240f40348f7fe03',1,'search.js']]],
+  ['selftest',['selftest',['../class_robot_proxy.html#ac8632633b6638e0b1ab7901d263cc88c',1,'RobotProxy']]],
+  ['selftestcommand',['selfTestCommand',['../class_main_windows_event_handling.html#afe221b0d91cbeff80cd2f8eaf991c858',1,'MainWindowsEventHandling']]],
+  ['send',['send',['../class_communication.html#a758523fe047afcb715d2c62f469570aa',1,'Communication']]],
+  ['sendbuffercontent',['sendBufferContent',['../class_communication.html#ac818c645c8ed63af3e871f017e30ed02',1,'Communication::sendBufferContent()'],['../class_communication_serial_port.html#a8f5ece62f8c14851f2f81100283b392f',1,'CommunicationSerialPort::sendBufferContent()'],['../class_communication_tcp_socket.html#abe7e810371ab1df67adacaea55f7b82a',1,'CommunicationTcpSocket::sendBufferContent()']]],
+  ['seta',['setA',['../class_robot_state.html#aa45dd8288a784f8fc3f64ceddf143620',1,'RobotState']]],
+  ['setclassattr',['setClassAttr',['../search_8js.html#a499422fc054a5278ae32801ec0082c56',1,'search.js']]],
+  ['setkeyactions',['setKeyActions',['../search_8js.html#a98192fa2929bb8e4b0a890a4909ab9b2',1,'search.js']]],
+  ['setkoordinata',['SetKoordinata',['../class_szimulator.html#a1f27e33338d2b358b401a2926ff9f709',1,'Szimulator']]],
+  ['setlight',['setLight',['../class_robot_state.html#a6435f956fa3d27b72b5b235a0e490ad2',1,'RobotState']]],
+  ['setorient',['setOrient',['../class_robot_state.html#a58e86162277924fd2e0f4b754a694ade',1,'RobotState']]],
+  ['setpos',['setPos',['../class_robot_state.html#a3e8cd5979d92790bff6527e3a4a3ac1e',1,'RobotState']]],
+  ['setsocket',['setSocket',['../class_communication_tcp_socket.html#a5cbd04540116c295413af2825309398e',1,'CommunicationTcpSocket']]],
+  ['setstatus',['setStatus',['../class_robot_state.html#a76f2df4a1d9c854eef845cba6b262e44',1,'RobotState']]],
+  ['settimestamp',['setTimestamp',['../class_robot_state.html#a805e45b559e1262e78315f70275deb41',1,'RobotState']]],
+  ['setturn',['setTurn',['../class_robot_state.html#ac7692c6b46a0de4ffce12c4b7915d43a',1,'RobotState']]],
+  ['setv',['setV',['../class_robot_state.html#a1bba580ffd1d476fed5a8777101af766',1,'RobotState']]],
+  ['setx',['setX',['../class_robot_state.html#a1701a9555f090447e6c03bd3a3f272d3',1,'RobotState']]],
+  ['sety',['setY',['../class_robot_state.html#a7b4885ebf1b9454490a46260dbe1755c',1,'RobotState']]],
+  ['start',['start',['../class_szimulator.html#a5ad045d691f88a12941ca6fcc26aae3c',1,'Szimulator']]],
+  ['status',['status',['../class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b',1,'RobotState']]],
+  ['statuschanged',['statusChanged',['../class_robot_state.html#a7f52b2e4259d290fef9b136bea2ec698',1,'RobotState']]],
+  ['stop',['stop',['../class_robot_proxy.html#aff1ab5768189322b85c4d2213fd425d8',1,'RobotProxy']]],
+  ['stopcommand',['stopCommand',['../class_main_windows_event_handling.html#a78fcfb28cbb400d7121bff00ac629e0d',1,'MainWindowsEventHandling']]],
+  ['szimulator',['Szimulator',['../class_szimulator.html#ae5cd40656502cd247f190e90dfbd796c',1,'Szimulator']]]
 ];

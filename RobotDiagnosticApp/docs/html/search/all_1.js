@@ -1,28 +1,8 @@
 var searchData=
 [
-  ['communication',['Communication',['../class_communication.html',1,'Communication'],['../class_communication.html#a88aa7a2d2ac5202e2b8eef787d1a8689',1,'Communication::Communication()']]],
-  ['communication_2ecpp',['Communication.cpp',['../_communication_8cpp.html',1,'']]],
-  ['communication_2eh',['Communication.h',['../_communication_8h.html',1,'']]],
-  ['communication_5fh',['COMMUNICATION_H',['../_communication_8h.html#af8fa35862722ecccfa34a3e7d1c29609',1,'Communication.h']]],
-  ['communicationserialport',['CommunicationSerialPort',['../class_communication_serial_port.html',1,'CommunicationSerialPort'],['../class_communication_serial_port.html#ad07dc272819d966bb3003d1c3cf39746',1,'CommunicationSerialPort::CommunicationSerialPort()']]],
-  ['communicationserialport_2ecpp',['CommunicationSerialPort.cpp',['../_communication_serial_port_8cpp.html',1,'']]],
-  ['communicationserialport_2eh',['CommunicationSerialPort.h',['../_communication_serial_port_8h.html',1,'']]],
-  ['communicationserialport_5fh',['COMMUNICATIONSERIALPORT_H',['../_communication_serial_port_8h.html#aae1c65736d40a4b8a58434b38164d77b',1,'CommunicationSerialPort.h']]],
-  ['communicationtcpsocket',['CommunicationTcpSocket',['../class_communication_tcp_socket.html',1,'CommunicationTcpSocket'],['../class_communication_tcp_socket.html#af11f6acc3948e4809e26b90d1aa1300f',1,'CommunicationTcpSocket::CommunicationTcpSocket()']]],
-  ['communicationtcpsocket_2ecpp',['CommunicationTcpSocket.cpp',['../_communication_tcp_socket_8cpp.html',1,'']]],
-  ['communicationtcpsocket_2eh',['CommunicationTcpSocket.h',['../_communication_tcp_socket_8h.html',1,'']]],
-  ['communicationtcpsocketclient',['CommunicationTcpSocketClient',['../class_communication_tcp_socket_client.html',1,'CommunicationTcpSocketClient'],['../class_communication_tcp_socket_client.html#a915e85bdb65d40ade8edea5447f4d6e0',1,'CommunicationTcpSocketClient::CommunicationTcpSocketClient()']]],
-  ['communicationtcpsocketclient_2ecpp',['CommunicationTcpSocketClient.cpp',['../_communication_tcp_socket_client_8cpp.html',1,'']]],
-  ['communicationtcpsocketclient_2eh',['CommunicationTcpSocketClient.h',['../_communication_tcp_socket_client_8h.html',1,'']]],
-  ['communicationtcpsocketclient_5fh',['COMMUNICATIONTCPSOCKETCLIENT_H',['../_communication_tcp_socket_client_8h.html#a9ffd782ea05ae7752ffc4f5d0c38311c',1,'CommunicationTcpSocketClient.h']]],
-  ['communicationtcpsocketserver',['CommunicationTcpSocketServer',['../class_communication_tcp_socket_server.html',1,'CommunicationTcpSocketServer'],['../class_communication_tcp_socket_server.html#a0e4924b41f809060108a495e06874ec7',1,'CommunicationTcpSocketServer::CommunicationTcpSocketServer()']]],
-  ['communicationtcpsocketserver_2ecpp',['CommunicationTcpSocketServer.cpp',['../_communication_tcp_socket_server_8cpp.html',1,'']]],
-  ['communicationtcpsocketserver_2eh',['CommunicationTcpSocketServer.h',['../_communication_tcp_socket_server_8h.html',1,'']]],
-  ['communicationtcpsocketserver_5fh',['COMMUNICATIONTCPSOCKETSERVER_H',['../_communication_tcp_socket_server_8h.html#aea48f39ea5bb5209218947647e3b27b1',1,'CommunicationTcpSocketServer.h']]],
-  ['connect',['connect',['../class_communication_serial_port.html#a9f4b0b50d8414e14732961db77c10885',1,'CommunicationSerialPort::connect()'],['../class_communication_tcp_socket_client.html#ada058d58cb786f965c1dfc5ae9c0778c',1,'CommunicationTcpSocketClient::connect()']]],
-  ['connectqmlsignals',['ConnectQmlSignals',['../class_main_windows_event_handling.html#a599460ada95580017990387c5443df81',1,'MainWindowsEventHandling']]],
-  ['connecttodevice',['connectToDevice',['../class_communication.html#a4e1587f6fdd18820a4aa9c1902332f04',1,'Communication']]],
-  ['container',['container',['../class_robot_state_history.html#a034bc153debc1a7a6693f43b206f9cf8',1,'RobotStateHistory']]],
-  ['copyfrom',['CopyFrom',['../class_robot_state.html#a290a66424e07744ce438098ef40a370f',1,'RobotState']]],
-  ['currentstate',['currentState',['../class_robot_state_history.html#a3ceaeb54662f7fbf41696d67d22c9791',1,'RobotStateHistory']]]
+  ['b',['b',['../jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805',1,'b():&#160;jquery.js'],['../jquery_8js.html#a2fa551895933fae935a0a6b87282241d',1,'b(function(){if(!b.support.reliableMarginRight){b.cssHooks.marginRight={get:function(bw, bv){var e;b.swap(bw,{display:&quot;inline-block&quot;}, function(){if(bv){e=Z(bw,&quot;margin-right&quot;,&quot;marginRight&quot;)}else{e=bw.style.marginRight}});return e}}}}):&#160;jquery.js']]],
+  ['bb',['bb',['../jquery_8js.html#a1d6558865876e1c8cca029fce41a4bdb',1,'jquery.js']]],
+  ['bh',['bh',['../jquery_8js.html#a6fc9115e5c9c910cae480abf0a8c7ae3',1,'jquery.js']]],
+  ['bq',['bq',['../jquery_8js.html#af6ee77c71b2c89bdb365145ac5ad1219',1,'jquery.js']]],
+  ['bs',['bs',['../jquery_8js.html#ae77642f8ef73fb9c20c2a737d956acda',1,'jquery.js']]]
 ];
