@@ -1,0 +1,12 @@
+<map id="Osztályhierarchia&#45;ábra" name="Osztályhierarchia&#45;ábra">
+<area shape="rect" id="node2" href="$class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="163,31,277,57"/>
+<area shape="rect" id="node7" href="$class_main_windows_event_handling.html" title="Ez az osztály tartalmazza a felhasználó felület (GUI) eseménykezelőit. " alt="" coords="125,81,315,108"/>
+<area shape="rect" id="node8" href="$class_robot_proxy.html" title="A robot proxyja. " alt="" coords="175,132,265,159"/>
+<area shape="rect" id="node9" href="$class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. " alt="" coords="176,183,264,209"/>
+<area shape="rect" id="node10" href="$class_robot_state_history.html" title="Visszamenőleg tárolja a robot állapotait, valamint innen lehet lekérdezni a legutóbbi érvényes állapo..." alt="" coords="155,233,285,260"/>
+<area shape="rect" id="node11" href="$class_szimulator.html" title="A robot szimulátor. " alt="" coords="178,284,262,311"/>
+<area shape="rect" id="node3" href="$class_communication_serial_port.html" title="Soros port kommunikáció " alt="" coords="365,5,536,32"/>
+<area shape="rect" id="node4" href="$class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak..." alt="" coords="363,56,539,83"/>
+<area shape="rect" id="node5" href="$class_communication_tcp_socket_client.html" title="QTcpSocket alapú kommunikáció kliens oldala. " alt="" coords="589,31,800,57"/>
+<area shape="rect" id="node6" href="$class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. " alt="" coords="587,81,802,108"/>
+</map>

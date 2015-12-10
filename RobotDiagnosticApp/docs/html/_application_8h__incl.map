@@ -1,0 +1,11 @@
+<map id="/home/csiga/Alkalmazasfejlesztes&#45;hazi/RobotDiagnosticApp/Application.h" name="/home/csiga/Alkalmazasfejlesztes&#45;hazi/RobotDiagnosticApp/Application.h">
+<area shape="rect" id="node4" href="$szimulator_8h.html" title="szimulator.h" alt="" coords="661,104,755,131"/>
+<area shape="rect" id="node18" href="$_main_windows_event_handling_8h.html" title="MainWindowsEventHandling.h" alt="" coords="309,104,508,131"/>
+<area shape="rect" id="node20" href="$_robot_proxy_8h.html" title="RobotProxy.h" alt="" coords="534,104,636,131"/>
+<area shape="rect" id="node21" href="$_communication_tcp_socket_client_8h.html" title="Communication/Communication\lTcpSocketClient.h" alt="" coords="779,97,987,138"/>
+<area shape="rect" id="node22" href="$_robot_state_history_8h.html" title="RobotStateHistory.h" alt="" coords="1011,104,1151,131"/>
+<area shape="rect" id="node7" href="$_communication_tcp_socket_server_8h.html" title="Communication/Communication\lTcpSocketServer.h" alt="" coords="765,187,973,229"/>
+<area shape="rect" id="node16" href="$_robot_state_8h.html" title="RobotState.h" alt="" coords="552,195,651,221"/>
+<area shape="rect" id="node9" href="$_communication_tcp_socket_8h.html" title="CommunicationTcpSocket.h" alt="" coords="883,277,1069,304"/>
+<area shape="rect" id="node11" href="$_communication_8h.html" title="Communication.h" alt="" coords="767,352,891,379"/>
+</map>

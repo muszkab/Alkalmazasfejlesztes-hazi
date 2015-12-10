@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>RobotDiagnosticApp: /home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/RobotState.h Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RobotDiagnosticApp
+   </div>
+   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Főoldal</span></a></li>
+      <li><a href="pages.html"><span>Kapcsolódó&#160;lapok</span></a></li>
+      <li><a href="modules.html"><span>Modulok</span></a></li>
+      <li><a href="annotated.html"><span>Osztályok</span></a></li>
+      <li class="current"><a href="files.html"><span>Fájl</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Keresés" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Fájllista</span></a></li>
+      <li><a href="globals.html"><span>Fájlelemek</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/RobotState.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_robot_state_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifndef ROBOTSTATE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="_robot_state_8h.html#ac1705f5b7d94ccf72e82067bdca8844f">    3</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ROBOTSTATE_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;QDataStream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_robot_state.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_robot_state.html">RobotState</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">   24</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a7a1920d61156abc05a60135aefe8bc67">Default</a> = 0,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a526d688f37a86d3c3f27d0c5016eb71d">Reset</a> = 1,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a7b7ecb39b9e110c2a31409a1672bad23">Stopping</a> = 2,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710aa552e259a7aec237bbe28b9039dc3395">Accelerate</a> = 3,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a6b12be2513bab07567150f54467bc568">Turn</a>=4,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710af01242ef29e5426615adc0f4c0f0d43d">SelfTest</a>=5,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_robot_state_1_1koord.html">   40</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_robot_state_1_1koord.html">koord</a>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_robot_state_1_1koord.html#a1c8385302f44c0c8f5a09e5a96f0330f">   42</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_robot_state_1_1koord.html#a1c8385302f44c0c8f5a09e5a96f0330f">x</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_robot_state_1_1koord.html#acb8af3947e12ac3d1efebf5e4f9e905c">   44</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_robot_state_1_1koord.html#acb8af3947e12ac3d1efebf5e4f9e905c">y</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_robot_state_1_1koord.html#a80a1a04f8662a9cc5329b0624b4d0000">   47</a></span>&#160;        qint16 <a class="code" href="struct_robot_state_1_1koord.html#a80a1a04f8662a9cc5329b0624b4d0000">orient</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="struct_robot_state_1_1koord.html#a9c0ec94c61357ce231fce9734fad9992">   49</a></span>&#160;        qint16 <a class="code" href="struct_robot_state_1_1koord.html#a9c0ec94c61357ce231fce9734fad9992">turn</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }<a class="code" href="class_robot_state.html#acbe59b2ef0f10685a15711469b8bada6">koord</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_robot_state.html#ad10e75019e308bb0be22aa545eab0c44">RobotState</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_robot_state.html#ad10e75019e308bb0be22aa545eab0c44">RobotState</a>(<a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> <a class="code" href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">status</a>, qint64 <a class="code" href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">timestamp</a>,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;       <a class="code" href="struct_robot_state_1_1koord.html">koord</a> <a class="code" href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">pos</a>, <span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#ac97616dc44e3a9845e4d06b328bcdbf2">v</a>, <span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#ac6228002d08de4f50c472b81037aef45">a</a>, qint8 <a class="code" href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">light</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="class_robot_state.html#a87369e3d52968fc5061d5c6a7d52250e">~RobotState</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// A NOTIFY signalokat nem implementáljuk, mert nincs rájuk szükség.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_robot_state.html#adee1b223980c0ed4ec5a4d8e7fbd528f">   74</a></span>&#160;    Q_PROPERTY(<a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> <a class="code" href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">status</a> READ <a class="code" href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">status</a> WRITE <a class="code" href="class_robot_state.html#a76f2df4a1d9c854eef845cba6b262e44">setStatus</a> MEMBER _status NOTIFY <a class="code" href="class_robot_state.html#a7f52b2e4259d290fef9b136bea2ec698">statusChanged</a>)</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">   75</a></span>&#160;    <a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> <a class="code" href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">status</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _status; }</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_robot_state.html#a76f2df4a1d9c854eef845cba6b262e44">   76</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a76f2df4a1d9c854eef845cba6b262e44">setStatus</a>(<span class="keyword">const</span> <a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> <a class="code" href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">status</a>) { _status = <a class="code" href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">status</a>; }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_robot_state.html#a5b7d7d2f3859ed94354dc8a73a347c4a">   79</a></span>&#160;    Q_PROPERTY(<span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">timestamp</a> READ <a class="code" href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">timestamp</a> WRITE <a class="code" href="class_robot_state.html#a805e45b559e1262e78315f70275deb41">setTimestamp</a> MEMBER _timestamp NOTIFY <a class="code" href="class_robot_state.html#a3a1fcbe5c815beeae93fad74089e0a36">timestampChanged</a>)</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">   80</a></span>&#160;    float <a class="code" href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">timestamp</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _timestamp; }</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_robot_state.html#a805e45b559e1262e78315f70275deb41">   81</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a805e45b559e1262e78315f70275deb41">setTimestamp</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">timestamp</a>) { _timestamp = <a class="code" href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">timestamp</a>; }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_robot_state.html#af66e01626b287f9794b3c92cad19f73f">   84</a></span>&#160;    Q_PROPERTY(<a class="code" href="struct_robot_state_1_1koord.html">koord</a> <a class="code" href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">pos</a> READ <a class="code" href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">pos</a> WRITE <a class="code" href="class_robot_state.html#a3e8cd5979d92790bff6527e3a4a3ac1e">setPos</a> MEMBER _pos NOTIFY <a class="code" href="class_robot_state.html#a5ec9b351fd0e74df595c49fe9190d90c">posChanged</a>)</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">   85</a></span>&#160;    <a class="code" href="struct_robot_state_1_1koord.html">koord</a> <a class="code" href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">pos</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _pos; }</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_robot_state.html#a3e8cd5979d92790bff6527e3a4a3ac1e">   86</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a3e8cd5979d92790bff6527e3a4a3ac1e">setPos</a>(<a class="code" href="struct_robot_state_1_1koord.html">koord</a> <a class="code" href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">pos</a>) { _pos = <a class="code" href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">pos</a>; }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_robot_state.html#aea389bc0c6d3f37e0447827d7dbd01c1">   89</a></span>&#160;    Q_PROPERTY(<span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#a92c0d07b85888c8ef987e213a31154bb">x</a> READ <a class="code" href="class_robot_state.html#a92c0d07b85888c8ef987e213a31154bb">x</a> WRITE <a class="code" href="class_robot_state.html#a1701a9555f090447e6c03bd3a3f272d3">setX</a> MEMBER _pos NOTIFY <a class="code" href="class_robot_state.html#aaf6da96a835ef49e9939ea07047b1a99">xChanged</a>)</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_robot_state.html#a92c0d07b85888c8ef987e213a31154bb">   90</a></span>&#160;    float <a class="code" href="class_robot_state.html#a92c0d07b85888c8ef987e213a31154bb">x</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _pos.<a class="code" href="struct_robot_state_1_1koord.html#a1c8385302f44c0c8f5a09e5a96f0330f">x</a>; }</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_robot_state.html#a1701a9555f090447e6c03bd3a3f272d3">   91</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a1701a9555f090447e6c03bd3a3f272d3">setX</a>(<span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#a92c0d07b85888c8ef987e213a31154bb">x</a>) { _pos.<a class="code" href="struct_robot_state_1_1koord.html#a1c8385302f44c0c8f5a09e5a96f0330f">x</a> = <a class="code" href="class_robot_state.html#a92c0d07b85888c8ef987e213a31154bb">x</a>; }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_robot_state.html#af278b6a9728d4713571d51694187b9f1">   94</a></span>&#160;    Q_PROPERTY(<span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#a9dece2a6d596959359ad1fe248e191fe">y</a> READ <a class="code" href="class_robot_state.html#a9dece2a6d596959359ad1fe248e191fe">y</a> WRITE <a class="code" href="class_robot_state.html#a7b4885ebf1b9454490a46260dbe1755c">setY</a> MEMBER _pos NOTIFY <a class="code" href="class_robot_state.html#aa82efbef6113d6bee388c1107e1ba297">yChanged</a>)</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_robot_state.html#a9dece2a6d596959359ad1fe248e191fe">   95</a></span>&#160;    float <a class="code" href="class_robot_state.html#a9dece2a6d596959359ad1fe248e191fe">y</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _pos.<a class="code" href="struct_robot_state_1_1koord.html#acb8af3947e12ac3d1efebf5e4f9e905c">y</a>; }</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_robot_state.html#a7b4885ebf1b9454490a46260dbe1755c">   96</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a7b4885ebf1b9454490a46260dbe1755c">setY</a>(<span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#a9dece2a6d596959359ad1fe248e191fe">y</a>) { _pos.<a class="code" href="struct_robot_state_1_1koord.html#acb8af3947e12ac3d1efebf5e4f9e905c">y</a> = <a class="code" href="class_robot_state.html#a9dece2a6d596959359ad1fe248e191fe">y</a>; }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_robot_state.html#a43d89eaf17ee485e414d0f3d0a4f1873">   99</a></span>&#160;    Q_PROPERTY(qint16 <a class="code" href="class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b">orient</a> READ <a class="code" href="class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b">orient</a> WRITE <a class="code" href="class_robot_state.html#a58e86162277924fd2e0f4b754a694ade">setOrient</a> MEMBER _pos NOTIFY <a class="code" href="class_robot_state.html#a0d655b72fff39b3b8bf36e19dd97bea4">orientChanged</a>)</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b">  100</a></span>&#160;    qint16 <a class="code" href="class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b">orient</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _pos.<a class="code" href="struct_robot_state_1_1koord.html#a80a1a04f8662a9cc5329b0624b4d0000">orient</a>; }</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_robot_state.html#a58e86162277924fd2e0f4b754a694ade">  101</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a58e86162277924fd2e0f4b754a694ade">setOrient</a>(qint16 <a class="code" href="class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b">orient</a>) { _pos.<a class="code" href="struct_robot_state_1_1koord.html#a80a1a04f8662a9cc5329b0624b4d0000">orient</a> = <a class="code" href="class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b">orient</a>; }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_robot_state.html#ab55ecb5edda84ec38e726c6daf033be2">  104</a></span>&#160;    Q_PROPERTY(qint16 <a class="code" href="class_robot_state.html#a625109036cc72e8b01bb5cc559a40f57">turn</a> READ <a class="code" href="class_robot_state.html#a625109036cc72e8b01bb5cc559a40f57">turn</a> WRITE <a class="code" href="class_robot_state.html#ac7692c6b46a0de4ffce12c4b7915d43a">setTurn</a> MEMBER _pos NOTIFY <a class="code" href="class_robot_state.html#abf8f666b74dbbdeea6902e22d69a7d2f">turnChanged</a>)</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_robot_state.html#a625109036cc72e8b01bb5cc559a40f57">  105</a></span>&#160;    qint16 <a class="code" href="class_robot_state.html#a625109036cc72e8b01bb5cc559a40f57">turn</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _pos.<a class="code" href="struct_robot_state_1_1koord.html#a9c0ec94c61357ce231fce9734fad9992">turn</a>; }</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_robot_state.html#ac7692c6b46a0de4ffce12c4b7915d43a">  106</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#ac7692c6b46a0de4ffce12c4b7915d43a">setTurn</a>(qint16 <a class="code" href="class_robot_state.html#a625109036cc72e8b01bb5cc559a40f57">turn</a>) { _pos.<a class="code" href="struct_robot_state_1_1koord.html#a9c0ec94c61357ce231fce9734fad9992">turn</a> = <a class="code" href="class_robot_state.html#a625109036cc72e8b01bb5cc559a40f57">turn</a>; }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_robot_state.html#aa573299aa7b4ba08edba13e316f5974e">  109</a></span>&#160;    Q_PROPERTY(<span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#ac97616dc44e3a9845e4d06b328bcdbf2">v</a> READ <a class="code" href="class_robot_state.html#ac97616dc44e3a9845e4d06b328bcdbf2">v</a> WRITE <a class="code" href="class_robot_state.html#a1bba580ffd1d476fed5a8777101af766">setV</a> MEMBER _v NOTIFY <a class="code" href="class_robot_state.html#ae84b6f4d81097590cea92f109b94e71f">vChanged</a>)</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_robot_state.html#ac97616dc44e3a9845e4d06b328bcdbf2">  110</a></span>&#160;    float <a class="code" href="class_robot_state.html#ac97616dc44e3a9845e4d06b328bcdbf2">v</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _v; }</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_robot_state.html#a1bba580ffd1d476fed5a8777101af766">  111</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a1bba580ffd1d476fed5a8777101af766">setV</a>(<span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#ac97616dc44e3a9845e4d06b328bcdbf2">v</a>) { _v = <a class="code" href="class_robot_state.html#ac97616dc44e3a9845e4d06b328bcdbf2">v</a>; }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_robot_state.html#a626828bded8161fd8b02b61e523fd1bf">  114</a></span>&#160;    Q_PROPERTY(<span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#ac6228002d08de4f50c472b81037aef45">a</a> READ <a class="code" href="class_robot_state.html#ac6228002d08de4f50c472b81037aef45">a</a> WRITE <a class="code" href="class_robot_state.html#aa45dd8288a784f8fc3f64ceddf143620">setA</a> MEMBER _a NOTIFY <a class="code" href="class_robot_state.html#a924a28342d76f0d5db614d9d653d7a94">aChanged</a>)</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_robot_state.html#ac6228002d08de4f50c472b81037aef45">  115</a></span>&#160;    float <a class="code" href="class_robot_state.html#ac6228002d08de4f50c472b81037aef45">a</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _a; }</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_robot_state.html#aa45dd8288a784f8fc3f64ceddf143620">  116</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#aa45dd8288a784f8fc3f64ceddf143620">setA</a>(<span class="keywordtype">float</span> <a class="code" href="class_robot_state.html#ac6228002d08de4f50c472b81037aef45">a</a>) { _a = <a class="code" href="class_robot_state.html#ac6228002d08de4f50c472b81037aef45">a</a>; }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_robot_state.html#a2f86299f6891b2afcc59ea5f78e30dbe">  119</a></span>&#160;    Q_PROPERTY(qint16 <a class="code" href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">light</a> READ <a class="code" href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">light</a> WRITE <a class="code" href="class_robot_state.html#a6435f956fa3d27b72b5b235a0e490ad2">setLight</a> MEMBER _light NOTIFY <a class="code" href="class_robot_state.html#a78580428d5406a316d577af101ca1928">lightChanged</a>)</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">  120</a></span>&#160;    qint16 <a class="code" href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">light</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _light; }</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_robot_state.html#a6435f956fa3d27b72b5b235a0e490ad2">  121</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a6435f956fa3d27b72b5b235a0e490ad2">setLight</a>(qint16 <a class="code" href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">light</a>) { _light = <a class="code" href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">light</a>; }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="comment">// In QML, it will be accessible as model.statusName</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_robot_state.html#a104cb221a80e19594d47b5db4b2e1b2b">  125</a></span>&#160;    Q_PROPERTY(QString <a class="code" href="class_robot_state.html#a104cb221a80e19594d47b5db4b2e1b2b">statusName</a> READ <a class="code" href="class_robot_state.html#a8f388f9f5c9c709d923dbb1d2ccf00a0">getStatusName</a> NOTIFY <a class="code" href="class_robot_state.html#a7f52b2e4259d290fef9b136bea2ec698">statusChanged</a>)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a20af6823886f0e71aedc22927bdfe670">WriteTo</a>(QDataStream&amp; stream) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a798cfc69dbff89df944746331f790d3a">ReadFrom</a>(QDataStream&amp; stream);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">// Erre azért van szükség, mert a QObject-ek másolására speciális szabályok vonatkoznak.</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a290a66424e07744ce438098ef40a370f">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="class_robot_state.html">RobotState</a>&amp; other);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    QString <a class="code" href="class_robot_state.html#a8f388f9f5c9c709d923dbb1d2ccf00a0">getStatusName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;signals:</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="comment">// Ezeket a signalokat most nem használjuk */</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a7f52b2e4259d290fef9b136bea2ec698">statusChanged</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a3a1fcbe5c815beeae93fad74089e0a36">timestampChanged</a>();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a5ec9b351fd0e74df595c49fe9190d90c">posChanged</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#aaf6da96a835ef49e9939ea07047b1a99">xChanged</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#aa82efbef6113d6bee388c1107e1ba297">yChanged</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a0d655b72fff39b3b8bf36e19dd97bea4">orientChanged</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#abf8f666b74dbbdeea6902e22d69a7d2f">turnChanged</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#ae84b6f4d81097590cea92f109b94e71f">vChanged</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a924a28342d76f0d5db614d9d653d7a94">aChanged</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_robot_state.html#a78580428d5406a316d577af101ca1928">lightChanged</a>();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> _status;   </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">float</span> _timestamp; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="struct_robot_state_1_1koord.html">koord</a> _pos;   </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">float</span> _v;   </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">float</span> _a;   </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    qint16 _light; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">static</span> std::map&lt;int,QString&gt; statusNames;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> initStatusNames();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;};</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;QDataStream &amp;<a class="code" href="_robot_state_8h.html#a32f2c1974f6e43c209b2c3a18e666cae">operator&lt;&lt;</a>(QDataStream &amp;, <span class="keyword">const</span> <a class="code" href="class_robot_state.html">RobotState</a> &amp;);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;QDataStream &amp;<a class="code" href="_robot_state_8h.html#ae544fc2f81c7b6015ee43b164250d6d5">operator&gt;&gt;</a>(QDataStream &amp;, <a class="code" href="class_robot_state.html">RobotState</a> &amp;);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#endif // ROBOTSTATE_H</span></div>
+<div class="ttc" id="class_robot_state_html"><div class="ttname"><a href="class_robot_state.html">RobotState</a></div><div class="ttdoc">A robot teljes állapotleírása le egy adott időpillanatban. </div><div class="ttdef"><b>Definition:</b> RobotState.h:16</div></div>
+<div class="ttc" id="class_robot_state_html_a7b4885ebf1b9454490a46260dbe1755c"><div class="ttname"><a href="class_robot_state.html#a7b4885ebf1b9454490a46260dbe1755c">RobotState::setY</a></div><div class="ttdeci">void setY(float y)</div><div class="ttdef"><b>Definition:</b> RobotState.h:96</div></div>
+<div class="ttc" id="class_robot_state_html_a1701a9555f090447e6c03bd3a3f272d3"><div class="ttname"><a href="class_robot_state.html#a1701a9555f090447e6c03bd3a3f272d3">RobotState::setX</a></div><div class="ttdeci">void setX(float x)</div><div class="ttdef"><b>Definition:</b> RobotState.h:91</div></div>
+<div class="ttc" id="class_robot_state_html_a76f2df4a1d9c854eef845cba6b262e44"><div class="ttname"><a href="class_robot_state.html#a76f2df4a1d9c854eef845cba6b262e44">RobotState::setStatus</a></div><div class="ttdeci">void setStatus(const Status status)</div><div class="ttdef"><b>Definition:</b> RobotState.h:76</div></div>
+<div class="ttc" id="class_robot_state_html_ac97616dc44e3a9845e4d06b328bcdbf2"><div class="ttname"><a href="class_robot_state.html#ac97616dc44e3a9845e4d06b328bcdbf2">RobotState::v</a></div><div class="ttdeci">float v() const </div><div class="ttdef"><b>Definition:</b> RobotState.h:110</div></div>
+<div class="ttc" id="class_robot_state_html_a924a28342d76f0d5db614d9d653d7a94"><div class="ttname"><a href="class_robot_state.html#a924a28342d76f0d5db614d9d653d7a94">RobotState::aChanged</a></div><div class="ttdeci">void aChanged()</div></div>
+<div class="ttc" id="class_robot_state_html_a60fe59b6721cf2c043e0c0c44cf5734b"><div class="ttname"><a href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">RobotState::status</a></div><div class="ttdeci">Status status() const </div><div class="ttdef"><b>Definition:</b> RobotState.h:75</div></div>
+<div class="ttc" id="class_robot_state_html_a58e86162277924fd2e0f4b754a694ade"><div class="ttname"><a href="class_robot_state.html#a58e86162277924fd2e0f4b754a694ade">RobotState::setOrient</a></div><div class="ttdeci">void setOrient(qint16 orient)</div><div class="ttdef"><b>Definition:</b> RobotState.h:101</div></div>
+<div class="ttc" id="class_robot_state_html_a92c0d07b85888c8ef987e213a31154bb"><div class="ttname"><a href="class_robot_state.html#a92c0d07b85888c8ef987e213a31154bb">RobotState::x</a></div><div class="ttdeci">float x() const </div><div class="ttdef"><b>Definition:</b> RobotState.h:90</div></div>
+<div class="ttc" id="class_robot_state_html_aa82efbef6113d6bee388c1107e1ba297"><div class="ttname"><a href="class_robot_state.html#aa82efbef6113d6bee388c1107e1ba297">RobotState::yChanged</a></div><div class="ttdeci">void yChanged()</div></div>
+<div class="ttc" id="class_robot_state_html_ac7692c6b46a0de4ffce12c4b7915d43a"><div class="ttname"><a href="class_robot_state.html#ac7692c6b46a0de4ffce12c4b7915d43a">RobotState::setTurn</a></div><div class="ttdeci">void setTurn(qint16 turn)</div><div class="ttdef"><b>Definition:</b> RobotState.h:106</div></div>
+<div class="ttc" id="class_robot_state_html_ae84b6f4d81097590cea92f109b94e71f"><div class="ttname"><a href="class_robot_state.html#ae84b6f4d81097590cea92f109b94e71f">RobotState::vChanged</a></div><div class="ttdeci">void vChanged()</div></div>
+<div class="ttc" id="class_robot_state_html_a3a1fcbe5c815beeae93fad74089e0a36"><div class="ttname"><a href="class_robot_state.html#a3a1fcbe5c815beeae93fad74089e0a36">RobotState::timestampChanged</a></div><div class="ttdeci">void timestampChanged()</div></div>
+<div class="ttc" id="class_robot_state_html_a7f52b2e4259d290fef9b136bea2ec698"><div class="ttname"><a href="class_robot_state.html#a7f52b2e4259d290fef9b136bea2ec698">RobotState::statusChanged</a></div><div class="ttdeci">void statusChanged()</div></div>
+<div class="ttc" id="class_robot_state_html_a4bdbca2e0764ec2772ebc79d13796710a526d688f37a86d3c3f27d0c5016eb71d"><div class="ttname"><a href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a526d688f37a86d3c3f27d0c5016eb71d">RobotState::Status::Reset</a></div></div>
+<div class="ttc" id="class_robot_state_html_a266ffb225698ea322f690aced638fa5b"><div class="ttname"><a href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">RobotState::pos</a></div><div class="ttdeci">koord pos() const </div><div class="ttdef"><b>Definition:</b> RobotState.h:85</div></div>
+<div class="ttc" id="class_robot_state_html_a87369e3d52968fc5061d5c6a7d52250e"><div class="ttname"><a href="class_robot_state.html#a87369e3d52968fc5061d5c6a7d52250e">RobotState::~RobotState</a></div><div class="ttdeci">~RobotState()=default</div></div>
+<div class="ttc" id="class_robot_state_html_a4bdbca2e0764ec2772ebc79d13796710af01242ef29e5426615adc0f4c0f0d43d"><div class="ttname"><a href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710af01242ef29e5426615adc0f4c0f0d43d">RobotState::Status::SelfTest</a></div></div>
+<div class="ttc" id="class_robot_state_html_a798cfc69dbff89df944746331f790d3a"><div class="ttname"><a href="class_robot_state.html#a798cfc69dbff89df944746331f790d3a">RobotState::ReadFrom</a></div><div class="ttdeci">void ReadFrom(QDataStream &amp;stream)</div><div class="ttdef"><b>Definition:</b> RobotState.cpp:52</div></div>
+<div class="ttc" id="class_robot_state_html_a4bdbca2e0764ec2772ebc79d13796710"><div class="ttname"><a href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">RobotState::Status</a></div><div class="ttdeci">Status</div><div class="ttdoc">A robot állapota. </div><div class="ttdef"><b>Definition:</b> RobotState.h:24</div></div>
+<div class="ttc" id="class_robot_state_html_a5ec9b351fd0e74df595c49fe9190d90c"><div class="ttname"><a href="class_robot_state.html#a5ec9b351fd0e74df595c49fe9190d90c">RobotState::posChanged</a></div><div class="ttdeci">void posChanged()</div></div>
+<div class="ttc" id="class_robot_state_html_aaf6da96a835ef49e9939ea07047b1a99"><div class="ttname"><a href="class_robot_state.html#aaf6da96a835ef49e9939ea07047b1a99">RobotState::xChanged</a></div><div class="ttdeci">void xChanged()</div></div>
+<div class="ttc" id="struct_robot_state_1_1koord_html_a9c0ec94c61357ce231fce9734fad9992"><div class="ttname"><a href="struct_robot_state_1_1koord.html#a9c0ec94c61357ce231fce9734fad9992">RobotState::koord::turn</a></div><div class="ttdeci">qint16 turn</div><div class="ttdef"><b>Definition:</b> RobotState.h:49</div></div>
+<div class="ttc" id="class_robot_state_html_a6435f956fa3d27b72b5b235a0e490ad2"><div class="ttname"><a href="class_robot_state.html#a6435f956fa3d27b72b5b235a0e490ad2">RobotState::setLight</a></div><div class="ttdeci">void setLight(qint16 light)</div><div class="ttdef"><b>Definition:</b> RobotState.h:121</div></div>
+<div class="ttc" id="_robot_state_8h_html_a32f2c1974f6e43c209b2c3a18e666cae"><div class="ttname"><a href="_robot_state_8h.html#a32f2c1974f6e43c209b2c3a18e666cae">operator&lt;&lt;</a></div><div class="ttdeci">QDataStream &amp; operator&lt;&lt;(QDataStream &amp;, const RobotState &amp;)</div><div class="ttdef"><b>Definition:</b> RobotState.cpp:77</div></div>
+<div class="ttc" id="_robot_state_8h_html_ae544fc2f81c7b6015ee43b164250d6d5"><div class="ttname"><a href="_robot_state_8h.html#ae544fc2f81c7b6015ee43b164250d6d5">operator&gt;&gt;</a></div><div class="ttdeci">QDataStream &amp; operator&gt;&gt;(QDataStream &amp;, RobotState &amp;)</div><div class="ttdef"><b>Definition:</b> RobotState.cpp:83</div></div>
+<div class="ttc" id="struct_robot_state_1_1koord_html"><div class="ttname"><a href="struct_robot_state_1_1koord.html">RobotState::koord</a></div><div class="ttdef"><b>Definition:</b> RobotState.h:40</div></div>
+<div class="ttc" id="struct_robot_state_1_1koord_html_a80a1a04f8662a9cc5329b0624b4d0000"><div class="ttname"><a href="struct_robot_state_1_1koord.html#a80a1a04f8662a9cc5329b0624b4d0000">RobotState::koord::orient</a></div><div class="ttdeci">qint16 orient</div><div class="ttdef"><b>Definition:</b> RobotState.h:47</div></div>
+<div class="ttc" id="class_robot_state_html_ac6228002d08de4f50c472b81037aef45"><div class="ttname"><a href="class_robot_state.html#ac6228002d08de4f50c472b81037aef45">RobotState::a</a></div><div class="ttdeci">float a() const </div><div class="ttdef"><b>Definition:</b> RobotState.h:115</div></div>
+<div class="ttc" id="class_robot_state_html_a3e8cd5979d92790bff6527e3a4a3ac1e"><div class="ttname"><a href="class_robot_state.html#a3e8cd5979d92790bff6527e3a4a3ac1e">RobotState::setPos</a></div><div class="ttdeci">void setPos(koord pos)</div><div class="ttdef"><b>Definition:</b> RobotState.h:86</div></div>
+<div class="ttc" id="class_robot_state_html_a0d655b72fff39b3b8bf36e19dd97bea4"><div class="ttname"><a href="class_robot_state.html#a0d655b72fff39b3b8bf36e19dd97bea4">RobotState::orientChanged</a></div><div class="ttdeci">void orientChanged()</div></div>
+<div class="ttc" id="class_robot_state_html_a20af6823886f0e71aedc22927bdfe670"><div class="ttname"><a href="class_robot_state.html#a20af6823886f0e71aedc22927bdfe670">RobotState::WriteTo</a></div><div class="ttdeci">void WriteTo(QDataStream &amp;stream) const </div><div class="ttdef"><b>Definition:</b> RobotState.cpp:39</div></div>
+<div class="ttc" id="class_robot_state_html_a8f388f9f5c9c709d923dbb1d2ccf00a0"><div class="ttname"><a href="class_robot_state.html#a8f388f9f5c9c709d923dbb1d2ccf00a0">RobotState::getStatusName</a></div><div class="ttdeci">QString getStatusName() const </div><div class="ttdef"><b>Definition:</b> RobotState.cpp:32</div></div>
+<div class="ttc" id="struct_robot_state_1_1koord_html_a1c8385302f44c0c8f5a09e5a96f0330f"><div class="ttname"><a href="struct_robot_state_1_1koord.html#a1c8385302f44c0c8f5a09e5a96f0330f">RobotState::koord::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> RobotState.h:42</div></div>
+<div class="ttc" id="class_robot_state_html_abf8f666b74dbbdeea6902e22d69a7d2f"><div class="ttname"><a href="class_robot_state.html#abf8f666b74dbbdeea6902e22d69a7d2f">RobotState::turnChanged</a></div><div class="ttdeci">void turnChanged()</div></div>
+<div class="ttc" id="class_robot_state_html_a78580428d5406a316d577af101ca1928"><div class="ttname"><a href="class_robot_state.html#a78580428d5406a316d577af101ca1928">RobotState::lightChanged</a></div><div class="ttdeci">void lightChanged()</div></div>
+<div class="ttc" id="class_robot_state_html_ad10e75019e308bb0be22aa545eab0c44"><div class="ttname"><a href="class_robot_state.html#ad10e75019e308bb0be22aa545eab0c44">RobotState::RobotState</a></div><div class="ttdeci">RobotState()</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> RobotState.cpp:6</div></div>
+<div class="ttc" id="struct_robot_state_1_1koord_html_acb8af3947e12ac3d1efebf5e4f9e905c"><div class="ttname"><a href="struct_robot_state_1_1koord.html#acb8af3947e12ac3d1efebf5e4f9e905c">RobotState::koord::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> RobotState.h:44</div></div>
+<div class="ttc" id="class_robot_state_html_a4bdbca2e0764ec2772ebc79d13796710a7b7ecb39b9e110c2a31409a1672bad23"><div class="ttname"><a href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a7b7ecb39b9e110c2a31409a1672bad23">RobotState::Status::Stopping</a></div></div>
+<div class="ttc" id="class_robot_state_html_a290a66424e07744ce438098ef40a370f"><div class="ttname"><a href="class_robot_state.html#a290a66424e07744ce438098ef40a370f">RobotState::CopyFrom</a></div><div class="ttdeci">void CopyFrom(const RobotState &amp;other)</div><div class="ttdef"><b>Definition:</b> RobotState.cpp:67</div></div>
+<div class="ttc" id="class_robot_state_html_a104cb221a80e19594d47b5db4b2e1b2b"><div class="ttname"><a href="class_robot_state.html#a104cb221a80e19594d47b5db4b2e1b2b">RobotState::statusName</a></div><div class="ttdeci">QString statusName</div><div class="ttdef"><b>Definition:</b> RobotState.h:125</div></div>
+<div class="ttc" id="class_robot_state_html_a4bdbca2e0764ec2772ebc79d13796710a6b12be2513bab07567150f54467bc568"><div class="ttname"><a href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a6b12be2513bab07567150f54467bc568">RobotState::Status::Turn</a></div></div>
+<div class="ttc" id="class_robot_state_html_aa45dd8288a784f8fc3f64ceddf143620"><div class="ttname"><a href="class_robot_state.html#aa45dd8288a784f8fc3f64ceddf143620">RobotState::setA</a></div><div class="ttdeci">void setA(float a)</div><div class="ttdef"><b>Definition:</b> RobotState.h:116</div></div>
+<div class="ttc" id="class_robot_state_html_aef8dc84153eeab852d62e15c63922e18"><div class="ttname"><a href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">RobotState::light</a></div><div class="ttdeci">qint16 light() const </div><div class="ttdef"><b>Definition:</b> RobotState.h:120</div></div>
+<div class="ttc" id="class_robot_state_html_a58647778e1ee162630d0e22ff1c5df3b"><div class="ttname"><a href="class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b">RobotState::orient</a></div><div class="ttdeci">qint16 orient() const </div><div class="ttdef"><b>Definition:</b> RobotState.h:100</div></div>
+<div class="ttc" id="class_robot_state_html_a4bdbca2e0764ec2772ebc79d13796710aa552e259a7aec237bbe28b9039dc3395"><div class="ttname"><a href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710aa552e259a7aec237bbe28b9039dc3395">RobotState::Status::Accelerate</a></div></div>
+<div class="ttc" id="class_robot_state_html_a1bba580ffd1d476fed5a8777101af766"><div class="ttname"><a href="class_robot_state.html#a1bba580ffd1d476fed5a8777101af766">RobotState::setV</a></div><div class="ttdeci">void setV(float v)</div><div class="ttdef"><b>Definition:</b> RobotState.h:111</div></div>
+<div class="ttc" id="class_robot_state_html_a805e45b559e1262e78315f70275deb41"><div class="ttname"><a href="class_robot_state.html#a805e45b559e1262e78315f70275deb41">RobotState::setTimestamp</a></div><div class="ttdeci">void setTimestamp(const float timestamp)</div><div class="ttdef"><b>Definition:</b> RobotState.h:81</div></div>
+<div class="ttc" id="class_robot_state_html_acbe59b2ef0f10685a15711469b8bada6"><div class="ttname"><a href="class_robot_state.html#acbe59b2ef0f10685a15711469b8bada6">RobotState::koord</a></div><div class="ttdeci">struct RobotState::koord koord</div></div>
+<div class="ttc" id="class_robot_state_html_a9dece2a6d596959359ad1fe248e191fe"><div class="ttname"><a href="class_robot_state.html#a9dece2a6d596959359ad1fe248e191fe">RobotState::y</a></div><div class="ttdeci">float y() const </div><div class="ttdef"><b>Definition:</b> RobotState.h:95</div></div>
+<div class="ttc" id="class_robot_state_html_a625109036cc72e8b01bb5cc559a40f57"><div class="ttname"><a href="class_robot_state.html#a625109036cc72e8b01bb5cc559a40f57">RobotState::turn</a></div><div class="ttdeci">qint16 turn() const </div><div class="ttdef"><b>Definition:</b> RobotState.h:105</div></div>
+<div class="ttc" id="class_robot_state_html_ad9fed60c04c049ebdeb4b57860e61f6a"><div class="ttname"><a href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">RobotState::timestamp</a></div><div class="ttdeci">float timestamp() const </div><div class="ttdef"><b>Definition:</b> RobotState.h:80</div></div>
+<div class="ttc" id="class_robot_state_html_a4bdbca2e0764ec2772ebc79d13796710a7a1920d61156abc05a60135aefe8bc67"><div class="ttname"><a href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a7a1920d61156abc05a60135aefe8bc67">RobotState::Status::Default</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 12:52:00 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

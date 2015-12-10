@@ -1,0 +1,6 @@
+<map id="Communication" name="Communication">
+<area shape="rect" id="node3" href="$class_communication_serial_port.html" title="Soros port kommunikáció " alt="" coords="5,155,176,181"/>
+<area shape="rect" id="node4" href="$class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak..." alt="" coords="200,155,376,181"/>
+<area shape="rect" id="node5" href="$class_communication_tcp_socket_client.html" title="QTcpSocket alapú kommunikáció kliens oldala. " alt="" coords="64,229,273,256"/>
+<area shape="rect" id="node6" href="$class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. " alt="" coords="299,229,513,256"/>
+</map>

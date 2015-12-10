@@ -1,0 +1,5 @@
+<map id="CommunicationTcpSocket" name="CommunicationTcpSocket">
+<area shape="rect" id="node4" href="$class_communication_tcp_socket_client.html" title="QTcpSocket alapú kommunikáció kliens oldala. " alt="" coords="5,229,215,256"/>
+<area shape="rect" id="node5" href="$class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. " alt="" coords="241,229,455,256"/>
+<area shape="rect" id="node2" href="$class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="173,80,285,107"/>
+</map>

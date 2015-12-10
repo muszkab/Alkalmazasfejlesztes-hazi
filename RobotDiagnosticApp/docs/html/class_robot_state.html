@@ -1,0 +1,1418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>RobotDiagnosticApp: RobotState osztályreferencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RobotDiagnosticApp
+   </div>
+   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Főoldal</span></a></li>
+      <li><a href="pages.html"><span>Kapcsolódó&#160;lapok</span></a></li>
+      <li><a href="modules.html"><span>Modulok</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Osztályok</span></a></li>
+      <li><a href="files.html"><span>Fájl</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Keresés" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Osztálylista</span></a></li>
+      <li><a href="classes.html"><span>Osztálymutató</span></a></li>
+      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="functions.html"><span>Osztálytagok</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Osztályok</a> &#124;
+<a href="#pub-types">Publikus típusok</a> &#124;
+<a href="#signals">Szignálok</a> &#124;
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#properties">Tulajdonságok</a> &#124;
+<a href="class_robot_state-members.html">A tagok teljes listája</a>  </div>
+  <div class="headertitle">
+<div class="title">RobotState osztályreferencia</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A robot teljes állapotleírása le egy adott időpillanatban.  
+ <a href="class_robot_state.html#details">Részletek...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_robot_state_8h_source.html">RobotState.h</a>&gt;</code></p>
+<div class="dynheader">
+A RobotState osztály származási diagramja:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_robot_state.png" usemap="#RobotState_map" alt=""/>
+  <map id="RobotState_map" name="RobotState_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Osztályok</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_robot_state_1_1koord.html">koord</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Publikus típusok</h2></td></tr>
+<tr class="memitem:a4bdbca2e0764ec2772ebc79d13796710"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> { <br/>
+&#160;&#160;<a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a7a1920d61156abc05a60135aefe8bc67">Status::Default</a> = 0, 
+<a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a526d688f37a86d3c3f27d0c5016eb71d">Status::Reset</a> = 1, 
+<a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a7b7ecb39b9e110c2a31409a1672bad23">Status::Stopping</a> = 2, 
+<a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710aa552e259a7aec237bbe28b9039dc3395">Status::Accelerate</a> = 3, 
+<br/>
+&#160;&#160;<a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a6b12be2513bab07567150f54467bc568">Status::Turn</a> =4, 
+<a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710af01242ef29e5426615adc0f4c0f0d43d">Status::SelfTest</a> =5
+<br/>
+ }</td></tr>
+<tr class="memdesc:a4bdbca2e0764ec2772ebc79d13796710"><td class="mdescLeft">&#160;</td><td class="mdescRight">A robot állapota.  <a href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Részletek...</a><br/></td></tr>
+<tr class="separator:a4bdbca2e0764ec2772ebc79d13796710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe59b2ef0f10685a15711469b8bada6"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_robot_state_1_1koord.html">RobotState::koord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#acbe59b2ef0f10685a15711469b8bada6">koord</a></td></tr>
+<tr class="separator:acbe59b2ef0f10685a15711469b8bada6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Szignálok</h2></td></tr>
+<tr class="memitem:a7f52b2e4259d290fef9b136bea2ec698"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a7f52b2e4259d290fef9b136bea2ec698">statusChanged</a> ()</td></tr>
+<tr class="separator:a7f52b2e4259d290fef9b136bea2ec698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1fcbe5c815beeae93fad74089e0a36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a3a1fcbe5c815beeae93fad74089e0a36">timestampChanged</a> ()</td></tr>
+<tr class="separator:a3a1fcbe5c815beeae93fad74089e0a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec9b351fd0e74df595c49fe9190d90c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a5ec9b351fd0e74df595c49fe9190d90c">posChanged</a> ()</td></tr>
+<tr class="separator:a5ec9b351fd0e74df595c49fe9190d90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf6da96a835ef49e9939ea07047b1a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#aaf6da96a835ef49e9939ea07047b1a99">xChanged</a> ()</td></tr>
+<tr class="separator:aaf6da96a835ef49e9939ea07047b1a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82efbef6113d6bee388c1107e1ba297"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#aa82efbef6113d6bee388c1107e1ba297">yChanged</a> ()</td></tr>
+<tr class="separator:aa82efbef6113d6bee388c1107e1ba297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d655b72fff39b3b8bf36e19dd97bea4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a0d655b72fff39b3b8bf36e19dd97bea4">orientChanged</a> ()</td></tr>
+<tr class="separator:a0d655b72fff39b3b8bf36e19dd97bea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf8f666b74dbbdeea6902e22d69a7d2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#abf8f666b74dbbdeea6902e22d69a7d2f">turnChanged</a> ()</td></tr>
+<tr class="separator:abf8f666b74dbbdeea6902e22d69a7d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84b6f4d81097590cea92f109b94e71f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#ae84b6f4d81097590cea92f109b94e71f">vChanged</a> ()</td></tr>
+<tr class="separator:ae84b6f4d81097590cea92f109b94e71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924a28342d76f0d5db614d9d653d7a94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a924a28342d76f0d5db614d9d653d7a94">aChanged</a> ()</td></tr>
+<tr class="separator:a924a28342d76f0d5db614d9d653d7a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78580428d5406a316d577af101ca1928"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a78580428d5406a316d577af101ca1928">lightChanged</a> ()</td></tr>
+<tr class="separator:a78580428d5406a316d577af101ca1928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:ad10e75019e308bb0be22aa545eab0c44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#ad10e75019e308bb0be22aa545eab0c44">RobotState</a> ()</td></tr>
+<tr class="memdesc:ad10e75019e308bb0be22aa545eab0c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#ad10e75019e308bb0be22aa545eab0c44">Részletek...</a><br/></td></tr>
+<tr class="separator:ad10e75019e308bb0be22aa545eab0c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a67dafde618e0465220443d5cf4941a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a3a67dafde618e0465220443d5cf4941a">RobotState</a> (<a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> <a class="el" href="class_robot_state.html#adee1b223980c0ed4ec5a4d8e7fbd528f">status</a>, qint64 <a class="el" href="class_robot_state.html#a5b7d7d2f3859ed94354dc8a73a347c4a">timestamp</a>, <a class="el" href="struct_robot_state_1_1koord.html">koord</a> <a class="el" href="class_robot_state.html#af66e01626b287f9794b3c92cad19f73f">pos</a>, float <a class="el" href="class_robot_state.html#aa573299aa7b4ba08edba13e316f5974e">v</a>, float <a class="el" href="class_robot_state.html#a626828bded8161fd8b02b61e523fd1bf">a</a>, qint8 <a class="el" href="class_robot_state.html#a2f86299f6891b2afcc59ea5f78e30dbe">light</a>)</td></tr>
+<tr class="memdesc:a3a67dafde618e0465220443d5cf4941a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor adott értékekkel.  <a href="#a3a67dafde618e0465220443d5cf4941a">Részletek...</a><br/></td></tr>
+<tr class="separator:a3a67dafde618e0465220443d5cf4941a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87369e3d52968fc5061d5c6a7d52250e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a87369e3d52968fc5061d5c6a7d52250e">~RobotState</a> ()=default</td></tr>
+<tr class="separator:a87369e3d52968fc5061d5c6a7d52250e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60fe59b6721cf2c043e0c0c44cf5734b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">status</a> () const </td></tr>
+<tr class="separator:a60fe59b6721cf2c043e0c0c44cf5734b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f2df4a1d9c854eef845cba6b262e44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a76f2df4a1d9c854eef845cba6b262e44">setStatus</a> (const <a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> <a class="el" href="class_robot_state.html#adee1b223980c0ed4ec5a4d8e7fbd528f">status</a>)</td></tr>
+<tr class="separator:a76f2df4a1d9c854eef845cba6b262e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9fed60c04c049ebdeb4b57860e61f6a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">timestamp</a> () const </td></tr>
+<tr class="separator:ad9fed60c04c049ebdeb4b57860e61f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a805e45b559e1262e78315f70275deb41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a805e45b559e1262e78315f70275deb41">setTimestamp</a> (const float <a class="el" href="class_robot_state.html#a5b7d7d2f3859ed94354dc8a73a347c4a">timestamp</a>)</td></tr>
+<tr class="separator:a805e45b559e1262e78315f70275deb41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a266ffb225698ea322f690aced638fa5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_robot_state_1_1koord.html">koord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">pos</a> () const </td></tr>
+<tr class="separator:a266ffb225698ea322f690aced638fa5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8cd5979d92790bff6527e3a4a3ac1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a3e8cd5979d92790bff6527e3a4a3ac1e">setPos</a> (<a class="el" href="struct_robot_state_1_1koord.html">koord</a> <a class="el" href="class_robot_state.html#af66e01626b287f9794b3c92cad19f73f">pos</a>)</td></tr>
+<tr class="separator:a3e8cd5979d92790bff6527e3a4a3ac1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c0d07b85888c8ef987e213a31154bb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a92c0d07b85888c8ef987e213a31154bb">x</a> () const </td></tr>
+<tr class="separator:a92c0d07b85888c8ef987e213a31154bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1701a9555f090447e6c03bd3a3f272d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a1701a9555f090447e6c03bd3a3f272d3">setX</a> (float <a class="el" href="class_robot_state.html#aea389bc0c6d3f37e0447827d7dbd01c1">x</a>)</td></tr>
+<tr class="separator:a1701a9555f090447e6c03bd3a3f272d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dece2a6d596959359ad1fe248e191fe"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a9dece2a6d596959359ad1fe248e191fe">y</a> () const </td></tr>
+<tr class="separator:a9dece2a6d596959359ad1fe248e191fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4885ebf1b9454490a46260dbe1755c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a7b4885ebf1b9454490a46260dbe1755c">setY</a> (float <a class="el" href="class_robot_state.html#af278b6a9728d4713571d51694187b9f1">y</a>)</td></tr>
+<tr class="separator:a7b4885ebf1b9454490a46260dbe1755c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58647778e1ee162630d0e22ff1c5df3b"><td class="memItemLeft" align="right" valign="top">qint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b">orient</a> () const </td></tr>
+<tr class="separator:a58647778e1ee162630d0e22ff1c5df3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e86162277924fd2e0f4b754a694ade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a58e86162277924fd2e0f4b754a694ade">setOrient</a> (qint16 <a class="el" href="class_robot_state.html#a43d89eaf17ee485e414d0f3d0a4f1873">orient</a>)</td></tr>
+<tr class="separator:a58e86162277924fd2e0f4b754a694ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a625109036cc72e8b01bb5cc559a40f57"><td class="memItemLeft" align="right" valign="top">qint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a625109036cc72e8b01bb5cc559a40f57">turn</a> () const </td></tr>
+<tr class="separator:a625109036cc72e8b01bb5cc559a40f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7692c6b46a0de4ffce12c4b7915d43a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#ac7692c6b46a0de4ffce12c4b7915d43a">setTurn</a> (qint16 <a class="el" href="class_robot_state.html#ab55ecb5edda84ec38e726c6daf033be2">turn</a>)</td></tr>
+<tr class="separator:ac7692c6b46a0de4ffce12c4b7915d43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac97616dc44e3a9845e4d06b328bcdbf2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#ac97616dc44e3a9845e4d06b328bcdbf2">v</a> () const </td></tr>
+<tr class="separator:ac97616dc44e3a9845e4d06b328bcdbf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bba580ffd1d476fed5a8777101af766"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a1bba580ffd1d476fed5a8777101af766">setV</a> (float <a class="el" href="class_robot_state.html#aa573299aa7b4ba08edba13e316f5974e">v</a>)</td></tr>
+<tr class="separator:a1bba580ffd1d476fed5a8777101af766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6228002d08de4f50c472b81037aef45"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#ac6228002d08de4f50c472b81037aef45">a</a> () const </td></tr>
+<tr class="separator:ac6228002d08de4f50c472b81037aef45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa45dd8288a784f8fc3f64ceddf143620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#aa45dd8288a784f8fc3f64ceddf143620">setA</a> (float <a class="el" href="class_robot_state.html#a626828bded8161fd8b02b61e523fd1bf">a</a>)</td></tr>
+<tr class="separator:aa45dd8288a784f8fc3f64ceddf143620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8dc84153eeab852d62e15c63922e18"><td class="memItemLeft" align="right" valign="top">qint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">light</a> () const </td></tr>
+<tr class="separator:aef8dc84153eeab852d62e15c63922e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6435f956fa3d27b72b5b235a0e490ad2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a6435f956fa3d27b72b5b235a0e490ad2">setLight</a> (qint16 <a class="el" href="class_robot_state.html#a2f86299f6891b2afcc59ea5f78e30dbe">light</a>)</td></tr>
+<tr class="separator:a6435f956fa3d27b72b5b235a0e490ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20af6823886f0e71aedc22927bdfe670"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a20af6823886f0e71aedc22927bdfe670">WriteTo</a> (QDataStream &amp;stream) const </td></tr>
+<tr class="separator:a20af6823886f0e71aedc22927bdfe670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a798cfc69dbff89df944746331f790d3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a798cfc69dbff89df944746331f790d3a">ReadFrom</a> (QDataStream &amp;stream)</td></tr>
+<tr class="separator:a798cfc69dbff89df944746331f790d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a290a66424e07744ce438098ef40a370f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a290a66424e07744ce438098ef40a370f">CopyFrom</a> (const <a class="el" href="class_robot_state.html">RobotState</a> &amp;other)</td></tr>
+<tr class="separator:a290a66424e07744ce438098ef40a370f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f388f9f5c9c709d923dbb1d2ccf00a0"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a8f388f9f5c9c709d923dbb1d2ccf00a0">getStatusName</a> () const </td></tr>
+<tr class="separator:a8f388f9f5c9c709d923dbb1d2ccf00a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Tulajdonságok</h2></td></tr>
+<tr class="memitem:adee1b223980c0ed4ec5a4d8e7fbd528f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#adee1b223980c0ed4ec5a4d8e7fbd528f">status</a></td></tr>
+<tr class="separator:adee1b223980c0ed4ec5a4d8e7fbd528f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b7d7d2f3859ed94354dc8a73a347c4a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a5b7d7d2f3859ed94354dc8a73a347c4a">timestamp</a></td></tr>
+<tr class="separator:a5b7d7d2f3859ed94354dc8a73a347c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af66e01626b287f9794b3c92cad19f73f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_robot_state_1_1koord.html">koord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#af66e01626b287f9794b3c92cad19f73f">pos</a></td></tr>
+<tr class="separator:af66e01626b287f9794b3c92cad19f73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea389bc0c6d3f37e0447827d7dbd01c1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#aea389bc0c6d3f37e0447827d7dbd01c1">x</a></td></tr>
+<tr class="separator:aea389bc0c6d3f37e0447827d7dbd01c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af278b6a9728d4713571d51694187b9f1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#af278b6a9728d4713571d51694187b9f1">y</a></td></tr>
+<tr class="separator:af278b6a9728d4713571d51694187b9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d89eaf17ee485e414d0f3d0a4f1873"><td class="memItemLeft" align="right" valign="top">qint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a43d89eaf17ee485e414d0f3d0a4f1873">orient</a></td></tr>
+<tr class="separator:a43d89eaf17ee485e414d0f3d0a4f1873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55ecb5edda84ec38e726c6daf033be2"><td class="memItemLeft" align="right" valign="top">qint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#ab55ecb5edda84ec38e726c6daf033be2">turn</a></td></tr>
+<tr class="separator:ab55ecb5edda84ec38e726c6daf033be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa573299aa7b4ba08edba13e316f5974e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#aa573299aa7b4ba08edba13e316f5974e">v</a></td></tr>
+<tr class="separator:aa573299aa7b4ba08edba13e316f5974e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626828bded8161fd8b02b61e523fd1bf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a626828bded8161fd8b02b61e523fd1bf">a</a></td></tr>
+<tr class="separator:a626828bded8161fd8b02b61e523fd1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f86299f6891b2afcc59ea5f78e30dbe"><td class="memItemLeft" align="right" valign="top">qint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a2f86299f6891b2afcc59ea5f78e30dbe">light</a></td></tr>
+<tr class="separator:a2f86299f6891b2afcc59ea5f78e30dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a104cb221a80e19594d47b5db4b2e1b2b"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a104cb221a80e19594d47b5db4b2e1b2b">statusName</a></td></tr>
+<tr class="separator:a104cb221a80e19594d47b5db4b2e1b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>A robot teljes állapotleírása le egy adott időpillanatban. </p>
+<p>A kommunikáció során ilyen objektumokat küldünk át a robot és a kliens között. A robottól érkezve az aktuális állapotot képviseli, míg az ellenkező irányba küldve parancsként a kívánt állapotot írja le.</p>
+<p>A history ilyen objektumok sorozata. </p>
+</div><h2 class="groupheader">Típusdefiníció-tagok dokumentációja</h2>
+<a class="anchor" id="acbe59b2ef0f10685a15711469b8bada6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_robot_state_1_1koord.html">RobotState::koord</a> <a class="el" href="struct_robot_state_1_1koord.html">RobotState::koord</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Koordiáták és orientáció a pozició tárolásához </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeráció-tagok dokumentációja</h2>
+<a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">RobotState::Status</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A robot állapota. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a7a1920d61156abc05a60135aefe8bc67"></a>Default</em>&#160;</td><td class="fielddoc">
+<p>Alapállapot. A robot tartja az aktuális gyorsulást. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a526d688f37a86d3c3f27d0c5016eb71d"></a>Reset</em>&#160;</td><td class="fielddoc">
+<p>Reset. Parancsként használjuk. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a7b7ecb39b9e110c2a31409a1672bad23"></a>Stopping</em>&#160;</td><td class="fielddoc">
+<p>Stop parancs. Ez az állapot akkor is érvényes marad, ha megállt a robot. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710aa552e259a7aec237bbe28b9039dc3395"></a>Accelerate</em>&#160;</td><td class="fielddoc">
+<p>Gyorsítási parancs a robotnak. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a6b12be2513bab07567150f54467bc568"></a>Turn</em>&#160;</td><td class="fielddoc">
+<p>Kanyarodás parancs. A fordulás mértékét kívülről kapja. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710af01242ef29e5426615adc0f4c0f0d43d"></a>SelfTest</em>&#160;</td><td class="fielddoc">
+<p>Öntesztelő állapot </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
+<a class="anchor" id="ad10e75019e308bb0be22aa545eab0c44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RobotState::RobotState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3a67dafde618e0465220443d5cf4941a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RobotState::RobotState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a>&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qint64&#160;</td>
+          <td class="paramname"><em>timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_robot_state_1_1koord.html">koord</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qint8&#160;</td>
+          <td class="paramname"><em>light</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor adott értékekkel. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>Robot állapot </td></tr>
+    <tr><td class="paramname">timestamp</td><td>Időbélyeg </td></tr>
+    <tr><td class="paramname">pos</td><td>Pozíció: x és y koordináta, orientáció, kanyarodás mértéke </td></tr>
+    <tr><td class="paramname">v</td><td>Sebesség </td></tr>
+    <tr><td class="paramname">a</td><td>Gyorsulás </td></tr>
+    <tr><td class="paramname">light</td><td>Robot öntesztelő folyamatának állapota (1-8) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a87369e3d52968fc5061d5c6a7d52250e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RobotState::~RobotState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a class="anchor" id="ac6228002d08de4f50c472b81037aef45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::a </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a924a28342d76f0d5db614d9d653d7a94"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::aChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a290a66424e07744ce438098ef40a370f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_robot_state.html">RobotState</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Másolat készítés. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8f388f9f5c9c709d923dbb1d2ccf00a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString RobotState::getStatusName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Olvaható formában visszaadja az állapotot. </p>
+
+</div>
+</div>
+<a class="anchor" id="aef8dc84153eeab852d62e15c63922e18"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qint16 RobotState::light </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a78580428d5406a316d577af101ca1928"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::lightChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58647778e1ee162630d0e22ff1c5df3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qint16 RobotState::orient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0d655b72fff39b3b8bf36e19dd97bea4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::orientChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a266ffb225698ea322f690aced638fa5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_robot_state_1_1koord.html">koord</a> RobotState::pos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5ec9b351fd0e74df595c49fe9190d90c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::posChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a798cfc69dbff89df944746331f790d3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::ReadFrom </td>
+          <td>(</td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Beolvassa az objektumot a streamből. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa45dd8288a784f8fc3f64ceddf143620"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::setA </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6435f956fa3d27b72b5b235a0e490ad2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::setLight </td>
+          <td>(</td>
+          <td class="paramtype">qint16&#160;</td>
+          <td class="paramname"><em>light</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58e86162277924fd2e0f4b754a694ade"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::setOrient </td>
+          <td>(</td>
+          <td class="paramtype">qint16&#160;</td>
+          <td class="paramname"><em>orient</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3e8cd5979d92790bff6527e3a4a3ac1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::setPos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_robot_state_1_1koord.html">koord</a>&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a76f2df4a1d9c854eef845cba6b262e44"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::setStatus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a805e45b559e1262e78315f70275deb41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::setTimestamp </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>timestamp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac7692c6b46a0de4ffce12c4b7915d43a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::setTurn </td>
+          <td>(</td>
+          <td class="paramtype">qint16&#160;</td>
+          <td class="paramname"><em>turn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1bba580ffd1d476fed5a8777101af766"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::setV </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1701a9555f090447e6c03bd3a3f272d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::setX </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7b4885ebf1b9454490a46260dbe1755c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::setY </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a60fe59b6721cf2c043e0c0c44cf5734b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> RobotState::status </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7f52b2e4259d290fef9b136bea2ec698"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::statusChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad9fed60c04c049ebdeb4b57860e61f6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::timestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3a1fcbe5c815beeae93fad74089e0a36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::timestampChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a625109036cc72e8b01bb5cc559a40f57"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qint16 RobotState::turn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abf8f666b74dbbdeea6902e22d69a7d2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::turnChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac97616dc44e3a9845e4d06b328bcdbf2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::v </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae84b6f4d81097590cea92f109b94e71f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::vChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a20af6823886f0e71aedc22927bdfe670"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::WriteTo </td>
+          <td>(</td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sorosítja az objektumot a megadott streambe. </p>
+
+</div>
+</div>
+<a class="anchor" id="a92c0d07b85888c8ef987e213a31154bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::x </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaf6da96a835ef49e9939ea07047b1a99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::xChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9dece2a6d596959359ad1fe248e191fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa82efbef6113d6bee388c1107e1ba297"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::yChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Tulajdonságok dokumentációjka</h2>
+<a class="anchor" id="a626828bded8161fd8b02b61e523fd1bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::a</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gyorsulás (m/s2) </p>
+
+</div>
+</div>
+<a class="anchor" id="a2f86299f6891b2afcc59ea5f78e30dbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qint16 RobotState::light</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A robot lámpájának (önteszt használja) állapota. </p>
+
+</div>
+</div>
+<a class="anchor" id="a43d89eaf17ee485e414d0f3d0a4f1873"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qint16 RobotState::orient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Orientáció (fok) </p>
+
+</div>
+</div>
+<a class="anchor" id="af66e01626b287f9794b3c92cad19f73f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_robot_state_1_1koord.html">koord</a> RobotState::pos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pozíció (méter) </p>
+
+</div>
+</div>
+<a class="anchor" id="adee1b223980c0ed4ec5a4d8e7fbd528f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> RobotState::status</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Állapot (vagy parancs) </p>
+
+</div>
+</div>
+<a class="anchor" id="a104cb221a80e19594d47b5db4b2e1b2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString RobotState::statusName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Az aktuális állapot QStringként. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5b7d7d2f3859ed94354dc8a73a347c4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::timestamp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Időbélyeg (ms) </p>
+
+</div>
+</div>
+<a class="anchor" id="ab55ecb5edda84ec38e726c6daf033be2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qint16 RobotState::turn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Kanyarodás (fok: orientáció változás egy tick alatt) </p>
+
+</div>
+</div>
+<a class="anchor" id="aa573299aa7b4ba08edba13e316f5974e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::v</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sebesség (m/s) </p>
+
+</div>
+</div>
+<a class="anchor" id="aea389bc0c6d3f37e0447827d7dbd01c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>X koordináta (méter) </p>
+
+</div>
+</div>
+<a class="anchor" id="af278b6a9728d4713571d51694187b9f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Y koordináta (méter) </p>
+
+</div>
+</div>
+<hr/>Ez a dokumentáció az osztályról a következő fájlok alapján készült:<ul>
+<li>/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_robot_state_8h_source.html">RobotState.h</a></li>
+<li>/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_robot_state_8cpp.html">RobotState.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 12:52:00 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

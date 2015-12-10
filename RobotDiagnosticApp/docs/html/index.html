@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>RobotDiagnosticApp: Főoldal</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RobotDiagnosticApp
+   </div>
+   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li class="current"><a href="index.html"><span>Főoldal</span></a></li>
+      <li><a href="pages.html"><span>Kapcsolódó&#160;lapok</span></a></li>
+      <li><a href="modules.html"><span>Modulok</span></a></li>
+      <li><a href="annotated.html"><span>Osztályok</span></a></li>
+      <li><a href="files.html"><span>Fájl</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Keresés" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">RobotDiagnosticApp Dokumentáció</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Tartalomjegyzék</h3>
+<ul><li class="level1"><a href="#Architektura">Architektúra áttekintés</a></li>
+<li class="level1"><a href="#Application">Application: az alkalmazás osztály</a></li>
+<li class="level1"><a href="#Kommunikacio">Kommunikáció</a></li>
+<li class="level1"><a href="#Robot">Robot reprezentáció</a></li>
+<li class="level1"><a href="#Szimulator">A szimulátor</a></li>
+<li class="level1"><a href="#UI">Felhasználói felület</a></li>
+<li class="level1"><a href="#Git">Git</a></li>
+</ul>
+</div>
+<div class="textblock"><p><a href="https://www.youtube.com/watch?v=DFJsDSGP1IQ&amp;ab_channel=GyulaSzab%C3%B3">A funkciókat bemutató videó</a></p>
+<h1><a class="anchor" id="Architektura"></a>
+Architektúra áttekintés</h1>
+<p>A RobotDiagnosticApp alkalmazás három fő részből áll:</p>
+<ul>
+<li>Robot reprezentáció és szimuláció: ez felelős a robot állapotának követéséért, valamint a korábbi állapotok eltárolásáért a későbbi megjelenítéshez.</li>
+<li>Felhasználói felület: QML alapú megjelenítése a vezérlő nyomógomboknak, valamint az aktuális és korábbi állapotoknak.</li>
+<li>Kommunikáció: TCP/IP alapú kommunikáció a szimulációval. Kialakítása miatt könnyű az átállás más, péládul Bluetooth alapú kommunikációra. A kommunikációs adatcsomagok egyetlen osztály példányait küldik mindkét irányba (<a class="el" href="class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. ">RobotState</a>), ebben továbbítódnak a konkrét állapotok és a parancsok is.</li>
+</ul>
+<h1><a class="anchor" id="Application"></a>
+Application: az alkalmazás osztály</h1>
+<p>Az <a class="el" href="class_application.html" title="Alkalmazás osztály. A main() példányosítja és indítja el. ">Application</a> osztály egyetlen példányát hozza létre a <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> függvény. A konstruktor létrehozza a további objektum példányokat, összekapcsolja őket. A <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> függvény ezután elindítja a Qt fő eseménykezelő ciklusát.</p>
+<p>Az <a class="el" href="class_application.html" title="Alkalmazás osztály. A main() példányosítja és indítja el. ">Application</a> környezetét az alábbi osztálydiagram ábrázolja:</p>
+<div class="image">
+<img src="main_ClassDiagram.jpg" alt="main_ClassDiagram.jpg"/>
+</div>
+<p>A <a class="el" href="class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak...">CommunicationTcpSocket</a> példánya felelős minden kommunikációért a kliens irányból (a másik a szimulátor, mely a mélyén tartalmaz egy <a class="el" href="class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. ">CommunicationTcpSocketServer</a> objektumot).</p>
+<p>A <a class="el" href="class_szimulator.html" title="A robot szimulátor. ">Szimulator</a> egy teljesen önállóan működő objektum, mely egy QTimer időzítő segítségével szimulálja a robot működését és küldi az állapotokat a <a class="el" href="class_robot_proxy.html" title="A robot proxyja. ">RobotProxy</a> számára és fogadja az esetleges parancsokat.</p>
+<p>A <a class="el" href="class_robot_proxy.html" title="A robot proxyja. ">RobotProxy</a> képviseli a kliensben a robotot, annak korábbi és aktuális állapotát is.</p>
+<p>A RobotStateHistory-t a <a class="el" href="class_robot_proxy.html" title="A robot proxyja. ">RobotProxy</a> használja az aktuális és korábbi állapotok tárolására. A <a class="el" href="class_robot_state_history.html" title="Visszamenőleg tárolja a robot állapotait, valamint innen lehet lekérdezni a legutóbbi érvényes állapo...">RobotStateHistory</a> új állapot érkezése esetén értesíti a felhasználó felületet, hogy frissíteni kell a megjelenítést.</p>
+<p>A <a class="el" href="class_main_windows_event_handling.html" title="Ez az osztály tartalmazza a felhasználó felület (GUI) eseménykezelőit. ">MainWindowsEventHandling</a> felelős minden a felhasználói felületet érintő esemény lekezeléséért. Hozzá futnak be a GUI nyomógombjainak eseményei és a <a class="el" href="class_robot_state_history.html" title="Visszamenőleg tárolja a robot állapotait, valamint innen lehet lekérdezni a legutóbbi érvényes állapo...">RobotStateHistory</a> változásáról tájékoztató signal is.</p>
+<h1><a class="anchor" id="Kommunikacio"></a>
+Kommunikáció</h1>
+<p>A kommunikációért felelős osztályok egy általános kommunikációs interfészre (<a class="el" href="class_communication.html" title="Stream alapú kommunikációs ősosztály. ">Communication</a> osztály) épülnek. Ezt egészítik ki egy TCP/IP socket használatára, melynek két alesete van: a szerver és a kliens oldal. Ezt az alábbi osztály diagram szemlélteti:</p>
+<div class="image">
+<img src="communication_ClassDiagram.jpg" alt="communication_ClassDiagram.jpg"/>
+</div>
+<p>A <a class="el" href="class_communication.html" title="Stream alapú kommunikációs ősosztály. ">Communication</a> bizonyos műveleteket (isConnected, sendBufferContent) még csak absztrakt metódus formájában tartalmaz. A működési alapelve, hogy a send() metódussal bármilyen objektumot ki lehet írni a küldési bufferbe, amire értelmezett az operator&lt;&lt; QDataStream-re. A send() metódus ennek segítségével sorosítja az üzenet objektumot, majd a sendBufferContent() metódussal elküldi azt. Ebből a folyamatból csak a sendBufferContent() az, ami függ a tényleges kommunikációs implementációtól, így az itt még absztrakt.</p>
+<p>Adatok fogadása esetén minden adat egy általános streambe érkezik (<a class="el" href="class_communication.html#a64a0141a36e9b73e5f44135d23b37a02">Communication::receiveStream</a>) és egy signal (<a class="el" href="class_communication.html#a00087bceaa972b8e7d19edce4668cc20">Communication::dataReady</a>) jelzi, ha egy teljes üzenet megérkezett. Erre a dataReady() signalra iratkozik fel a <a class="el" href="class_robot_proxy.html" title="A robot proxyja. ">RobotProxy</a>, hogy fogadni tudja az üzeneteket.</p>
+<p>A <a class="el" href="class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak...">CommunicationTcpSocket</a> azzal egészíti ki az ősosztályát, hogy itt már konkrét TCP/IP socketet használ. Itt van a socket specifikus kommunikációs műveletek (sendBufferContent és isConnected) implementációi.</p>
+<p>A maradék két osztály, a kliens és a szerver gyakorlatilag csak a kapcsolat felépítésében és lebontásában különbözik, ezeknek az eltéréseknek a megvalósításával egészíti ki az ősosztályt.</p>
+<p>Az adatküldés szekvencia diagramja a következő:</p>
+<div class="image">
+<img src="send_SequenceDiagram.png" alt="send_SequenceDiagram.png"/>
+<div class="caption">
+Data sending sequence diagram</div></div>
+<p> A küldéshez a <a class="el" href="class_communication.html#a758523fe047afcb715d2c62f469570aa">Communication::send()</a> elkéri a küldési adatstreamet (getSendStream() hívása), ebbe sorosítja a küldendő objektumot, majd a sendBufferContent() hívásával elküldi az adatokat.</p>
+<p>Adatok fogadása esetén az alábbi szekvencia diagram foglalja össze az eseményeket:</p>
+<div class="image">
+<img src="receive_SequenceDiagram.png" alt="receive_SequenceDiagram.png"/>
+<div class="caption">
+Data reception sequence diagram</div></div>
+<p> A kommunikáció mélyén lévő QTcpSocket a kliens dataReceived slotján kereszül jelzi, hogy érkezett adat. Mivel ilyenkor nem biztos, hogy a bufferben már egy egész üzenet benne van, így a kommunikáció csak akkor szól tovább a RobotProxynak (a dataReady signaljával), ha elegendő adat összegyűlt. (Ezt onnan tudja, hogy az adatcsomagok elején mindig átküldi, hogy hány bájtból áll a teljes adatcsomag.)</p>
+<p>Amennyiben egy teljes adatcsomag átjött, a <a class="el" href="class_robot_proxy.html" title="A robot proxyja. ">RobotProxy</a> ezt kiolvassa (ehhez létrehoz egy új <a class="el" href="class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. ">RobotState</a> példányt), majd azt továbbítja a <a class="el" href="class_robot_state_history.html" title="Visszamenőleg tárolja a robot állapotait, valamint innen lehet lekérdezni a legutóbbi érvényes állapo...">RobotStateHistory</a> példányának. A history pedig ezt egyrészt elmenti, másrészt a historyChange signal segítségével jelez a felhasználói felületnek, hogy frissíteni kell a megjelenítést.</p>
+<p>(Az ábrán négyzetekben láthatók az érintett objektumok, bal oldalukon a slotjaik, jobb oldalon pedig a signaljaik, valamint ezek kapcsolatai.)</p>
+<h1><a class="anchor" id="Robot"></a>
+Robot reprezentáció</h1>
+<p>A robot reprezentációját az alábbi osztály diagram foglalja össze:</p>
+<div class="image">
+<img src="robot_ClassDiagram.jpg" alt="robot_ClassDiagram.jpg"/>
+<div class="caption">
+Robot class diagram</div></div>
+<p> A <a class="el" href="class_robot_proxy.html" title="A robot proxyja. ">RobotProxy</a> felelős a kliens többi része felé a kapcsolattartásért.</p>
+<p>A robot pillanatnyi állapotát a <a class="el" href="class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. ">RobotState</a> osztály írja le. (A szimulátornak egyetlen <a class="el" href="class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. ">RobotState</a> osztály példánya van és mindent az alapján szimulál.) Feladata csak az információ tárolás.</p>
+<p>A <a class="el" href="class_robot_state_history.html" title="Visszamenőleg tárolja a robot állapotait, valamint innen lehet lekérdezni a legutóbbi érvényes állapo...">RobotStateHistory</a> három formában is tárol RobotState-et:</p>
+<ul>
+<li>container: egy std::vector&lt;unique_ptr&gt;, mely az összes tárolt állapot (aktuális és korábbiak is) tárolásáért felelős. Övé az "ownership", vagyis ennek a unique_ptr miatt ennek a vektornak a megszűnésekor szűnnek meg az állapotok is.</li>
+<li>currentState: egy pointer az aktuális állapotra. Mivel az ownership a containeré, ezért ha változik az aktuális állapot, ezt a pointert nyugodtan át lehet állítani bármi egyéb teendő nélkül.</li>
+<li>stateList: egy pointer lista a container minden elemére. Erre azért van szükség, mert a QML megjelenítés csak ilyen listához tud adatkötést felépíteni, a unique_ptr vectorhoz nem.</li>
+</ul>
+<h1><a class="anchor" id="Szimulator"></a>
+A szimulátor</h1>
+<p>A szimulátort a <a class="el" href="class_szimulator.html" title="A robot szimulátor. ">Szimulator</a> osztály foglalja magába, mely belül egy <a class="el" href="class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. ">CommunicationTcpSocketServer</a> és egy <a class="el" href="class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. ">RobotState</a> objektumra támaszkodik. Minden bejövő üzenetet azonnal feldolgoz és egy QTimer segítségével periodikusan lefuttatja a szimulációt. Minden szimulációs lépés után elküldi az állapotát.</p>
+<h1><a class="anchor" id="UI"></a>
+Felhasználói felület</h1>
+<p>Az alkalmazás felhasználói felülete egy QML alapú GUI, melyben a QML oldal felelős az adatkötésért a <a class="el" href="class_robot_state_history.html" title="Visszamenőleg tárolja a robot állapotait, valamint innen lehet lekérdezni a legutóbbi érvényes állapo...">RobotStateHistory</a> felé, az ottani változások esetén a megjelenítés frissítéséért (<a class="el" href="class_robot_state_history.html#a8cbccac0f660e5d4265eb206d57eae17">RobotStateHistory.historyChanged</a> signal), valamint a menük és nyomógombok kezeléséért.</p>
+<p>A Reset nyomógomb megnyomása esetét mutatja be a következő szekvencia diagram:</p>
+<div class="image">
+<img src="reset_SequenceDiagram.png" alt="reset_SequenceDiagram.png"/>
+<div class="caption">
+Reset button sequence diagram</div></div>
+<p> A QML oldalon a resetBtn nyomógomb eseményét a mainFormControl resetCommand slotja kapja meg (onResetCommand), mely tovább küldi azt a resetCommandCpp signal formájában, ami már a C++ oldalon van bekötve a <a class="el" href="class_main_windows_event_handling.html" title="Ez az osztály tartalmazza a felhasználó felület (GUI) eseménykezelőit. ">MainWindowsEventHandling</a> resetCommand slotjába. Az itteni eseménykezelő meghívja a robotProxy.reset() metódust, ami pedig összeállítja a reset parancsot a robot számára és elküldi a <a class="el" href="class_communication.html" title="Stream alapú kommunikációs ősosztály. ">Communication</a> send() metódusával.</p>
+<p>A többi nyomógomb ehhez hasonlóan működik.</p>
+<h1><a class="anchor" id="Git"></a>
+Git</h1>
+<p>A fejlesztéshez a Git verziókövető szoftvert használtuk, mellyel párhuzamosan tudtunk haladni a különböző részeivel a programnak.</p>
+<p>Az alábbi képeken látszódik, hogy a fejlesztés során használtunk több különböző branchet, illetve a változásokat "commitoltuk".</p>
+<div class="image">
+<img src="Git_branchek.png" alt="Git_branchek.png"/>
+<div class="caption">
+Git Extensions</div></div>
+ <div class="image">
+<img src="Git_branchek_2.png" alt="Git_branchek_2.png"/>
+<div class="caption">
+Git Extensions</div></div>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 12:52:00 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
