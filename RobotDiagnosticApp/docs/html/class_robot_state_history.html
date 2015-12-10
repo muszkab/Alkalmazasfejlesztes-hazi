@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>RobotDiagnosticApp: RobotStateHistory osztályreferencia</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,17 +21,17 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">RobotDiagnosticApp
    </div>
-   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+   <div id="projectbrief">Diagnosztikai kliensprogram robothoz</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Készítette Doxygen 1.8.10 -->
+<!-- Készítette Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </script>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -74,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,11 +101,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="dynheader">
 A RobotStateHistory osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_robot_state_history.png" usemap="#RobotStateHistory_map" alt=""/>
-  <map id="RobotStateHistory_map" name="RobotStateHistory_map">
-</map>
- </div></div>
+<div class="center"><img src="class_robot_state_history__inherit__graph.png" border="0" usemap="#_robot_state_history_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+A RobotStateHistory osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_robot_state_history__coll__graph.png" border="0" usemap="#_robot_state_history_coll__map" alt="Collaboration graph"/></div>
+<map name="_robot_state_history_coll__map" id="_robot_state_history_coll__map">
+<area shape="rect" id="node3" href="class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. " alt="" coords="85,193,219,666"/><area shape="rect" id="node4" href="struct_robot_state_1_1koord.html" title="{RobotState::koord\n|+ x\l+ y\l+ orient\l+ turn\l|}" alt="" coords="107,6,235,127"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Szignálok</h2></td></tr>
@@ -116,7 +119,7 @@ Szignálok</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
 <tr class="memitem:aa39329cdbc54f074aac6d6670a1a6412"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state_history.html#aa39329cdbc54f074aac6d6670a1a6412">RobotStateHistory</a> ()</td></tr>
-<tr class="memdesc:aa39329cdbc54f074aac6d6670a1a6412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#aa39329cdbc54f074aac6d6670a1a6412">Részletek...</a><br /></td></tr>
+<tr class="memdesc:aa39329cdbc54f074aac6d6670a1a6412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#aa39329cdbc54f074aac6d6670a1a6412">Részletek...</a><br/></td></tr>
 <tr class="separator:aa39329cdbc54f074aac6d6670a1a6412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a57af7dcd7db519e5fc0a2e757146c0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state_history.html#a9a57af7dcd7db519e5fc0a2e757146c0">~RobotStateHistory</a> ()=default</td></tr>
 <tr class="separator:a9a57af7dcd7db519e5fc0a2e757146c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +134,8 @@ Publikus attribútumok</h2></td></tr>
 <tr class="separator:a7fe5462d9cb7169b7dd2dca2e2f1a8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ceaeb54662f7fbf41696d67d22c9791"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robot_state.html">RobotState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state_history.html#a3ceaeb54662f7fbf41696d67d22c9791">currentState</a></td></tr>
 <tr class="separator:a3ceaeb54662f7fbf41696d67d22c9791"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a034bc153debc1a7a6693f43b206f9cf8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_robot_state.html">RobotState</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state_history.html#a034bc153debc1a7a6693f43b206f9cf8">container</a></td></tr>
+<tr class="memitem:a034bc153debc1a7a6693f43b206f9cf8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr<br class="typebreak"/>
+&lt; <a class="el" href="class_robot_state.html">RobotState</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state_history.html#a034bc153debc1a7a6693f43b206f9cf8">container</a></td></tr>
 <tr class="separator:a034bc153debc1a7a6693f43b206f9cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga39f1e8ce556daceb1c0893c8a839a045"><td class="memItemLeft" align="right" valign="top">QList&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_xC3_xA1rol_xC3_xB3k.html#ga39f1e8ce556daceb1c0893c8a839a045">graphVelocities</a></td></tr>
 <tr class="separator:ga39f1e8ce556daceb1c0893c8a839a045"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,15 +285,15 @@ Publikus attribútumok</h2></td></tr>
 </div>
 </div>
 <hr/>Ez a dokumentáció az osztályról a következő fájlok alapján készült:<ul>
-<li>D:/BME/MSc/Alkalmazásfejlesztés/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_robot_state_history_8h_source.html">RobotStateHistory.h</a></li>
-<li>D:/BME/MSc/Alkalmazásfejlesztés/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_robot_state_history_8cpp.html">RobotStateHistory.cpp</a></li>
+<li>/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_robot_state_history_8h_source.html">RobotStateHistory.h</a></li>
+<li>/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_robot_state_history_8cpp.html">RobotStateHistory.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 14:38:06 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 16:02:21 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+</a> 1.8.6
 </small></address>
 </body>
 </html>

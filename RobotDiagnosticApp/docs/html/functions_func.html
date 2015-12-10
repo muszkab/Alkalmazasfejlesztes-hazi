@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>RobotDiagnosticApp: Osztálytagok - Függvények</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,17 +21,17 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">RobotDiagnosticApp
    </div>
-   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+   <div id="projectbrief">Diagnosztikai kliensprogram robothoz</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Készítette Doxygen 1.8.10 -->
+<!-- Készítette Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </script>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li class="current"><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -76,6 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
       <li><a href="functions_vars.html"><span>Változók</span></a></li>
       <li><a href="functions_type.html"><span>Típusdefiníciók</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerációk</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumeráció-értékek</span></a></li>
       <li><a href="functions_prop.html"><span>Tulajdonságok</span></a></li>
     </ul>
   </div>
@@ -85,12 +85,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
@@ -109,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -179,6 +181,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <li>dataReady()
 : <a class="el" href="class_communication.html#a00087bceaa972b8e7d19edce4668cc20">Communication</a>
 , <a class="el" href="class_robot_proxy.html#afeff26e4e16001278cf78582ef0cb3de">RobotProxy</a>
+, <a class="el" href="class_szimulator.html#a2522743404fcdeef684e7bfa6063fdbe">Szimulator</a>
 </li>
 <li>dataReceived()
 : <a class="el" href="class_communication.html#ad353a908e815c98158f6145e7104bc4f">Communication</a>
@@ -186,12 +189,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <li>disconnect()
 : <a class="el" href="class_communication_tcp_socket.html#ab1dd1b1524b6dd6c85220bb3759de8a6">CommunicationTcpSocket</a>
 </li>
+<li>disconnected()
+: <a class="el" href="class_communication_tcp_socket_server.html#a6749a2ed380ab25c41beb8d2ced5caed">CommunicationTcpSocketServer</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
 <li>errorOccurred()
 : <a class="el" href="class_communication.html#ae8be547ce3c27b6efb9c5c79d021cb53">Communication</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>FindItemByName()
+: <a class="el" href="class_main_windows_event_handling.html#a12a2bbac44a4bc08d4d0313bf672e457">MainWindowsEventHandling</a>
 </li>
 </ul>
 
@@ -210,6 +223,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>handleError()
+: <a class="el" href="class_communication_serial_port.html#ab1f1867d3aa930fa3b797dd1398ba0e2">CommunicationSerialPort</a>
+, <a class="el" href="class_communication_tcp_socket.html#ae8e52251a25607afb988c43f43551b0a">CommunicationTcpSocket</a>
+</li>
 <li>historyChanged()
 : <a class="el" href="class_main_windows_event_handling.html#a100f744879416c70f6ef324cb77267a8">MainWindowsEventHandling</a>
 , <a class="el" href="class_robot_state_history.html#a8cbccac0f660e5d4265eb206d57eae17">RobotStateHistory</a>
@@ -221,10 +238,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 
 
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>initStatusNames()
+: <a class="el" href="class_robot_state.html#a6d46484ec51367c5464e0a0b8ad63078">RobotState</a>
+</li>
 <li>isConnected()
-: <a class="el" href="class_communication.html#ab91fa1703c2c460bd3b9a01a6142db20">Communication</a>
-, <a class="el" href="class_communication_serial_port.html#a76880601be9cac78361faf9aa30871ff">CommunicationSerialPort</a>
-, <a class="el" href="class_communication_tcp_socket.html#a9b0cb039b4b7083fbbaac22302dcc835">CommunicationTcpSocket</a>
+: <a class="el" href="class_communication.html#abbe4b6e3d630cfd38f12bb1265a97f31">Communication</a>
+, <a class="el" href="class_communication_serial_port.html#a8c235312a90c2ba34afdf56f0f29c4c2">CommunicationSerialPort</a>
+, <a class="el" href="class_communication_tcp_socket.html#ac255b04b13e6869aac18da8dea888d8e">CommunicationTcpSocket</a>
 </li>
 </ul>
 
@@ -249,6 +269,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>MainWindowsEventHandling()
 : <a class="el" href="class_main_windows_event_handling.html#a3bff792b78f5ac6762547d03b3d8ddde">MainWindowsEventHandling</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>newConnection()
+: <a class="el" href="class_communication_tcp_socket_server.html#a82f33a70276083eb7e84327c1932a526">CommunicationTcpSocketServer</a>
 </li>
 </ul>
 
@@ -371,6 +398,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>tick()
+: <a class="el" href="class_szimulator.html#a45a669a8ad78f0c47e6d0d9be18deaa1">Szimulator</a>
+</li>
 <li>timestamp()
 : <a class="el" href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">RobotState</a>
 </li>
@@ -462,9 +492,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 14:38:06 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 16:02:22 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+</a> 1.8.6
 </small></address>
 </body>
 </html>

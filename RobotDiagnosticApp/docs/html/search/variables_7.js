@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['k',['k',['../jquery_8js.html#ab26645c014aa005ecedef329ecf58c99',1,'jquery.js']]]
+  ['qmlcontext',['qmlContext',['../group___hivatkoz_xC3_xA1sok.html#gad0e6e922bc5aaa5f6dbf9e0dfecfe4a8',1,'MainWindowsEventHandling']]]
 ];

@@ -1,4 +1,4 @@
 <map id="CommunicationTcpSocketServer" name="CommunicationTcpSocketServer">
-<area shape="rect" id="node2" href="$class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak..." alt="" coords="24,155,200,181"/>
-<area shape="rect" id="node3" href="$class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="55,80,168,107"/>
+<area shape="rect" id="node2" href="$class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak..." alt="" coords="25,403,228,568"/>
+<area shape="rect" id="node3" href="$class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="51,131,201,355"/>
 </map>

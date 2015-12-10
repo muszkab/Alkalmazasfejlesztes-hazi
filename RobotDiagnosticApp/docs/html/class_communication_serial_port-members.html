@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>RobotDiagnosticApp: Taglista</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,17 +21,17 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">RobotDiagnosticApp
    </div>
-   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+   <div id="projectbrief">Diagnosztikai kliensprogram robothoz</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Készítette Doxygen 1.8.10 -->
+<!-- Készítette Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </script>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -74,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,19 +100,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
   <tr class="even"><td class="entry"><a class="el" href="class_communication.html#ae8be547ce3c27b6efb9c5c79d021cb53">errorOccurred</a>(const QString &amp;)</td><td class="entry"><a class="el" href="class_communication.html">Communication</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_communication.html#adf0ba74b7d1e1c993a9166b68b7d5b97">getReceiveStream</a>()</td><td class="entry"><a class="el" href="class_communication.html">Communication</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_communication.html#a55270f00472fa162061787fa4eae532b">getSendStream</a>()</td><td class="entry"><a class="el" href="class_communication.html">Communication</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_communication_serial_port.html#a76880601be9cac78361faf9aa30871ff">isConnected</a>() const  override</td><td class="entry"><a class="el" href="class_communication_serial_port.html">CommunicationSerialPort</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_communication.html#a64a0141a36e9b73e5f44135d23b37a02">receiveStream</a></td><td class="entry"><a class="el" href="class_communication.html">Communication</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_communication.html#a758523fe047afcb715d2c62f469570aa">send</a>(const T &amp;toSendObject)</td><td class="entry"><a class="el" href="class_communication.html">Communication</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_communication.html#a1525b9cbb7793d7f9b17751347d05272">sendBuffer</a></td><td class="entry"><a class="el" href="class_communication.html">Communication</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_communication_serial_port.html#a8f5ece62f8c14851f2f81100283b392f">sendBufferContent</a>() override</td><td class="entry"><a class="el" href="class_communication_serial_port.html">CommunicationSerialPort</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_communication_serial_port.html#ab1f1867d3aa930fa3b797dd1398ba0e2">handleError</a>(QSerialPort::SerialPortError error)</td><td class="entry"><a class="el" href="class_communication_serial_port.html">CommunicationSerialPort</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">slot</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_communication_serial_port.html#a8c235312a90c2ba34afdf56f0f29c4c2">isConnected</a>() const override</td><td class="entry"><a class="el" href="class_communication_serial_port.html">CommunicationSerialPort</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_communication.html#a64a0141a36e9b73e5f44135d23b37a02">receiveStream</a></td><td class="entry"><a class="el" href="class_communication.html">Communication</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_communication.html#a758523fe047afcb715d2c62f469570aa">send</a>(const T &amp;toSendObject)</td><td class="entry"><a class="el" href="class_communication.html">Communication</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_communication.html#a1525b9cbb7793d7f9b17751347d05272">sendBuffer</a></td><td class="entry"><a class="el" href="class_communication.html">Communication</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_communication_serial_port.html#a8f5ece62f8c14851f2f81100283b392f">sendBufferContent</a>() override</td><td class="entry"><a class="el" href="class_communication_serial_port.html">CommunicationSerialPort</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_communication_serial_port.html#aa9bb232a2f7cee4c579b40ed2f6aebd6">serialPort</a></td><td class="entry"><a class="el" href="class_communication_serial_port.html">CommunicationSerialPort</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_communication.html#a75ba08ce908d45251e28e4c1db94e6f4">~Communication</a>()</td><td class="entry"><a class="el" href="class_communication.html">Communication</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_communication_serial_port.html#ac631532ede844a11573ec022827927eb">~CommunicationSerialPort</a>()=default</td><td class="entry"><a class="el" href="class_communication_serial_port.html">CommunicationSerialPort</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 14:38:06 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 16:02:21 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+</a> 1.8.6
 </small></address>
 </body>
 </html>

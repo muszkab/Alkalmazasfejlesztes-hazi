@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>RobotDiagnosticApp: RobotState osztályreferencia</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,17 +21,17 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">RobotDiagnosticApp
    </div>
-   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+   <div id="projectbrief">Diagnosztikai kliensprogram robothoz</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Készítette Doxygen 1.8.10 -->
+<!-- Készítette Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </script>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -74,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,6 +90,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <a href="#signals">Szignálok</a> &#124;
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
 <a href="#properties">Tulajdonságok</a> &#124;
+<a href="#pri-methods">Privát tagfüggvények</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
+<a href="#pri-static-attribs">Statikus privát attribútumok</a> &#124;
 <a href="class_robot_state-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">RobotState osztályreferencia</div>  </div>
@@ -104,11 +106,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="dynheader">
 A RobotState osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_robot_state.png" usemap="#RobotState_map" alt=""/>
-  <map id="RobotState_map" name="RobotState_map">
-</map>
- </div></div>
+<div class="center"><img src="class_robot_state__inherit__graph.png" border="0" usemap="#_robot_state_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+A RobotState osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_robot_state__coll__graph.png" border="0" usemap="#_robot_state_coll__map" alt="Collaboration graph"/></div>
+<map name="_robot_state_coll__map" id="_robot_state_coll__map">
+<area shape="rect" id="node3" href="struct_robot_state_1_1koord.html" title="{RobotState::koord\n|+ x\l+ y\l+ orient\l+ turn\l|}" alt="" coords="100,6,228,127"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Osztályok</h2></td></tr>
@@ -117,18 +123,18 @@ Osztályok</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Publikus típusok</h2></td></tr>
-<tr class="memitem:a4bdbca2e0764ec2772ebc79d13796710"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> { <br />
+<tr class="memitem:a4bdbca2e0764ec2772ebc79d13796710"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> { <br/>
 &#160;&#160;<a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a7a1920d61156abc05a60135aefe8bc67">Status::Default</a> = 0, 
 <a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a526d688f37a86d3c3f27d0c5016eb71d">Status::Reset</a> = 1, 
 <a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a7b7ecb39b9e110c2a31409a1672bad23">Status::Stopping</a> = 2, 
 <a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710aa552e259a7aec237bbe28b9039dc3395">Status::Accelerate</a> = 3, 
-<br />
+<br/>
 &#160;&#160;<a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710a6b12be2513bab07567150f54467bc568">Status::Turn</a> =4, 
 <a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710af01242ef29e5426615adc0f4c0f0d43d">Status::SelfTest</a> =5
-<br />
- }<tr class="memdesc:a4bdbca2e0764ec2772ebc79d13796710"><td class="mdescLeft">&#160;</td><td class="mdescRight">A robot állapota.  <a href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Részletek...</a><br /></td></tr>
+<br/>
+ }</td></tr>
+<tr class="memdesc:a4bdbca2e0764ec2772ebc79d13796710"><td class="mdescLeft">&#160;</td><td class="mdescRight">A robot állapota.  <a href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Részletek...</a><br/></td></tr>
 <tr class="separator:a4bdbca2e0764ec2772ebc79d13796710"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</td></tr>
 <tr class="memitem:acbe59b2ef0f10685a15711469b8bada6"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_robot_state_1_1koord.html">RobotState::koord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#acbe59b2ef0f10685a15711469b8bada6">koord</a></td></tr>
 <tr class="separator:acbe59b2ef0f10685a15711469b8bada6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -158,10 +164,10 @@ Szignálok</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
 <tr class="memitem:ad10e75019e308bb0be22aa545eab0c44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#ad10e75019e308bb0be22aa545eab0c44">RobotState</a> ()</td></tr>
-<tr class="memdesc:ad10e75019e308bb0be22aa545eab0c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#ad10e75019e308bb0be22aa545eab0c44">Részletek...</a><br /></td></tr>
+<tr class="memdesc:ad10e75019e308bb0be22aa545eab0c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#ad10e75019e308bb0be22aa545eab0c44">Részletek...</a><br/></td></tr>
 <tr class="separator:ad10e75019e308bb0be22aa545eab0c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a67dafde618e0465220443d5cf4941a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a3a67dafde618e0465220443d5cf4941a">RobotState</a> (<a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> <a class="el" href="class_robot_state.html#adee1b223980c0ed4ec5a4d8e7fbd528f">status</a>, qint64 <a class="el" href="class_robot_state.html#a5b7d7d2f3859ed94354dc8a73a347c4a">timestamp</a>, <a class="el" href="struct_robot_state_1_1koord.html">koord</a> <a class="el" href="class_robot_state.html#af66e01626b287f9794b3c92cad19f73f">pos</a>, float <a class="el" href="class_robot_state.html#aa573299aa7b4ba08edba13e316f5974e">v</a>, float <a class="el" href="class_robot_state.html#a626828bded8161fd8b02b61e523fd1bf">a</a>, qint8 <a class="el" href="class_robot_state.html#a2f86299f6891b2afcc59ea5f78e30dbe">light</a>)</td></tr>
-<tr class="memdesc:a3a67dafde618e0465220443d5cf4941a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor adott értékekkel.  <a href="#a3a67dafde618e0465220443d5cf4941a">Részletek...</a><br /></td></tr>
+<tr class="memdesc:a3a67dafde618e0465220443d5cf4941a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor adott értékekkel.  <a href="#a3a67dafde618e0465220443d5cf4941a">Részletek...</a><br/></td></tr>
 <tr class="separator:a3a67dafde618e0465220443d5cf4941a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87369e3d52968fc5061d5c6a7d52250e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a87369e3d52968fc5061d5c6a7d52250e">~RobotState</a> ()=default</td></tr>
 <tr class="separator:a87369e3d52968fc5061d5c6a7d52250e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,6 +244,31 @@ Tulajdonságok</h2></td></tr>
 <tr class="separator:a2f86299f6891b2afcc59ea5f78e30dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a104cb221a80e19594d47b5db4b2e1b2b"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a104cb221a80e19594d47b5db4b2e1b2b">statusName</a></td></tr>
 <tr class="separator:a104cb221a80e19594d47b5db4b2e1b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Privát tagfüggvények</h2></td></tr>
+<tr class="memitem:a6d46484ec51367c5464e0a0b8ad63078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a6d46484ec51367c5464e0a0b8ad63078">initStatusNames</a> ()</td></tr>
+<tr class="separator:a6d46484ec51367c5464e0a0b8ad63078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:a0bc45128872198e223f64ff13b78a99e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a0bc45128872198e223f64ff13b78a99e">_status</a></td></tr>
+<tr class="separator:a0bc45128872198e223f64ff13b78a99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d099c8a25105c077663c08249bc1f77"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a1d099c8a25105c077663c08249bc1f77">_timestamp</a></td></tr>
+<tr class="separator:a1d099c8a25105c077663c08249bc1f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2056e9d74274124e04b74f008b64bc30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_robot_state_1_1koord.html">koord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a2056e9d74274124e04b74f008b64bc30">_pos</a></td></tr>
+<tr class="separator:a2056e9d74274124e04b74f008b64bc30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a745af590e605672828281983d152df"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a0a745af590e605672828281983d152df">_v</a></td></tr>
+<tr class="separator:a0a745af590e605672828281983d152df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d73f27266ca5ec42ef4dfbb9ce07380"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a3d73f27266ca5ec42ef4dfbb9ce07380">_a</a></td></tr>
+<tr class="separator:a3d73f27266ca5ec42ef4dfbb9ce07380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1831f10b00ad62b2f8d49fae5e0a546f"><td class="memItemLeft" align="right" valign="top">qint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#a1831f10b00ad62b2f8d49fae5e0a546f">_light</a></td></tr>
+<tr class="separator:a1831f10b00ad62b2f8d49fae5e0a546f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Statikus privát attribútumok</h2></td></tr>
+<tr class="memitem:aabbc57d8a316e5e21d0a79ad17195b28"><td class="memItemLeft" align="right" valign="top">static std::map&lt; int, QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_state.html#aabbc57d8a316e5e21d0a79ad17195b28">statusNames</a></td></tr>
+<tr class="separator:aabbc57d8a316e5e21d0a79ad17195b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
 <div class="textblock"><p>A robot teljes állapotleírása le egy adott időpillanatban. </p>
@@ -278,22 +309,22 @@ Tulajdonságok</h2></td></tr>
 
 <p>A robot állapota. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a7a1920d61156abc05a60135aefe8bc67"></a>Default&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a7a1920d61156abc05a60135aefe8bc67"></a>Default</em>&#160;</td><td class="fielddoc">
 <p>Alapállapot. A robot tartja az aktuális gyorsulást. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a526d688f37a86d3c3f27d0c5016eb71d"></a>Reset&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a526d688f37a86d3c3f27d0c5016eb71d"></a>Reset</em>&#160;</td><td class="fielddoc">
 <p>Reset. Parancsként használjuk. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a7b7ecb39b9e110c2a31409a1672bad23"></a>Stopping&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a7b7ecb39b9e110c2a31409a1672bad23"></a>Stopping</em>&#160;</td><td class="fielddoc">
 <p>Stop parancs. Ez az állapot akkor is érvényes marad, ha megállt a robot. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710aa552e259a7aec237bbe28b9039dc3395"></a>Accelerate&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710aa552e259a7aec237bbe28b9039dc3395"></a>Accelerate</em>&#160;</td><td class="fielddoc">
 <p>Gyorsítási parancs a robotnak. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a6b12be2513bab07567150f54467bc568"></a>Turn&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710a6b12be2513bab07567150f54467bc568"></a>Turn</em>&#160;</td><td class="fielddoc">
 <p>Kanyarodás parancs. A fordulás mértékét kívülről kapja. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710af01242ef29e5426615adc0f4c0f0d43d"></a>SelfTest&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><em><a class="anchor" id="a4bdbca2e0764ec2772ebc79d13796710af01242ef29e5426615adc0f4c0f0d43d"></a>SelfTest</em>&#160;</td><td class="fielddoc">
 <p>Öntesztelő állapot </p>
 </td></tr>
 </table>
@@ -481,6 +512,30 @@ Tulajdonságok</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Olvaható formában visszaadja az állapotot. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6d46484ec51367c5464e0a0b8ad63078"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotState::initStatusNames </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Beállítja a statusNames értékeit. A konstruktor hívja. </p>
 
 </div>
 </div>
@@ -1172,6 +1227,153 @@ Tulajdonságok</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Adattagok dokumentációja</h2>
+<a class="anchor" id="a3d73f27266ca5ec42ef4dfbb9ce07380"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::_a</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sebesség (m/s) </p>
+
+</div>
+</div>
+<a class="anchor" id="a1831f10b00ad62b2f8d49fae5e0a546f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qint16 RobotState::_light</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gyorsulás (m/s2) </p>
+
+</div>
+</div>
+<a class="anchor" id="a2056e9d74274124e04b74f008b64bc30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_robot_state_1_1koord.html">koord</a> RobotState::_pos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Időpillanat </p>
+
+</div>
+</div>
+<a class="anchor" id="a0bc45128872198e223f64ff13b78a99e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> RobotState::_status</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1d099c8a25105c077663c08249bc1f77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::_timestamp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Robot állapot </p>
+
+</div>
+</div>
+<a class="anchor" id="a0a745af590e605672828281983d152df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RobotState::_v</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pozíció (koordináta, orientáció) </p>
+
+</div>
+</div>
+<a class="anchor" id="aabbc57d8a316e5e21d0a79ad17195b28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; int, QString &gt; RobotState::statusNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Robot önteszt funkciója használja Az állapotok és szöveges verziójuk közti megfeleltetés. A <a class="el" href="class_robot_state.html#a8f388f9f5c9c709d923dbb1d2ccf00a0">getStatusName()</a> használja. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Tulajdonságok dokumentációjka</h2>
 <a class="anchor" id="a626828bded8161fd8b02b61e523fd1bf"></a>
 <div class="memitem">
@@ -1405,15 +1607,15 @@ Tulajdonságok</h2></td></tr>
 </div>
 </div>
 <hr/>Ez a dokumentáció az osztályról a következő fájlok alapján készült:<ul>
-<li>D:/BME/MSc/Alkalmazásfejlesztés/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_robot_state_8h_source.html">RobotState.h</a></li>
-<li>D:/BME/MSc/Alkalmazásfejlesztés/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_robot_state_8cpp.html">RobotState.cpp</a></li>
+<li>/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_robot_state_8h_source.html">RobotState.h</a></li>
+<li>/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_robot_state_8cpp.html">RobotState.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 14:38:06 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 16:02:21 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+</a> 1.8.6
 </small></address>
 </body>
 </html>

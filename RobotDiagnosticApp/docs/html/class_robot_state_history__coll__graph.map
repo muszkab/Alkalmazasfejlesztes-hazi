@@ -1,3 +1,4 @@
 <map id="RobotStateHistory" name="RobotStateHistory">
-<area shape="rect" id="node3" href="$class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. " alt="" coords="85,83,173,109"/>
+<area shape="rect" id="node3" href="$class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. " alt="" coords="85,193,219,666"/>
+<area shape="rect" id="node4" href="$struct_robot_state_1_1koord.html" title="{RobotState::koord\n|+ x\l+ y\l+ orient\l+ turn\l|}" alt="" coords="107,6,235,127"/>
 </map>

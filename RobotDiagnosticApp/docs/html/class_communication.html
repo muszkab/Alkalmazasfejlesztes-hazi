@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>RobotDiagnosticApp: Communication osztályreferencia</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,17 +21,17 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">RobotDiagnosticApp
    </div>
-   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+   <div id="projectbrief">Diagnosztikai kliensprogram robothoz</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Készítette Doxygen 1.8.10 -->
+<!-- Készítette Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </script>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -74,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <a href="#pro-slots">Védett rések</a> &#124;
 <a href="#pro-methods">Védett tagfüggvények</a> &#124;
 <a href="#pro-attribs">Védett attribútumok</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
 <a href="class_communication-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">Communication osztályreferencia<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -104,15 +104,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="dynheader">
 A Communication osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_communication.png" usemap="#Communication_map" alt=""/>
-  <map id="Communication_map" name="Communication_map">
-<area href="class_communication_serial_port.html" title="Soros port kommunikáció " alt="CommunicationSerialPort" shape="rect" coords="0,112,195,136"/>
-<area href="class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak..." alt="CommunicationTcpSocket" shape="rect" coords="205,112,400,136"/>
-<area href="class_communication_tcp_socket_client.html" title="QTcpSocket alapú kommunikáció kliens oldala. " alt="CommunicationTcpSocketClient" shape="rect" coords="102,168,297,192"/>
-<area href="class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. " alt="CommunicationTcpSocketServer" shape="rect" coords="307,168,502,192"/>
-</map>
- </div></div>
+<div class="center"><img src="class_communication__inherit__graph.png" border="0" usemap="#_communication_inherit__map" alt="Inheritance graph"/></div>
+<map name="_communication_inherit__map" id="_communication_inherit__map">
+<area shape="rect" id="node3" href="class_communication_serial_port.html" title="Soros port kommunikáció " alt="" coords="5,410,203,561"/><area shape="rect" id="node4" href="class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak..." alt="" coords="227,403,431,568"/><area shape="rect" id="node5" href="class_communication_tcp_socket_client.html" title="QTcpSocket alapú kommunikáció kliens oldala. " alt="" coords="78,624,316,731"/><area shape="rect" id="node6" href="class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. " alt="" coords="341,617,584,738"/></map>
+</div>
+<div class="dynheader">
+A Communication osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_communication__coll__graph.png" border="0" usemap="#_communication_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Szignálok</h2></td></tr>
@@ -129,8 +129,8 @@ Publikus tagfüggvények</h2></td></tr>
 <tr class="separator:a75ba08ce908d45251e28e4c1db94e6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e1587f6fdd18820a4aa9c1902332f04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication.html#a4e1587f6fdd18820a4aa9c1902332f04">connectToDevice</a> (QIODevice *device)</td></tr>
 <tr class="separator:a4e1587f6fdd18820a4aa9c1902332f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab91fa1703c2c460bd3b9a01a6142db20"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication.html#ab91fa1703c2c460bd3b9a01a6142db20">isConnected</a> () const  =0</td></tr>
-<tr class="separator:ab91fa1703c2c460bd3b9a01a6142db20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe4b6e3d630cfd38f12bb1265a97f31"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication.html#abbe4b6e3d630cfd38f12bb1265a97f31">isConnected</a> () const =0</td></tr>
+<tr class="separator:abbe4b6e3d630cfd38f12bb1265a97f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf0ba74b7d1e1c993a9166b68b7d5b97"><td class="memItemLeft" align="right" valign="top">QDataStream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication.html#adf0ba74b7d1e1c993a9166b68b7d5b97">getReceiveStream</a> ()</td></tr>
 <tr class="separator:adf0ba74b7d1e1c993a9166b68b7d5b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a758523fe047afcb715d2c62f469570aa"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -155,6 +155,11 @@ Védett attribútumok</h2></td></tr>
 <tr class="separator:a64a0141a36e9b73e5f44135d23b37a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1525b9cbb7793d7f9b17751347d05272"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication.html#a1525b9cbb7793d7f9b17751347d05272">sendBuffer</a></td></tr>
 <tr class="separator:a1525b9cbb7793d7f9b17751347d05272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:a2492bf381c1489945a99edd83e9de753"><td class="memItemLeft" align="right" valign="top">qint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communication.html#a2492bf381c1489945a99edd83e9de753">currentMessageSize</a></td></tr>
+<tr class="separator:a2492bf381c1489945a99edd83e9de753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
 <div class="textblock"><p>Stream alapú kommunikációs ősosztály. </p>
@@ -331,7 +336,7 @@ Védett attribútumok</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab91fa1703c2c460bd3b9a01a6142db20"></a>
+<a class="anchor" id="abbe4b6e3d630cfd38f12bb1265a97f31"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -353,7 +358,7 @@ Védett attribútumok</h2></td></tr>
 </div><div class="memdoc">
 <p>Visszaadja, hogy van-e nyitott kapcsolat. </p>
 
-<p>Megvalósítják a következők: <a class="el" href="class_communication_tcp_socket.html#a9b0cb039b4b7083fbbaac22302dcc835">CommunicationTcpSocket</a> és <a class="el" href="class_communication_serial_port.html#a76880601be9cac78361faf9aa30871ff">CommunicationSerialPort</a>.</p>
+<p>Megvalósítják a következők: <a class="el" href="class_communication_tcp_socket.html#ac255b04b13e6869aac18da8dea888d8e">CommunicationTcpSocket</a> és <a class="el" href="class_communication_serial_port.html#a8c235312a90c2ba34afdf56f0f29c4c2">CommunicationSerialPort</a>.</p>
 
 </div>
 </div>
@@ -412,6 +417,27 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Adattagok dokumentációja</h2>
+<a class="anchor" id="a2492bf381c1489945a99edd83e9de753"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qint32 Communication::currentMessageSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Az éppen fogadott üzenet mérete. A <a class="el" href="class_communication.html#ad353a908e815c98158f6145e7104bc4f">dataReceived()</a> használja. </p>
+
+</div>
+</div>
 <a class="anchor" id="a64a0141a36e9b73e5f44135d23b37a02"></a>
 <div class="memitem">
 <div class="memproto">
@@ -455,15 +481,15 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>Ez a dokumentáció az osztályról a következő fájlok alapján készült:<ul>
-<li>D:/BME/MSc/Alkalmazásfejlesztés/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/Communication/<a class="el" href="_communication_8h_source.html">Communication.h</a></li>
-<li>D:/BME/MSc/Alkalmazásfejlesztés/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/Communication/<a class="el" href="_communication_8cpp.html">Communication.cpp</a></li>
+<li>/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/Communication/<a class="el" href="_communication_8h_source.html">Communication.h</a></li>
+<li>/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/Communication/<a class="el" href="_communication_8cpp.html">Communication.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 14:38:06 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 16:02:21 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+</a> 1.8.6
 </small></address>
 </body>
 </html>

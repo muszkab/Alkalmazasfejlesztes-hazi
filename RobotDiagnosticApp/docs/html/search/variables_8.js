@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['l',['L',['../jquery_8js.html#a38ee4c0b5f4fe2a18d0c783af540d253',1,'jquery.js']]],
-  ['lt',['lt',['../all__a_8js.html#a857c8c8ca640fb2283d751a715bd1ee9',1,'lt():&#160;all_a.js'],['../functions__a_8js.html#a857c8c8ca640fb2283d751a715bd1ee9',1,'lt():&#160;functions_a.js']]]
+  ['receivestream',['receiveStream',['../class_communication.html#a64a0141a36e9b73e5f44135d23b37a02',1,'Communication']]],
+  ['robot',['robot',['../class_application.html#a85f77473f3ab1f52a8ed42d611fb0ae0',1,'Application::robot()'],['../class_main_windows_event_handling.html#aa562c0b63aaf85a8fc6e853e3ad2533a',1,'MainWindowsEventHandling::robot()']]]
 ];

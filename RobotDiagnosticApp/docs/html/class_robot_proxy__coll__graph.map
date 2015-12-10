@@ -1,2 +1,6 @@
 <map id="RobotProxy" name="RobotProxy">
+<area shape="rect" id="node3" href="$class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="15,691,165,915"/>
+<area shape="rect" id="node4" href="$class_robot_state_history.html" title="Visszamenőleg tárolja a robot állapotait, valamint innen lehet lekérdezni a legutóbbi érvényes állapo..." alt="" coords="186,939,344,1133"/>
+<area shape="rect" id="node5" href="$class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. " alt="" coords="225,193,359,666"/>
+<area shape="rect" id="node6" href="$struct_robot_state_1_1koord.html" title="{RobotState::koord\n|+ x\l+ y\l+ orient\l+ turn\l|}" alt="" coords="228,6,356,127"/>
 </map>

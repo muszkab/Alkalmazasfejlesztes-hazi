@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>RobotDiagnosticApp: Taglista</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,17 +21,17 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">RobotDiagnosticApp
    </div>
-   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+   <div id="projectbrief">Diagnosztikai kliensprogram robothoz</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Készítette Doxygen 1.8.10 -->
+<!-- Készítette Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </script>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -74,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -92,17 +91,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 
 <p>A(z) <a class="el" href="class_szimulator.html">Szimulator</a> osztály tagjainak teljes listája, az örökölt tagokkal együtt.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_szimulator.html#a1520a3ea51549d30baa1ad332545e53f">PositionCalculate</a>(RobotState::koord prevPos, float v, float t)</td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_szimulator.html#a1f27e33338d2b358b401a2926ff9f709">SetKoordinata</a>(float x, float y, qint16 o, qint16 t)</td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_szimulator.html#a5ad045d691f88a12941ca6fcc26aae3c">start</a>(float intervalSec)</td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_szimulator.html#a4f0e8faff67f489c9d6b5e1280e00854">communication</a></td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_szimulator.html#a2522743404fcdeef684e7bfa6063fdbe">dataReady</a>(QDataStream &amp;inputStream)</td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">slot</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_szimulator.html#aaa04e15d04a7fad0d173358ec546a9a6">dt</a></td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_szimulator.html#a1520a3ea51549d30baa1ad332545e53f">PositionCalculate</a>(RobotState::koord prevPos, float v, float t)</td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_szimulator.html#a1f27e33338d2b358b401a2926ff9f709">SetKoordinata</a>(float x, float y, qint16 o, qint16 t)</td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_szimulator.html#a5ad045d691f88a12941ca6fcc26aae3c">start</a>(float intervalSec)</td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_szimulator.html#ad4dd96cc163cd2656972d156156ecefb">state</a></td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_szimulator.html#ae5cd40656502cd247f190e90dfbd796c">Szimulator</a>(int port)</td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_szimulator.html#a45a669a8ad78f0c47e6d0d9be18deaa1">tick</a>()</td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">slot</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_szimulator.html#afd8cdaa10c012d06c3643b839af52c6b">timer</a></td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_szimulator.html#ad6c62c6b6373dffe04c99c5716ce4a75">~Szimulator</a>()=default</td><td class="entry"><a class="el" href="class_szimulator.html">Szimulator</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 14:38:06 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 16:02:21 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+</a> 1.8.6
 </small></address>
 </body>
 </html>

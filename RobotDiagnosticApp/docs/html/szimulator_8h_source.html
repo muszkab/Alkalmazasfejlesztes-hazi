@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
-<title>RobotDiagnosticApp: D:/BME/MSc/Alkalmazásfejlesztés/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/szimulator.h Forrásfájl</title>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>RobotDiagnosticApp: /home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/szimulator.h Forrásfájl</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,17 +21,17 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">RobotDiagnosticApp
    </div>
-   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+   <div id="projectbrief">Diagnosztikai kliensprogram robothoz</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Készítette Doxygen 1.8.10 -->
+<!-- Készítette Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </script>
@@ -73,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,12 +83,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">D:/BME/MSc/Alkalmazásfejlesztés/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/szimulator.h</div>  </div>
+<div class="title">/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/szimulator.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="szimulator_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SZIMULATOR_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SZIMULATOR_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SZIMULATOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_communication_tcp_socket_server_8h.html">Communication/CommunicationTcpSocketServer.h</a>&quot;</span></div>
@@ -105,34 +104,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_szimulator.html#a5ad045d691f88a12941ca6fcc26aae3c">start</a>(<span class="keywordtype">float</span> intervalSec);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="struct_robot_state_1_1koord.html">RobotState::koord</a> <a class="code" href="class_szimulator.html#a1f27e33338d2b358b401a2926ff9f709">SetKoordinata</a>(<span class="keywordtype">float</span> <a class="code" href="jquery_8js.html#a4c3eadaa5164016d2c340d495fc6e55e">x</a>, <span class="keywordtype">float</span> y, qint16 o, qint16 t);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="struct_robot_state_1_1koord.html">RobotState::koord</a> <a class="code" href="class_szimulator.html#a1f27e33338d2b358b401a2926ff9f709">SetKoordinata</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, qint16 o, qint16 t);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="struct_robot_state_1_1koord.html">RobotState::koord</a> <a class="code" href="class_szimulator.html#a1520a3ea51549d30baa1ad332545e53f">PositionCalculate</a> (<a class="code" href="struct_robot_state_1_1koord.html">RobotState::koord</a> prevPos, <span class="keywordtype">float</span> v, <span class="keywordtype">float</span> t);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_communication_tcp_socket_server.html">CommunicationTcpSocketServer</a> communication;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_szimulator.html#a4f0e8faff67f489c9d6b5e1280e00854">   53</a></span>&#160;    <a class="code" href="class_communication_tcp_socket_server.html">CommunicationTcpSocketServer</a> <a class="code" href="class_szimulator.html#a4f0e8faff67f489c9d6b5e1280e00854">communication</a>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    QTimer timer;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_szimulator.html#afd8cdaa10c012d06c3643b839af52c6b">   56</a></span>&#160;    QTimer <a class="code" href="class_szimulator.html#afd8cdaa10c012d06c3643b839af52c6b">timer</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">float</span> dt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_szimulator.html#aaa04e15d04a7fad0d173358ec546a9a6">   59</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_szimulator.html#aaa04e15d04a7fad0d173358ec546a9a6">dt</a>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_robot_state.html">RobotState</a> state;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_szimulator.html#ad4dd96cc163cd2656972d156156ecefb">   62</a></span>&#160;    <a class="code" href="class_robot_state.html">RobotState</a> <a class="code" href="class_szimulator.html#ad4dd96cc163cd2656972d156156ecefb">state</a>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> tick();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_szimulator.html#a45a669a8ad78f0c47e6d0d9be18deaa1">tick</a>();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> dataReady(QDataStream&amp; inputStream);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_szimulator.html#a2522743404fcdeef684e7bfa6063fdbe">dataReady</a>(QDataStream&amp; inputStream);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif // SZIMULATOR_H</span></div>
 <div class="ttc" id="class_robot_state_html"><div class="ttname"><a href="class_robot_state.html">RobotState</a></div><div class="ttdoc">A robot teljes állapotleírása le egy adott időpillanatban. </div><div class="ttdef"><b>Definition:</b> RobotState.h:16</div></div>
+<div class="ttc" id="class_szimulator_html_a2522743404fcdeef684e7bfa6063fdbe"><div class="ttname"><a href="class_szimulator.html#a2522743404fcdeef684e7bfa6063fdbe">Szimulator::dataReady</a></div><div class="ttdeci">void dataReady(QDataStream &amp;inputStream)</div><div class="ttdef"><b>Definition:</b> szimulator.cpp:239</div></div>
 <div class="ttc" id="class_szimulator_html_a1520a3ea51549d30baa1ad332545e53f"><div class="ttname"><a href="class_szimulator.html#a1520a3ea51549d30baa1ad332545e53f">Szimulator::PositionCalculate</a></div><div class="ttdeci">RobotState::koord PositionCalculate(RobotState::koord prevPos, float v, float t)</div><div class="ttdoc">Pozíciót (x,y) számítja ki minden egyes tick-nél. </div><div class="ttdef"><b>Definition:</b> szimulator.cpp:26</div></div>
 <div class="ttc" id="class_szimulator_html_a1f27e33338d2b358b401a2926ff9f709"><div class="ttname"><a href="class_szimulator.html#a1f27e33338d2b358b401a2926ff9f709">Szimulator::SetKoordinata</a></div><div class="ttdeci">RobotState::koord SetKoordinata(float x, float y, qint16 o, qint16 t)</div><div class="ttdoc">A pozíció beállításához szükséges függvény. </div><div class="ttdef"><b>Definition:</b> szimulator.cpp:16</div></div>
-<div class="ttc" id="jquery_8js_html_a4c3eadaa5164016d2c340d495fc6e55e"><div class="ttname"><a href="jquery_8js.html#a4c3eadaa5164016d2c340d495fc6e55e">x</a></div><div class="ttdeci">function x(bx)</div><div class="ttdef"><b>Definition:</b> jquery.js:30</div></div>
+<div class="ttc" id="class_szimulator_html_ad4dd96cc163cd2656972d156156ecefb"><div class="ttname"><a href="class_szimulator.html#ad4dd96cc163cd2656972d156156ecefb">Szimulator::state</a></div><div class="ttdeci">RobotState state</div><div class="ttdef"><b>Definition:</b> szimulator.h:62</div></div>
 <div class="ttc" id="_communication_tcp_socket_server_8h_html"><div class="ttname"><a href="_communication_tcp_socket_server_8h.html">CommunicationTcpSocketServer.h</a></div></div>
 <div class="ttc" id="class_szimulator_html"><div class="ttname"><a href="class_szimulator.html">Szimulator</a></div><div class="ttdoc">A robot szimulátor. </div><div class="ttdef"><b>Definition:</b> szimulator.h:17</div></div>
+<div class="ttc" id="class_szimulator_html_a4f0e8faff67f489c9d6b5e1280e00854"><div class="ttname"><a href="class_szimulator.html#a4f0e8faff67f489c9d6b5e1280e00854">Szimulator::communication</a></div><div class="ttdeci">CommunicationTcpSocketServer communication</div><div class="ttdef"><b>Definition:</b> szimulator.h:53</div></div>
+<div class="ttc" id="class_szimulator_html_a45a669a8ad78f0c47e6d0d9be18deaa1"><div class="ttname"><a href="class_szimulator.html#a45a669a8ad78f0c47e6d0d9be18deaa1">Szimulator::tick</a></div><div class="ttdeci">void tick()</div><div class="ttdef"><b>Definition:</b> szimulator.cpp:55</div></div>
+<div class="ttc" id="class_szimulator_html_afd8cdaa10c012d06c3643b839af52c6b"><div class="ttname"><a href="class_szimulator.html#afd8cdaa10c012d06c3643b839af52c6b">Szimulator::timer</a></div><div class="ttdeci">QTimer timer</div><div class="ttdef"><b>Definition:</b> szimulator.h:56</div></div>
 <div class="ttc" id="struct_robot_state_1_1koord_html"><div class="ttname"><a href="struct_robot_state_1_1koord.html">RobotState::koord</a></div><div class="ttdef"><b>Definition:</b> RobotState.h:40</div></div>
 <div class="ttc" id="_robot_state_8h_html"><div class="ttname"><a href="_robot_state_8h.html">RobotState.h</a></div></div>
+<div class="ttc" id="class_szimulator_html_aaa04e15d04a7fad0d173358ec546a9a6"><div class="ttname"><a href="class_szimulator.html#aaa04e15d04a7fad0d173358ec546a9a6">Szimulator::dt</a></div><div class="ttdeci">float dt</div><div class="ttdef"><b>Definition:</b> szimulator.h:59</div></div>
 <div class="ttc" id="class_szimulator_html_ae5cd40656502cd247f190e90dfbd796c"><div class="ttname"><a href="class_szimulator.html#ae5cd40656502cd247f190e90dfbd796c">Szimulator::Szimulator</a></div><div class="ttdeci">Szimulator(int port)</div><div class="ttdef"><b>Definition:</b> szimulator.cpp:7</div></div>
 <div class="ttc" id="class_szimulator_html_ad6c62c6b6373dffe04c99c5716ce4a75"><div class="ttname"><a href="class_szimulator.html#ad6c62c6b6373dffe04c99c5716ce4a75">Szimulator::~Szimulator</a></div><div class="ttdeci">~Szimulator()=default</div></div>
 <div class="ttc" id="class_szimulator_html_a5ad045d691f88a12941ca6fcc26aae3c"><div class="ttname"><a href="class_szimulator.html#a5ad045d691f88a12941ca6fcc26aae3c">Szimulator::start</a></div><div class="ttdeci">void start(float intervalSec)</div><div class="ttdef"><b>Definition:</b> szimulator.cpp:42</div></div>
@@ -140,9 +144,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 14:38:06 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 16:02:21 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+</a> 1.8.6
 </small></address>
 </body>
 </html>

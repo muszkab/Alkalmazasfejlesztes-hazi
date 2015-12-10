@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['jquery',['jQuery',['../jquery_8js.html#aa676d9980e4aff2d9210b4c8e0e1dad9',1,'jquery.js']]],
-  ['jquery_2ejs',['jquery.js',['../jquery_8js.html',1,'']]]
+  ['koord',['koord',['../struct_robot_state_1_1koord.html',1,'RobotState']]],
+  ['koord',['koord',['../class_robot_state.html#acbe59b2ef0f10685a15711469b8bada6',1,'RobotState']]],
+  ['kormanychanged',['kormanyChanged',['../class_main_windows_event_handling.html#aba3ac50d366afceb4c638e5d0bc487cb',1,'MainWindowsEventHandling']]]
 ];

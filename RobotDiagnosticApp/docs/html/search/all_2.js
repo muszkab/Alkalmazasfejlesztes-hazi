@@ -1,13 +1,6 @@
 var searchData=
 [
-  ['c',['c',['../jquery_8js.html#abce695e0af988ece0826d9ad59b8160d',1,'jquery.js']]],
-  ['classes_5f0_2ejs',['classes_0.js',['../classes__0_8js.html',1,'']]],
-  ['classes_5f1_2ejs',['classes_1.js',['../classes__1_8js.html',1,'']]],
-  ['classes_5f2_2ejs',['classes_2.js',['../classes__2_8js.html',1,'']]],
-  ['classes_5f3_2ejs',['classes_3.js',['../classes__3_8js.html',1,'']]],
-  ['classes_5f4_2ejs',['classes_4.js',['../classes__4_8js.html',1,'']]],
-  ['classes_5f5_2ejs',['classes_5.js',['../classes__5_8js.html',1,'']]],
-  ['communication',['Communication',['../class_communication.html',1,'Communication'],['../class_communication.html#a88aa7a2d2ac5202e2b8eef787d1a8689',1,'Communication::Communication()']]],
+  ['communication',['Communication',['../class_communication.html',1,'Communication'],['../class_communication.html#a88aa7a2d2ac5202e2b8eef787d1a8689',1,'Communication::Communication()'],['../class_application.html#a214f052f63e34d66aacc1eeda7f1fa0f',1,'Application::communication()'],['../class_robot_proxy.html#ade4969f34aceb299268a520ca38acda8',1,'RobotProxy::communication()'],['../class_szimulator.html#a4f0e8faff67f489c9d6b5e1280e00854',1,'Szimulator::communication()']]],
   ['communication_2ecpp',['Communication.cpp',['../_communication_8cpp.html',1,'']]],
   ['communication_2eh',['Communication.h',['../_communication_8h.html',1,'']]],
   ['communication_5fh',['COMMUNICATION_H',['../_communication_8h.html#af8fa35862722ecccfa34a3e7d1c29609',1,'Communication.h']]],
@@ -30,10 +23,7 @@ var searchData=
   ['connectqmlsignals',['ConnectQmlSignals',['../class_main_windows_event_handling.html#a599460ada95580017990387c5443df81',1,'MainWindowsEventHandling']]],
   ['connecttodevice',['connectToDevice',['../class_communication.html#a4e1587f6fdd18820a4aa9c1902332f04',1,'Communication']]],
   ['container',['container',['../class_robot_state_history.html#a034bc153debc1a7a6693f43b206f9cf8',1,'RobotStateHistory']]],
-  ['converttoid',['convertToId',['../search_8js.html#a196a29bd5a5ee7cd5b485e0753a49e57',1,'search.js']]],
   ['copyfrom',['CopyFrom',['../class_robot_state.html#a290a66424e07744ce438098ef40a370f',1,'RobotState']]],
-  ['createresults',['createResults',['../search_8js.html#a6b2c651120de3ed1dcf0d85341d51895',1,'search.js']]],
-  ['css',['css',['../jquery_8js.html#a89ad527fcd82c01ebb587332f5b4fcd4',1,'jquery.js']]],
-  ['curcss',['curCSS',['../jquery_8js.html#a88b21f8ba3af86d6981b1da520ece33b',1,'jquery.js']]],
+  ['currentmessagesize',['currentMessageSize',['../class_communication.html#a2492bf381c1489945a99edd83e9de753',1,'Communication']]],
   ['currentstate',['currentState',['../class_robot_state_history.html#a3ceaeb54662f7fbf41696d67d22c9791',1,'RobotStateHistory']]]
 ];

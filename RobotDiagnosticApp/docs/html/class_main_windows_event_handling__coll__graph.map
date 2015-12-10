@@ -1,2 +1,7 @@
 <map id="MainWindowsEventHandling" name="MainWindowsEventHandling">
+<area shape="rect" id="node3" href="$class_robot_state_history.html" title="Visszamenőleg tárolja a robot állapotait, valamint innen lehet lekérdezni a legutóbbi érvényes állapo..." alt="" coords="218,939,376,1133"/>
+<area shape="rect" id="node4" href="$class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. " alt="" coords="242,193,376,666"/>
+<area shape="rect" id="node6" href="$class_robot_proxy.html" title="A robot proxyja. " alt="" coords="72,1198,190,1378"/>
+<area shape="rect" id="node7" href="$class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="32,691,182,915"/>
+<area shape="rect" id="node5" href="$struct_robot_state_1_1koord.html" title="{RobotState::koord\n|+ x\l+ y\l+ orient\l+ turn\l|}" alt="" coords="394,6,522,127"/>
 </map>

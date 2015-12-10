@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>RobotDiagnosticApp: Taglista</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,17 +21,17 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">RobotDiagnosticApp
    </div>
-   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+   <div id="projectbrief">Diagnosztikai kliensprogram robothoz</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Készítette Doxygen 1.8.10 -->
+<!-- Készítette Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </script>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -74,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -92,39 +91,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 
 <p>A(z) <a class="el" href="class_robot_state.html">RobotState</a> osztály tagjainak teljes listája, az örökölt tagokkal együtt.</p>
 <table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a3d73f27266ca5ec42ef4dfbb9ce07380">_a</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a1831f10b00ad62b2f8d49fae5e0a546f">_light</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a2056e9d74274124e04b74f008b64bc30">_pos</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a0bc45128872198e223f64ff13b78a99e">_status</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a1d099c8a25105c077663c08249bc1f77">_timestamp</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a0a745af590e605672828281983d152df">_v</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a626828bded8161fd8b02b61e523fd1bf">a</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_robot_state.html#ac6228002d08de4f50c472b81037aef45">a</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a924a28342d76f0d5db614d9d653d7a94">aChanged</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_robot_state.html#a290a66424e07744ce438098ef40a370f">CopyFrom</a>(const RobotState &amp;other)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a8f388f9f5c9c709d923dbb1d2ccf00a0">getStatusName</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#acbe59b2ef0f10685a15711469b8bada6">koord</a> typedef</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a2f86299f6891b2afcc59ea5f78e30dbe">light</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">light</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a78580428d5406a316d577af101ca1928">lightChanged</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a43d89eaf17ee485e414d0f3d0a4f1873">orient</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b">orient</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a0d655b72fff39b3b8bf36e19dd97bea4">orientChanged</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#af66e01626b287f9794b3c92cad19f73f">pos</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">pos</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a5ec9b351fd0e74df595c49fe9190d90c">posChanged</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a798cfc69dbff89df944746331f790d3a">ReadFrom</a>(QDataStream &amp;stream)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#ad10e75019e308bb0be22aa545eab0c44">RobotState</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a3a67dafde618e0465220443d5cf4941a">RobotState</a>(Status status, qint64 timestamp, koord pos, float v, float a, qint8 light)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#aa45dd8288a784f8fc3f64ceddf143620">setA</a>(float a)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a6435f956fa3d27b72b5b235a0e490ad2">setLight</a>(qint16 light)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a58e86162277924fd2e0f4b754a694ade">setOrient</a>(qint16 orient)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a3e8cd5979d92790bff6527e3a4a3ac1e">setPos</a>(koord pos)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a76f2df4a1d9c854eef845cba6b262e44">setStatus</a>(const Status status)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a805e45b559e1262e78315f70275deb41">setTimestamp</a>(const float timestamp)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#ac7692c6b46a0de4ffce12c4b7915d43a">setTurn</a>(qint16 turn)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a1bba580ffd1d476fed5a8777101af766">setV</a>(float v)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a1701a9555f090447e6c03bd3a3f272d3">setX</a>(float x)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a7b4885ebf1b9454490a46260dbe1755c">setY</a>(float y)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> enum</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#adee1b223980c0ed4ec5a4d8e7fbd528f">status</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">status</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot_state.html#a7f52b2e4259d290fef9b136bea2ec698">statusChanged</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a104cb221a80e19594d47b5db4b2e1b2b">statusName</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a6d46484ec51367c5464e0a0b8ad63078">initStatusNames</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#acbe59b2ef0f10685a15711469b8bada6">koord</a> typedef</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a2f86299f6891b2afcc59ea5f78e30dbe">light</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#aef8dc84153eeab852d62e15c63922e18">light</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a78580428d5406a316d577af101ca1928">lightChanged</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a43d89eaf17ee485e414d0f3d0a4f1873">orient</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a58647778e1ee162630d0e22ff1c5df3b">orient</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a0d655b72fff39b3b8bf36e19dd97bea4">orientChanged</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#af66e01626b287f9794b3c92cad19f73f">pos</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a266ffb225698ea322f690aced638fa5b">pos</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a5ec9b351fd0e74df595c49fe9190d90c">posChanged</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a798cfc69dbff89df944746331f790d3a">ReadFrom</a>(QDataStream &amp;stream)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#ad10e75019e308bb0be22aa545eab0c44">RobotState</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a3a67dafde618e0465220443d5cf4941a">RobotState</a>(Status status, qint64 timestamp, koord pos, float v, float a, qint8 light)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#aa45dd8288a784f8fc3f64ceddf143620">setA</a>(float a)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a6435f956fa3d27b72b5b235a0e490ad2">setLight</a>(qint16 light)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a58e86162277924fd2e0f4b754a694ade">setOrient</a>(qint16 orient)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a3e8cd5979d92790bff6527e3a4a3ac1e">setPos</a>(koord pos)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a76f2df4a1d9c854eef845cba6b262e44">setStatus</a>(const Status status)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a805e45b559e1262e78315f70275deb41">setTimestamp</a>(const float timestamp)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#ac7692c6b46a0de4ffce12c4b7915d43a">setTurn</a>(qint16 turn)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a1bba580ffd1d476fed5a8777101af766">setV</a>(float v)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a1701a9555f090447e6c03bd3a3f272d3">setX</a>(float x)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a7b4885ebf1b9454490a46260dbe1755c">setY</a>(float y)</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a4bdbca2e0764ec2772ebc79d13796710">Status</a> enum</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#adee1b223980c0ed4ec5a4d8e7fbd528f">status</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a60fe59b6721cf2c043e0c0c44cf5734b">status</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#a7f52b2e4259d290fef9b136bea2ec698">statusChanged</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot_state.html#a104cb221a80e19594d47b5db4b2e1b2b">statusName</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#aabbc57d8a316e5e21d0a79ad17195b28">statusNames</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_robot_state.html#a5b7d7d2f3859ed94354dc8a73a347c4a">timestamp</a></td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_robot_state.html#ad9fed60c04c049ebdeb4b57860e61f6a">timestamp</a>() const </td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_robot_state.html#a3a1fcbe5c815beeae93fad74089e0a36">timestampChanged</a>()</td><td class="entry"><a class="el" href="class_robot_state.html">RobotState</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
@@ -145,9 +152,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 14:38:06 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 16:02:21 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+</a> 1.8.6
 </small></address>
 </body>
 </html>

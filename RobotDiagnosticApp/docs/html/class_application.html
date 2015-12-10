@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.10"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>RobotDiagnosticApp: Application osztályreferencia</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,17 +21,17 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">RobotDiagnosticApp
    </div>
-   <div id="projectbrief">Diagnosztikai klinesprogram robothoz</div>
+   <div id="projectbrief">Diagnosztikai kliensprogram robothoz</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Készítette Doxygen 1.8.10 -->
+<!-- Készítette Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 </script>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Osztálylista</span></a></li>
       <li><a href="classes.html"><span>Osztálymutató</span></a></li>
-      <li><a href="hierarchy.html"><span>Osztályhierarchia</span></a></li>
+      <li><a href="inherits.html"><span>Osztályhierarchia</span></a></li>
       <li><a href="functions.html"><span>Osztálytagok</span></a></li>
     </ul>
   </div>
@@ -74,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Változók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Típusdefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerációk</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeráció-értékek</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Tulajdonságok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Makródefiníciók</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Csoport</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
 <a href="class_application-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">Application osztályreferencia</div>  </div>
@@ -100,11 +100,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
 <div class="dynheader">
 Az Application osztály származási diagramja:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_application.png" usemap="#Application_map" alt=""/>
-  <map id="Application_map" name="Application_map">
-</map>
- </div></div>
+<div class="center"><img src="class_application__inherit__graph.png" border="0" usemap="#_application_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+Az Application osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_application__coll__graph.png" border="0" usemap="#_application_coll__map" alt="Collaboration graph"/></div>
+<map name="_application_coll__map" id="_application_coll__map">
+<area shape="rect" id="node3" href="class_robot_state_history.html" title="Visszamenőleg tárolja a robot állapotait, valamint innen lehet lekérdezni a legutóbbi érvényes állapo..." alt="" coords="314,731,472,925"/><area shape="rect" id="node7" href="class_robot_proxy.html" title="A robot proxyja. " alt="" coords="133,990,251,1170"/><area shape="rect" id="node12" href="class_main_windows_event_handling.html" title="Ez az osztály tartalmazza a felhasználó felület (GUI) eseménykezelőit. " alt="" coords="211,1325,428,1549"/><area shape="rect" id="node5" href="class_robot_state.html" title="A robot teljes állapotleírása le egy adott időpillanatban. " alt="" coords="743,193,877,666"/><area shape="rect" id="node8" href="class_communication.html" title="Stream alapú kommunikációs ősosztály. " alt="" coords="322,317,472,541"/><area shape="rect" id="node9" href="class_szimulator.html" title="A robot szimulátor. " alt="" coords="788,1347,932,1527"/><area shape="rect" id="node6" href="struct_robot_state_1_1koord.html" title="{RobotState::koord\n|+ x\l+ y\l+ orient\l+ turn\l|}" alt="" coords="952,6,1080,127"/><area shape="rect" id="node11" href="class_communication_tcp_socket.html" title="TCP socket alapú kommunikációra kialakított leszármazottja az általános Communication osztálynak..." alt="" coords="549,745,752,911"/><area shape="rect" id="node10" href="class_communication_tcp_socket_server.html" title="TCP/IP szerver socket. " alt="" coords="639,1019,881,1141"/><area shape="rect" id="node13" href="class_communication_tcp_socket_client.html" title="QTcpSocket alapú kommunikáció kliens oldala. " alt="" coords="531,1195,769,1301"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
@@ -112,6 +116,21 @@ Publikus tagfüggvények</h2></td></tr>
 <tr class="separator:a4f945a7f8d003a3b8f716f7128206329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a062db49b40383051e3d3c2bd50ec9670"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a062db49b40383051e3d3c2bd50ec9670">~Application</a> ()=default</td></tr>
 <tr class="separator:a062db49b40383051e3d3c2bd50ec9670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:a4da885ff50299d449317a38c12bc901e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_szimulator.html">Szimulator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a4da885ff50299d449317a38c12bc901e">simulator</a></td></tr>
+<tr class="separator:a4da885ff50299d449317a38c12bc901e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b639af07c347a7622e4b76dcedb26b"><td class="memItemLeft" align="right" valign="top">QQmlApplicationEngine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a14b639af07c347a7622e4b76dcedb26b">engine</a></td></tr>
+<tr class="separator:a14b639af07c347a7622e4b76dcedb26b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2e6335fb736c52b16897e5127bed728"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robot_state_history.html">RobotStateHistory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#ac2e6335fb736c52b16897e5127bed728">history</a></td></tr>
+<tr class="separator:ac2e6335fb736c52b16897e5127bed728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a214f052f63e34d66aacc1eeda7f1fa0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_communication_tcp_socket_client.html">CommunicationTcpSocketClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a214f052f63e34d66aacc1eeda7f1fa0f">communication</a></td></tr>
+<tr class="separator:a214f052f63e34d66aacc1eeda7f1fa0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85f77473f3ab1f52a8ed42d611fb0ae0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robot_proxy.html">RobotProxy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a85f77473f3ab1f52a8ed42d611fb0ae0">robot</a></td></tr>
+<tr class="separator:a85f77473f3ab1f52a8ed42d611fb0ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a119f4374b8d14ae487c0aacaea16a8e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_main_windows_event_handling.html">MainWindowsEventHandling</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a119f4374b8d14ae487c0aacaea16a8e0">handler</a></td></tr>
+<tr class="separator:a119f4374b8d14ae487c0aacaea16a8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
 <div class="textblock"><p>Alkalmazás osztály. A <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> példányosítja és indítja el. </p>
@@ -167,16 +186,137 @@ Publikus tagfüggvények</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Adattagok dokumentációja</h2>
+<a class="anchor" id="a214f052f63e34d66aacc1eeda7f1fa0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_communication_tcp_socket_client.html">CommunicationTcpSocketClient</a> Application::communication</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a14b639af07c347a7622e4b76dcedb26b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QQmlApplicationEngine Application::engine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a119f4374b8d14ae487c0aacaea16a8e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_main_windows_event_handling.html">MainWindowsEventHandling</a> Application::handler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac2e6335fb736c52b16897e5127bed728"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_state_history.html">RobotStateHistory</a> Application::history</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a85f77473f3ab1f52a8ed42d611fb0ae0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_proxy.html">RobotProxy</a> Application::robot</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4da885ff50299d449317a38c12bc901e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_szimulator.html">Szimulator</a> Application::simulator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>Ez a dokumentáció az osztályról a következő fájlok alapján készült:<ul>
-<li>D:/BME/MSc/Alkalmazásfejlesztés/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_application_8h_source.html">Application.h</a></li>
-<li>D:/BME/MSc/Alkalmazásfejlesztés/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_application_8cpp.html">Application.cpp</a></li>
+<li>/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_application_8h_source.html">Application.h</a></li>
+<li>/home/csiga/Alkalmazasfejlesztes-hazi/RobotDiagnosticApp/<a class="el" href="_application_8cpp.html">Application.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 14:38:06 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+Projekt: RobotDiagnosticApp Készült: Thu Dec 10 2015 16:02:21 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
+</a> 1.8.6
 </small></address>
 </body>
 </html>
